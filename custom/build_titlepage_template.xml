@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="titlePage" default="all">
+
+	<path id="xslt-classpath">
+		<pathelement path="../catalog" />
+		<filelist dir="../lib">
+			<file name="resolver/resolver.jar" />
+			<file name="saxon6/saxon.jar" />
+			<file name="xalan/xercesImpl.jar" />
+			<file name="docbook-xsl/extensions/saxon65.jar" />
+		</filelist>
+	</path>
+
+<target name="all" depends="fo, html" />
+	
+	<target name="fo" description="fo template">
+		<java classname="com.icl.saxon.StyleSheet" classpathref="xslt-classpath" fork="true" dir=".">
+			<sysproperty key="javax.xml.parsers.DocumentBuilderFactory" value="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl" />
+			<sysproperty key="javax.xml.parsers.SAXParserFactory" value="org.apache.xerces.jaxp.SAXParserFactoryImpl" />
+			<sysproperty key="org.apache.xerces.xni.parser.XMLParserConfiguration" value="org.apache.xerces.parsers.XIncludeParserConfiguration" />
+			<arg value="-x" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-y" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-r" />
+			<arg value="org.apache.xml.resolver.tools.CatalogResolver" />
+			<arg value="-o" />
+			<arg value="fo_titlepage.xsl" />
+			<arg value="fo_titlepage.templates.xml"/>
+			<arg value="../lib/docbook-xsl-ns/template/titlepage.xsl" />
+		</java>
+	</target>
+
+	<target name="html" description="Generate HTML template">
+		<java classname="com.icl.saxon.StyleSheet" classpathref="xslt-classpath" fork="true" dir=".">
+			<sysproperty key="javax.xml.parsers.DocumentBuilderFactory" value="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl" />
+			<sysproperty key="javax.xml.parsers.SAXParserFactory" value="org.apache.xerces.jaxp.SAXParserFactoryImpl" />
+			<sysproperty key="org.apache.xerces.xni.parser.XMLParserConfiguration" value="org.apache.xerces.parsers.XIncludeParserConfiguration" />
+			<arg value="-x" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-y" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-r" />
+			<arg value="org.apache.xml.resolver.tools.CatalogResolver" />
+			<arg value="-o" />
+			<arg value="html_titlepage.xsl" />
+			<arg value="html_titlepage.templates.xml"/>
+			<arg value="../lib/docbook-xsl-ns/template/titlepage.xsl" />
+		</java>
+	</target>
+</project>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="libSettings">
+
+  <!-- Determines the location of the library sitemaps relative to the content -->
+    <property name="HTMLSITEMAP" value="../site.xml" />
+    <property name="PDFSITEMAP" value="../sitepdf.xml" />
+
+  <!-- This is the common file that contains all of the calls to the XSLT 
+    processor -->
+  <import file="../custom/xslt_build.xml"/>
+</project>

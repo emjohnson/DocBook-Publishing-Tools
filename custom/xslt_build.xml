@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="xsltSettings">
+	
+	<path id="xslt-classpath">
+		<pathelement path="../template/catalog" />
+	  <filelist dir="../template/lib">
+			<file name="resolver/resolver.jar" />
+			<file name="saxon6/saxon.jar" />
+			<file name="xalan/xercesImpl.jar" />
+			<file name="docbook-xsl-ns/extensions/saxon65.jar" />
+		</filelist>
+	</path>
+
+  <path id="fop-classpath">
+      <fileset dir="../template/lib/fop-0.95/lib">
+        <include name="*.jar"/>
+      </fileset>
+      <fileset dir="../template/lib/fop-0.95/build">
+        <include name="fop.jar"/>
+        <include name="fop-hyph.jar" />
+      </fileset>
+  </path>
+
+	<!-- Define standard tasks (for use with <antcall>) -->
+	<target name="docbook.cond" description="Process conditional text">
+		<java classname="com.icl.saxon.StyleSheet" classpathref="xslt-classpath" fork="true" dir="." maxmemory="512M">
+			<sysproperty key="javax.xml.parsers.DocumentBuilderFactory" value="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl" />
+			<sysproperty key="javax.xml.parsers.SAXParserFactory" value="org.apache.xerces.jaxp.SAXParserFactoryImpl" />
+			<sysproperty key="org.apache.xerces.xni.parser.XMLParserConfiguration" value="org.apache.xerces.parsers.XIncludeParserConfiguration" />
+			<arg value="-x" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-y" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-r" />
+			<arg value="org.apache.xml.resolver.tools.CatalogResolver" />
+			<arg value="-o" />
+			<arg value="${docbook.prfl}" />
+			<arg value="${docbook.in}" />
+		  <arg value="../template/lib/docbook-xsl-ns/profiling/profile.xsl" />
+			<arg value="profile.condition=${docbook.condition}" />
+		</java>
+	</target>
+
+	<target name="docbook.db" description="Builds the olink databases">
+		<java classname="com.icl.saxon.StyleSheet" classpathref="xslt-classpath" fork="true" dir="." maxmemory="512M">
+			<sysproperty key="javax.xml.parsers.DocumentBuilderFactory" value="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl" />
+			<sysproperty key="javax.xml.parsers.SAXParserFactory" value="org.apache.xerces.jaxp.SAXParserFactoryImpl" />
+			<sysproperty key="org.apache.xerces.xni.parser.XMLParserConfiguration" value="org.apache.xerces.parsers.XIncludeParserConfiguration" />
+			<arg value="-x" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-y" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-r" />
+			<arg value="org.apache.xml.resolver.tools.CatalogResolver" />
+			<arg value="${docbook.in}" />
+		  <arg value="../template/custom/olinks_html_collect_targets.xsl" />
+			<arg value="target.database.document=${HTMLSITEMAP}" />
+		</java>
+		<java classname="com.icl.saxon.StyleSheet" classpathref="xslt-classpath" fork="true" dir="." maxmemory="512M">
+			<sysproperty key="javax.xml.parsers.DocumentBuilderFactory" value="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl" />
+			<sysproperty key="javax.xml.parsers.SAXParserFactory" value="org.apache.xerces.jaxp.SAXParserFactoryImpl" />
+			<sysproperty key="org.apache.xerces.xni.parser.XMLParserConfiguration" value="org.apache.xerces.parsers.XIncludeParserConfiguration" />
+			<arg value="-x" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-y" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-r" />
+			<arg value="org.apache.xml.resolver.tools.CatalogResolver" />
+			<arg value="${docbook.in}" />
+		  <arg value="../template/custom/olinks_pdf_collect_targets.xsl" />
+			<arg value="target.database.document=${PDFSITEMAP}" />
+		</java>
+	</target>
+
+	<target name="docbook.html" description="Builds the html for the book">
+		<copy todir="output/imagesdb">
+		  <fileset dir="../template/custom/imagesdb" />
+		</copy>
+		<copy todir="output/images" failonerror="false">
+			<fileset dir="images" />
+		</copy>
+		<java classname="com.icl.saxon.StyleSheet" classpathref="xslt-classpath" fork="true" dir="." maxmemory="512M">
+			<sysproperty key="javax.xml.parsers.DocumentBuilderFactory" value="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl" />
+			<sysproperty key="javax.xml.parsers.SAXParserFactory" value="org.apache.xerces.jaxp.SAXParserFactoryImpl" />
+			<sysproperty key="org.apache.xerces.xni.parser.XMLParserConfiguration" value="org.apache.xerces.parsers.XIncludeParserConfiguration" />
+			<arg value="-x" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-y" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-r" />
+			<arg value="org.apache.xml.resolver.tools.CatalogResolver" />
+			<arg value="${docbook.in}" />
+		  <arg value="../template/custom/xhtml.xsl" />
+			<arg value="target.database.document=${HTMLSITEMAP}" />
+			<arg value="current.docid=${docbook.docid}" />
+		</java>
+		<move todir="output">
+			<fileset dir=".">
+				<include name="*.html" />
+			</fileset>
+		</move>
+	</target>
+
+	<target name="docbook.pdf" description="Builds the PDF version of the book">
+		<copy todir="output/imagesdb">
+		  <fileset dir="../template/custom/imagesdb" />
+		</copy>
+		<copy todir="output/images" failonerror="false">
+			<fileset dir="images" />
+		</copy>
+		<java classname="com.icl.saxon.StyleSheet" classpathref="xslt-classpath" dir="." fork="true" maxmemory="512M">
+			<sysproperty key="javax.xml.parsers.DocumentBuilderFactory" value="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl" />
+			<sysproperty key="javax.xml.parsers.SAXParserFactory" value="org.apache.xerces.jaxp.SAXParserFactoryImpl" />
+			<sysproperty key="org.apache.xerces.xni.parser.XMLParserConfiguration" value="org.apache.xerces.parsers.XIncludeParserConfiguration" />
+			<arg value="-x" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-y" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-r" />
+			<arg value="org.apache.xml.resolver.tools.CatalogResolver" />
+			<arg value="-o" />
+			<arg value="output/__temp.fo" />
+			<arg value="${docbook.in}" />
+		  <arg value="../template/custom/pdf.xsl" />
+			<arg value="target.database.document=${PDFSITEMAP}" />
+			<arg value="current.docid=${docbook.docid}" />
+		</java>
+	  <java classname="org.apache.fop.cli.Main" classpathref="fop-classpath" maxmemory="512M" fork="true" dir=".">
+	    <arg value="-q"/>
+	    <arg value="-fo"/>
+	    <arg value="output/__temp.fo"/>
+	    <arg value="-pdf"/>
+	    <arg value="output/${docbook.pdf}"/>
+	  </java>
+		<delete file="output/__temp.fo" />
+	</target>
+
+	<target name="docbook.eclipse" depends="" description="Builds an Eclipse help plugin">
+		<java classname="com.icl.saxon.StyleSheet" classpathref="xslt-classpath" fork="true" dir="." maxmemory="512M">
+			<sysproperty key="javax.xml.parsers.DocumentBuilderFactory" value="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl" />
+			<sysproperty key="javax.xml.parsers.SAXParserFactory" value="org.apache.xerces.jaxp.SAXParserFactoryImpl" />
+			<sysproperty key="org.apache.xerces.xni.parser.XMLParserConfiguration" value="org.apache.xerces.parsers.XIncludeParserConfiguration" />
+			<arg value="-x" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-y" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-r" />
+			<arg value="org.apache.xml.resolver.tools.CatalogResolver" />
+			<arg value="${docbook.in}" />
+		  <arg value="../template/custom/eclipse.xsl" />
+			<arg value="eclipse.plugin.name=${pluginName}" />
+			<arg value="eclipse.plugin.id=${pluginId}" />
+			<arg value="target.database.document=${HTMLSITEMAP}" />
+			<arg value="current.docid=${docbook.docid}" />
+		</java>
+		<copy todir="${pluginId}/images" failonerror="false">
+			<fileset dir="images" />
+		</copy>
+	  <copy file="../template/custom/iona_eclipse_book.css" todir="${pluginId}" />
+		<move todir="${pluginId}">
+			<fileset dir=".">
+				<include name="*.html" />
+				<include name="plugin.xml" />
+				<include name="toc.xml" />
+			</fileset>
+		</move>
+	</target>
+
+  <target name="docbook.epub" description="Builds Epub output">
+    <java classname="com.icl.saxon.StyleSheet" classpathref="xslt-classpath" fork="true" dir="." maxmemory="512M">
+      <sysproperty key="javax.xml.parsers.DocumentBuilderFactory" value="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl" />
+      <sysproperty key="javax.xml.parsers.SAXParserFactory" value="org.apache.xerces.jaxp.SAXParserFactoryImpl" />
+      <sysproperty key="org.apache.xerces.xni.parser.XMLParserConfiguration" value="org.apache.xerces.parsers.XIncludeParserConfiguration" />
+      <arg value="-x" />
+      <arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+      <arg value="-y" />
+      <arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+      <arg value="-r" />
+      <arg value="org.apache.xml.resolver.tools.CatalogResolver" />
+      <arg value="${docbook.in}" />
+      <arg value="../template/custom/epub.xsl" />
+      <arg value="target.database.document=${HTMLSITEMAP}" />
+      <arg value="current.docid=${docbook.docid}" />
+    </java>
+    <copy todir="OEBPS/imagesdb">
+      <fileset dir="../template/custom/imagesdb" />
+    </copy>
+    <copy todir="OEBPS/images" failonerror="false">
+      <fileset dir="images" />
+    </copy>
+    <delete file="output/${docbook.epub}" failonerror="false" />
+    <echo file="mimetype">application/epub+zip</echo>
+    <zip destfile="output/${docbook.epub}" whenempty="skip">
+      <fileset dir="." includes="mimetype" />
+      <zipfileset dir="OEBPS" prefix="OEBPS" />
+      <zipfileset dir="META-INF" prefix="META-INF" />
+    </zip>
+    <delete failonerror="false" includeemptydirs="true">
+      <fileset dir="." includes="mimetype"/>
+      <fileset dir="OEBPS" />
+      <fileset dir="META-INF" />
+    </delete>
+  </target>
+</project>

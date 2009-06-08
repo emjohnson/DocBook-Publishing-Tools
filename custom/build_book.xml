@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MRGettingStarted" default="all" basedir=".">
+	<property environment="env" />
+
+	<!-- Choose one of the following common build files to import:
+             build_forge_common.xml  (FUSE Forge)
+    -->
+<import file="${env.DBCK_HOME}/lib/build_fuse_ns_common.xml"/>
+
+	<!-- Edit the following properties for your book: -->
+	<property name="ROOT" value="getting_started" />
+	<property name="DOCID" value="FuseMRStarted" />
+	<property name="LOGO" value="fmr" />
+
+	<!-- Notes:
+     ROOT - Root file name of your XML book file. For example,
+       if your main DocBook file is 'getting_started.xml', set
+       ROOT equal to 'getting_started'.
+
+     DOCID - Value of the 'id' attribute in the <book> tag.
+
+     LOGO  - See the logo_*.gif files under custom/imagesdb.
+       At the time of writing, could be one of:
+       artix, fesb, fmb, fmr, fsf, fuse, iona
+    -->
+
+	<!-- Edit the following properties if you are building Eclipse help: -->
+	<property name="pluginId" value="com.iona.fuse.mb.gs"/>
+	<property name="pluginName" value="Getting Started with FUSE Message Broker" />
+
+	<!-- DO NOT MODIFY ANYTHING BELOW THIS LINE -->
+	<target name="all" depends="db,html,pdf" description="Builds everything" />
+	<target name="content" depends="html,pdf" description="Builds just the content" />
+
+	<target name="db" description="Builds the olink databases">
+		<antcall target="docbook.db">
+			<param name="docbook.in" value="${ROOT}.xml" />
+		</antcall>
+	</target>
+
+	<target name="html" description="Builds the html for the book">
+		<antcall target="docbook.html">
+			<param name="docbook.in" value="${ROOT}.xml" />
+			<param name="docbook.docid" value="${DOCID}" />
+			<param name="docbook.logo" value="${LOGO}" />
+		</antcall>
+	</target>
+
+	<target name="pdf" description="Builds the PDF version of the book">
+		<antcall target="docbook.pdf">
+			<param name="docbook.in" value="${ROOT}.xml" />
+			<param name="docbook.docid" value="${DOCID}" />
+			<param name="docbook.pdf" value="${ROOT}.pdf" />
+		</antcall>
+	</target>
+
+	<target name="eclipse" description="Builds an Eclipse Help plugin">
+		<antcall target="docbook.eclipse">
+			<param name="docbook.in" value="${ROOT}.xml" />
+			<param name="docbook.docid" value="${DOCID}" />
+		</antcall>
+	</target>
+</project>

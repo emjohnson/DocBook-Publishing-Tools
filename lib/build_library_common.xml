@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="librarySettings">
+
+	<path id="xslt-classpath">
+		<pathelement path="${env.DBCK_HOME}/catalog" />
+		<filelist dir="${env.DBCK_HOME}/lib">
+			<file name="resolver/resolver.jar" />
+			<file name="saxon6/saxon.jar" />
+			<file name="xalan/xercesImpl.jar" />
+			<file name="docbook-xsl/extensions/saxon65.jar" />
+		</filelist>
+	</path>
+
+	<target name="docbook.buildindex" description="Builds the index for a library">
+		<copy todir="output/images">
+			<fileset dir="$../templates/lib/index_support" />
+		</copy>
+		<java classname="com.icl.saxon.StyleSheet" classpathref="xslt-classpath" fork="true" dir="." maxmemory="512M">
+			<sysproperty key="javax.xml.parsers.DocumentBuilderFactory" value="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl" />
+			<sysproperty key="javax.xml.parsers.SAXParserFactory" value="org.apache.xerces.jaxp.SAXParserFactoryImpl" />
+			<sysproperty key="org.apache.xerces.xni.parser.XMLParserConfiguration" value="org.apache.xerces.parsers.XIncludeParserConfiguration" />
+			<arg value="-x" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-y" />
+			<arg value="org.apache.xml.resolver.tools.ResolvingXMLReader" />
+			<arg value="-r" />
+			<arg value="org.apache.xml.resolver.tools.CatalogResolver" />
+			<arg value="-o" />
+			<arg value="output/index.html" />
+			<arg value="${indexKey}" />
+			<arg value="${env.DBCK_HOME}/lib/build_index.xsl" />
+		</java>		
+	</target>
+</project>

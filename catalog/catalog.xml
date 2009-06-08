@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+
+  <group prefer="public" xml:base="../lib/">
+  <!-- Local-system redirections for several flavors of DocBook DOCTYPEs -->
+  <public publicId="-//OASIS//DTD DocBook XML V4.4//EN" 
+      uri="http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"/>
+  <rewriteSystem systemIdStartString="http://www.oasis-open.org/docbook/xml/4.4/" 
+      rewritePrefix="docbook44/"/>
+
+  <public publicId="-//OASIS//DTD DocBook XML V4.5//EN" 
+      uri="http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"/>
+  <rewriteSystem systemIdStartString="http://www.oasis-open.org/docbook/xml/4.5/" 
+      rewritePrefix="docbook45/"/>
+
+ <public publicId="-//OASIS//DTD DocBook XML V5.0//EN" 
+      uri="http://www.oasis-open.org/docbook/xml/5.0/docbook.dtd"/>
+  <rewriteSystem systemIdStartString="http://www.oasis-open.org/docbook/xml/5.0/" 
+  rewritePrefix="docbook50/dtd/"/>
+
+<!-- Local-System redirct for the mod used by DB5 books to suck in the standard entities -->
+  <public publicId="-//OASIS//ENTITIES DocBook Character Entities V4.5//EN" 
+      uri="docbook45/dbcentx.mod"/>
+
+      <!-- URI alias for the standard DocBook URI -->
+  <rewriteURI uriStartString="http://docbook.sourceforge.net/release/xsl/current/" 
+      rewritePrefix="docbook-xsl/"/>
+  </group>
+
+  <!-- URI aliases for the major DocBook driver stylesheets -->
+  <group xml:base="../lib/docbook-xsl/">
+  <!-- Resolve the local copy of the Site Map DTD -->
+   <rewriteSystem systemIdStartString="http://docbook.sourceforge.net/release/xsl/current/common/" 
+  rewritePrefix="common/"/>
+    
+    <uri name="html-docbook.xsl" 
+      uri="html/docbook.xsl"/>
+  <uri name="html-chunk.xsl" 
+      uri="html/chunk.xsl"/>
+  <uri name="html-onechunk.xsl" 
+      uri="html/onechunk.xsl"/>
+  <uri name="xhtml-docbook.xsl" 
+      uri="xhtml/docbook.xsl"/>
+  <uri name="xhtml-chunk.xsl" 
+      uri="xhtml/chunk.xsl"/>
+  <uri name="xhtml-onechunk.xsl" 
+      uri="xhtml/onechunk.xsl"/>
+  <uri name="fo-docbook.xsl" 
+      uri="fo/docbook.xsl"/>
+  <uri name="htmlhelp.xsl" 
+      uri="htmlhelp/htmlhelp.xsl"/>
+  </group>
+
+  <!-- Iona customization layers. Call these and they each call the appropiate 
+       DocBook driver as listed above. -->
+  <group xml:base="../custom/">
+
+<!-- Mod for validating xinclude in validating editors  -->
+<system systemId="xinclude.mod"
+    uri="xinclude.mod" />
+<systemSuffix systemIdSuffix="xinclude.mod" 
+      uri="xinclude.mod"/>
+
+<!-- Stylesheets for building FUSE books -->
+  <uri name="fuse-xhtml-chunk-chapter.xsl" 
+      uri="fuse-xhtml-chunk-chapter.xsl"/>
+  <uri name="fuse-xhtml-chunk-section.xsl" 
+      uri="fuse-xhtml-chunk-section.xsl"/>
+  <uri name="fuse-xhtml-article.xsl" 
+      uri="fuse-xhtml-article.xsl"/>
+	  
+<!-- Stylesheets for building Artix books -->
+   <uri name="iona-xhtml-chunk.xsl" 
+      uri="iona-xhtml-chunk.xsl"/>
+  <uri name="iona-xhtml-chunk-chapter.xsl" 
+      uri="iona-xhtml-chunk-chapter.xsl"/>
+  <uri name="iona-xhtml-chunk-section.xsl" 
+      uri="iona-xhtml-chunk-section.xsl"/>
+  <uri name="iona-xhtml-part.xsl" 
+      uri="iona-xhtml-part.xsl"/>
+  <uri name="iona-xhtml-single.xsl" 
+      uri="iona-xhtml-single.xsl"/>
+  <uri name="iona-xhtml-article.xsl" 
+      uri="iona-xhtml-article.xsl"/>
+  <uri name="iona-pdf-fop.xsl" 
+      uri="iona-pdf-fop.xsl"/>
+  <uri name="iona-pdf-xep.xsl" 
+      uri="iona-pdf-xep.xsl"/>
+  <uri name="iona-frameset.xsl" 
+      uri="iona-frameset.xsl"/>
+  <uri name="iona_olinks_collect_targets.xsl" 
+      uri="iona_olinks_collect_targets.xsl"/>
+  <uri name="iona_olinks_collect_targets_article.xsl" 
+      uri="iona_olinks_collect_targets_article.xsl"/>
+  <uri name="iona_olinks_collect_targets_chapter.xsl" 
+      uri="iona_olinks_collect_targets.xsl"/>
+  <uri name="iona_olinks_collect_targets_section.xsl" 
+      uri="iona_olinks_collect_targets.xsl"/>
+  <uri name="iona_olinks_pdf_collect_targets.xsl" 
+      uri="iona_olinks_pdf_collect_targets.xsl"/>
+	  <uri name="xep-docbook.xsl" 
+      uri="xep-docbook.xsl"/>
+	  
+  </group>
+
+</catalog>

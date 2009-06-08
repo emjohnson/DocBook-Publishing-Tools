@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="MRGettingStarted" default="all" basedir=".">
+    <property environment="env" />
+    
+    <!-- If you want to set up your book to use a specific search scope 
+            when build as a standalone then set this variable to the
+            proper path. This only effects Artix books. -->
+<!--    <property name="SEARCH_SCOPE" value="artix/5.1/index.html" />-->    
+
+        <!-- Choose one of the following common build files to import:
+             build_artix_common.xml (Artix)
+             build_fuse_common.xml  (FUSE)
+    -->
+<import file="${env.DBCK_HOME}/lib/build_fuse_common.xml"/>
+
+    <!-- Edit the following properties for your book: -->
+    <property name="ROOT" value="getting_started" />    
+    <property name="DOCID" value="FuseMRStarted" />
+    <property name="LOGO" value="fmr" />
+    <property name="CONDITIONS" value="fuse" />
+
+    <!-- Notes:
+     ROOT - Root file name of your XML book file. For example,
+       if your main DocBook file is 'getting_started.xml', set
+       ROOT equal to 'getting_started'.
+
+     DOCID - Value of the 'id' attribute in the <book> tag.
+
+     LOGO  - See the logo_*.gif files under custom/imagesdb.
+       At the time of writing, could be one of:
+       artix, fesb, fmb, fmr, fsf, fuse, iona
+
+     CONDITIONS - If you use conditions in your book, this property
+       can be set to a semicolon-separated list of conditions to enable.
+       A blank string causes an error.  Use the non-conditional version
+       of build.xml, if you don't want to use conditional text.
+    -->
+    
+    <!-- DO NOT MODIFY ANYTHING BELOW THIS LINE -->
+    <target name="all" depends="db,html,pdf" description="Builds everything" />
+    <target name="content" depends="html,pdf" description="Builds just the content" />
+    
+    <target name="cond" description="Process conditional text">
+        <antcall target="docbook.cond">
+            <param name="docbook.in" value="${ROOT}.xml" />
+            <param name="docbook.prfl" value="${ROOT}.prfl" />
+            <param name="docbook.condition" value="${CONDITIONS}" />
+        </antcall>
+    </target>
+
+    <target name="db" depends="cond"
+	    description="Builds the olink databases">
+        <antcall target="docbook.db">
+            <param name="docbook.in" value="${ROOT}.prfl" />
+        </antcall>
+    </target>
+  
+    <target name="html" depends="cond"
+	    description="Builds the html for the book">
+        <antcall target="docbook.html">
+            <param name="docbook.in" value="${ROOT}.prfl" />
+            <param name="docbook.docid" value="${DOCID}" />
+            <param name="docbook.logo" value="${LOGO}" />
+        </antcall>
+    </target>
+    
+    <target name="pdf" depends="cond"
+	    description="Builds the PDF version of the book">
+        <antcall target="docbook.pdf">
+            <param name="docbook.in" value="${ROOT}.prfl" />
+            <param name="docbook.docid" value="${DOCID}" />
+            <param name="docbook.pdf" value="${ROOT}.pdf" />
+        </antcall>
+  </target>
+</project>

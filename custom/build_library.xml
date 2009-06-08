@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This build file is the root for building FUSE books. -->
+<!-- Customize the project name here. -->
+<project name="Library" default="publish">
+
+    <!-- DO NOT MODIFY ANYTHING BELOW THIS LINE -->
+    <target name="publish" depends="clean">
+        <move todir="output">
+            <fileset dir="."  includes="*/output/*" />
+            <fileset dir="."  includes="*/output/images/*" />
+            <fileset dir="."  includes="*/output/imagesdb/*" />
+            <regexpmapper from="^(.*)/output/(.*)$$" to="\1/\2" handledirsep="yes" />
+        </move>
+        <delete includeemptydirs="true">
+            <fileset dir="." includes="*/output/" />
+        </delete>
+        <zip basedir="output" destfile="output/docs.zip" whenempty="skip" />
+    </target>
+    
+    <target name="build">
+        <subant target="db">
+            <fileset dir="." includes="*/build.xml"/>
+        </subant>
+        <subant target="content">
+            <fileset dir="." includes="*/build.xml"/>
+        </subant>
+    </target>
+    
+    <target name="clean">
+        <delete dir="output" failonerror="false" />
+    </target>
+</project>

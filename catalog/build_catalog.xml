@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+<xmlcatalog id="ionaCatalog">
+        <!-- Local-system redirections for several flavors of DocBook DOCTYPEs -->
+        <dtd publicid="-//OASIS//DTD DocBook XML V4.4//EN" location="${env.DBCK_HOME}/lib/docbook44/docbookx.dtd"/>
+        <dtd publicid="-//OASIS//DTD DocBook XML V4.5//EN" location="${env.DBCK_HOME}/lib/docbook45/docbookx.dtd"/>
+
+    <!-- Local system redirects for the DocBook Stylesheets -->
+        <entity publicid="xhtml-docbook.xsl" location="${env.DBCK_HOME}/lib/docbook-xsl/xhtml/docbook.xsl"/>
+        <entity publicid="xhtml-chunk.xsl" location="${env.DBCK_HOME}/lib/docbook-xsl/xhtml/chunk.xsl"/>
+        <entity publicid="xhtml-onechunk.xsl" location="${env.DBCK_HOME}/lib/docbook-xsl/xhtml/onechunk.xsl"/>
+        <entity publicid="fo-docbook.xsl" location="${env.DBCK_HOME}/lib/docbook-xsl/fo/docbook.xsl"/>
+
+    <!-- Stylesheets for building FUSE books -->
+            <entity publicid="fuse-xhtml-chunk-chapter.xsl" location="${env.DBCK_HOME}/custom/fuse-xhtml-chunk.xsl"/>
+            <entity publicid="fuse-xhtml-chunk-section.xsl" location="${env.DBCK_HOME}/custom/fuse-xhtml-article.xsl"/>
+            
+            <!-- Stylesheets for building Artix books -->
+            <entity publicid="iona-xhtml-chunk.xsl" location="${env.DBCK_HOME}/cusotm/iona-xhtml-chunk.xsl"/>
+            <entity publicid="iona-xhtml-part.xsl" location="${env.DBCK_HOME}/custom/iona-xhtml-part.xsl"/>
+            <entity publicid="iona-xhtml-single.xsl" location="${env.DBCK_HOME}/custom/iona-xhtml-single.xsl"/>
+            <entity publicid="iona-xhtml-article.xsl" location="${env.DBCK_HOME}/cusotm/iona-xhtml-article.xsl"/>
+            <entity publicid="iona-pdf-xep.xsl" location="${env.DBCK_HOME}/custom/iona-pdf-xep.xsl"/>
+            <entity publicid="iona-frameset.xsl" location="${env.DBCK_HOME}/custom/iona-frameset.xsl"/>
+            <entity publicid="iona_olinks_collect_targets.xsl" location="${env.DBCK_HOME}/custom/iona_olinks_collect_targets.xsl"/>
+            <entity publicid="iona_olinks_collect_targets_article.xsl" location="${env.DBCK_HOME}/custom/iona_olinks_collect_targets_article.xsl"/>
+            <entity publicid="iona_olinks_pdf_collect_targets.xsl" location="${env.DBCK_HOME}/custom/iona_olinks_pdf_collect_targets.xsl"/>
+            <entity publicid="xep-docbook.xsl" location="${env.DBCK_HOME}/custom/xep-docbook.xsl"/>
+</xmlcatalog>
+</project>
