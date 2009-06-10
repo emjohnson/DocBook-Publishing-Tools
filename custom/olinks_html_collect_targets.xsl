@@ -7,7 +7,7 @@
   exclude-result-prefixes="d"
 version="1.0">
 
-  <xsl:import href="../lib/docbook-xsl-ns/xhtml/chunk.xsl"/>
+  <xsl:import href="../lib/docbook-xsl-ns/html/chunk.xsl"/>
  
   <!--Create separate legal notice page"-->
   <xsl:param name="generate.legalnotice.link" select="1"/>
@@ -35,6 +35,9 @@ version="1.0">
     section   toc,title
     set       toc,title  </xsl:param>
   <xsl:param name="generate.section.toc.level" select="2"/>
+
+  <!-- Generate valid XHTML -->
+  <xsl:param name="make.valid.html" select="1" />
   
   <xsl:param name="collect.xref.targets" select="'only'" />
   <xsl:param name="targets.filename" select="'./target.db'" />
