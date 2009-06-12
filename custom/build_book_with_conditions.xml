@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="MRGettingStarted" default="all" basedir=".">
-    <property environment="env" />
+<project name="BookName" default="all" basedir=".">
+    <!-- This build file can be used to build a DocBook XML book that uses 
+      conditional text (profiling) to exclude content. It should be placed in 
+      the same folder as the book file. You need to modify the properties to 
+      fit your book. -->
     
-    <!-- If you want to set up your book to use a specific search scope 
-            when build as a standalone then set this variable to the
-            proper path. This only effects Artix books. -->
-<!--    <property name="SEARCH_SCOPE" value="artix/5.1/index.html" />-->    
-
-        <!-- Choose one of the following common build files to import:
-             build_artix_common.xml (Artix)
-             build_fuse_common.xml  (FUSE)
-    -->
-<import file="${env.DBCK_HOME}/lib/build_fuse_common.xml"/>
-
+    <!-- Imports the targets that call the XSLT and FO processors -->
+    <import file="../template/custom/xslt_build.xml"/>
+    
     <!-- Edit the following properties for your book: -->
     <property name="ROOT" value="getting_started" />    
     <property name="DOCID" value="FuseMRStarted" />

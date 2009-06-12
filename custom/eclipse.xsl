@@ -1,8 +1,9 @@
 <?xml version='1.0'?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-          xmlns:d="http://docbook.org/ns/docbook"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:d="http://docbook.org/ns/docbook"
   exclude-result-prefixes="d"
-version="1.0">
+  version="1.0">
+  <!-- Customization XSLT script for generating Eclipse Help. -->
 
         <!--Import the standard eclipse.xsl stylesheet-->
         <xsl:import href="../lib/docbook-xsl-ns/eclipse/eclipse.xsl"/>
@@ -58,7 +59,6 @@ version="1.0">
         <xsl:param name="menuchoice.menu.separator"> &gt; </xsl:param>
         
        <!--Do not include plugin name, ID, and provider in plugin.xml. These go in the manifest.mf-->
-        
         <xsl:template name="plugin.xml">
 	  <xsl:call-template name="write.chunk">
 	    <xsl:with-param name="filename">

@@ -5,11 +5,14 @@
   xmlns="http://www.w3.org/1999/xhtml"
   exclude-result-prefixes="d"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
-<xsl:import href="../lib/docbook-xsl-ns/epub/docbook.xsl"/>
+  <!-- Customization sheet for generating EPub content. -->
+  
+  <!-- Import the base XSLT script. -->
+  <xsl:import href="../lib/docbook-xsl-ns/epub/docbook.xsl"/>
 
   <xsl:import href="html_titlepage.xsl" /> 
   
+  <!-- Set up how HTML is chunked. -->
   <xsl:param name="chunk.tocs.and.lots" select="1" />
   <xsl:param name="chunk.separate.lots" select="1" />
   <xsl:param name="chunk.tocs.and.lots.has.title" select="1" />

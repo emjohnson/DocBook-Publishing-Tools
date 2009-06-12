@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="titlePage" default="all">
-
+  <!-- Build file for processing the DocBook XML title page templates for 
+  the customization layer. It can be used in this folder. -->
+  
+  <!-- Sets up the XSLT processor's Classpath -->
 	<path id="xslt-classpath">
 		<pathelement path="../catalog" />
 		<filelist dir="../lib">
@@ -12,8 +15,9 @@
 	</path>
 
 <target name="all" depends="fo, html" />
-	
-	<target name="fo" description="fo template">
+  
+  <!-- Processes the title page template for PDF output. -->
+  <target name="fo" description="fo template">
 		<java classname="com.icl.saxon.StyleSheet" classpathref="xslt-classpath" fork="true" dir=".">
 			<sysproperty key="javax.xml.parsers.DocumentBuilderFactory" value="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl" />
 			<sysproperty key="javax.xml.parsers.SAXParserFactory" value="org.apache.xerces.jaxp.SAXParserFactoryImpl" />
@@ -29,9 +33,10 @@
 			<arg value="fo_titlepage.templates.xml"/>
 			<arg value="../lib/docbook-xsl-ns/template/titlepage.xsl" />
 		</java>
-	</target>
-
-	<target name="html" description="Generate HTML template">
+  </target>
+  
+  <!-- Processes the title page template for HTML, EPub, and Eclipse Help output. -->
+  	<target name="html" description="Generate HTML template">
 		<java classname="com.icl.saxon.StyleSheet" classpathref="xslt-classpath" fork="true" dir=".">
 			<sysproperty key="javax.xml.parsers.DocumentBuilderFactory" value="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl" />
 			<sysproperty key="javax.xml.parsers.SAXParserFactory" value="org.apache.xerces.jaxp.SAXParserFactoryImpl" />

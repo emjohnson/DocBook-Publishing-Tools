@@ -4,21 +4,30 @@
     xmlns:d="http://docbook.org/ns/docbook"
   exclude-result-prefixes="d"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <!-- Customization style sheet for PDF output. -->
 
-<xsl:import href="../lib/docbook-xsl-ns/fo/docbook.xsl"/>
+  <!-- Imports the base DocBook style sheet. -->
+  <xsl:import href="../lib/docbook-xsl-ns/fo/docbook.xsl"/>
 
-<xsl:import href="fo_olinks_use.xsl"/>
+  <!-- Sets up the olink target database. -->
+  <xsl:import href="fo_olinks_use.xsl"/>
 
-<xsl:import href="fo_callouts_use.xsl"/>
+  <!-- Customizes how the code callouts are generated. -->
+  <xsl:import href="fo_callouts_use.xsl"/>
   
-<xsl:import href="fo_guitext.xsl" />
+  <!-- Makes content marked using the gui elements bold face. -->
+  <xsl:import href="fo_guitext.xsl" />
   
   <xsl:import href="fo_titlepage.xsl" />
   
+  <!-- Adds the headers and footers to the pages. -->
   <xsl:import href="fo_header.xsl" />
 
+  <!-- Activates the proper XSLT extensions for the FOP FO processor. -->
   <xsl:param name="fop1.extensions" select="1"></xsl:param>
   
+  <!-- Specifies that the publication system should prefer imageobject 
+    elements that  use role="fo" when generating PDF. -->
   <xsl:param name="use.role.for.mediaobject" select="1" />
   <xsl:param name="preferred.mediaobject.role" select="fo" />
   

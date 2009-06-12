@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="xsltSettings">
-	
+  <!-- This file does all of the dirty work needed to call the XSLT and FO 
+  processors. The individual book files import this file and use antcall to execute 
+  the targets in this file. -->
+  <!-- Java calls are used instead of the Ant xslt target so that xinclude support can be 
+  added to Saxon directly. There are a number of Ant targets that can be added that 
+  process xinclude as a separate step. I found using Saxon directly was faster. -->
+  <!-- The FO processor is called using Java so that the heap size can be set higher. 
+  Using the FOP (or XEP) Ant task does not set the Java heap high enough to process 
+  a book that is more than 100 pages. -->
+
+  <!-- Determines the location of the library sitemaps relative to the content -->
+  <property name="HTMLSITEMAP" value="../site.xml" />
+  <property name="PDFSITEMAP" value="../sitepdf.xml" />	
+
+  <!-- Sets up the Classpath for the XSLT processor -->
 	<path id="xslt-classpath">
 		<pathelement path="../template/catalog" />
 	  <filelist dir="../template/lib">
@@ -11,6 +25,7 @@
 		</filelist>
 	</path>
 
+  <!-- Sets up the Classpath for the FO processor -->
   <path id="fop-classpath">
       <fileset dir="../template/lib/fop-0.95/lib">
         <include name="*.jar"/>
@@ -182,6 +197,7 @@
       <arg value="target.database.document=${HTMLSITEMAP}" />
       <arg value="current.docid=${docbook.docid}" />
     </java>
+    <!-- Packages the EPub file from the generated content. -->
     <copy todir="OEBPS/imagesdb">
       <fileset dir="../template/custom/imagesdb" />
     </copy>

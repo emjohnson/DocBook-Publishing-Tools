@@ -6,7 +6,12 @@
     xmlns:d="http://docbook.org/ns/docbook"
   exclude-result-prefixes="d"
 version="1.0">
+  <!-- Style sheet used to collect the olink targets for HTML-based output.
+  This style sheet should be nearly the same as the style sheet for generating 
+  the HTML output. If it is different the targets may not map properly. The most
+  import sections include setting up the chunking. -->
 
+  <!-- Imports the base DocBook style sheet for HTML. -->
   <xsl:import href="../lib/docbook-xsl-ns/html/chunk.xsl"/>
  
   <!--Create separate legal notice page"-->

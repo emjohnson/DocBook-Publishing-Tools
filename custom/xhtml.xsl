@@ -6,13 +6,18 @@
   xmlns:d="http://docbook.org/ns/docbook"
   exclude-result-prefixes="d"
   version="1.0">
+  <!-- Customization for generating HTML output. -->
 
+  <!-- Imports the base DocBook XSLT style sheet. -->
   <xsl:import href="../lib/docbook-xsl-ns/xhtml/chunk.xsl"/>
  
+ <!-- Sets up the target database for using olinks. -->
  <xsl:import href="html_olinks_use.xsl"/>
   
+  <!-- Customizes olinks to generate links that open in a new window. -->
   <xsl:import href="html_olinks.xsl"/>
   
+  <!-- Customizes the navigation header and footer added to HTML pages. -->
   <xsl:import href="html_navigation.xsl"/>
   
   <xsl:import href="html_titlepage.xsl" />
@@ -68,6 +73,7 @@
   <xsl:param name="navig.graphics.extension" select="'.png'" />
   <xsl:param name="navig.showtitles" select="0" />
   
+  <!-- Needed to make Saxon generate proper XHTML -->
   <xsl:output method="saxon:xhtml" />  
   
 </xsl:stylesheet>

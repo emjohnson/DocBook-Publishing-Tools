@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="MRGettingStarted" default="all" basedir=".">
-	<property environment="env" />
-
-	<!-- Choose one of the following common build files to import:
-             build_forge_common.xml  (FUSE Forge)
-    -->
-<import file="${env.DBCK_HOME}/lib/build_fuse_ns_common.xml"/>
+<project name="BookName" default="all" basedir=".">
+  <!-- This build file can be used to build a standard DocBook XML book. It 
+  should be placed in the same folder as the book file. You need to modify 
+  the properties to fit your book. -->
+  
+  <!-- Imports the targets that call the XSLT and FO processors -->
+  <import file="../template/custom/xslt_build.xml"/>
 
 	<!-- Edit the following properties for your book: -->
 	<property name="ROOT" value="getting_started" />
