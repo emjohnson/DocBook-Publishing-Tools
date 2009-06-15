@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<targetset>
+  <targetsetinfo>
+    Site map for the PDF version of the FUSE Foo doc set
+  </targetsetinfo>
+  <document targetdoc="IGFuseFoo"
+    baseuri="http://fusesource.com/docs/install_fuse_foo/install_fuse_foo.pdf">
+    <xi:include href="install_guide/targetpdf.db" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  </document>
+  <document targetdoc="GSFuseFoo"
+    baseuri="http://fusesource.com/docs/getting_started/getting_started.pdf">
+    <xi:include href="getting_started/targetpdf.db" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  </document>
+</targetset>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE section [
+<!ENTITY % vars SYSTEM "../common/vars.xml">
+%vars;]>
+<section xmlns="http://docbook.org/ns/docbook"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xl="http://www.w3.org/1999/xlink"
+  version="5.0"
+  xml:id="projectlinks">
+  <title>Open Source Project Resources</title>
+  <simplesect>
+    <title>&cxf;</title>
+    <para><emphasis role="bold">Web site:</emphasis> <link xl:href="http://cxf.apache.org/"/></para>
+    <para><emphasis role="bold">User's list:</emphasis> <email>users@cxf.apache.org</email></para>
+  </simplesect>
+  <simplesect>
+    <title>Apache Tomcat</title>
+    <para><emphasis role="bold">Web site:</emphasis> <link xl:href="http://tomcat.apache.org/"/></para>
+    <para><emphasis role="bold">User's list:</emphasis> <email>users@tomcat.apache.org</email></para>
+  </simplesect>
+  <simplesect>
+    <title>&amq;</title>
+    <para><emphasis role="bold">Web site:</emphasis> <link xl:href="http://activemq.apache.org/" /></para>
+    <para><emphasis role="bold">User's list:</emphasis> <email>users@activemq.apache.org</email></para>
+  </simplesect>
+  <simplesect>
+    <title>&camel;</title>
+    <para><emphasis role="bold">Web site:</emphasis> <link xl:href="http://camel.apache.org"/></para>
+    <para><emphasis role="bold">User's list:</emphasis> <email>users@camel.apache.org</email></para>
+  </simplesect>
+  <simplesect>
+    <title>&servicemix;</title>
+    <para><emphasis role="bold">Web site:</emphasis> <link xl:href="http://servicemix.apache.org"/></para>
+    <para><emphasis role="bold">User's list:</emphasis> <email>users@servicemix.apache.org</email></para>
+  </simplesect>
+</section>

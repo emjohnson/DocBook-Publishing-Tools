@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE section [
+<!ENTITY % vars SYSTEM "../common/vars.xml">
+%vars;]>
+<section xmlns="http://docbook.org/ns/docbook"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  xmlns:xl="http://www.w3.org/1999/xlink"
+  version="5.0"
+  xml:id="fusepreqs">
+  <title>Required Reading</title>
+  <simplesect>
+    <title>Overview</title>
+    <para>The books in this library assumes that the reader is familiar with a number of key technologies including:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Apache Maven</para>
+      </listitem>
+      <listitem>
+        <para>The Spring Framework</para>
+      </listitem>
+      <listitem>
+        <para>Ant</para>
+      </listitem>
+    </itemizedlist>
+  </simplesect>
+  <simplesect>
+    <title>Apache Maven</title>
+    <para>Apache Maven is a plug-in based build system. The &prodnameshort; products have extensive Maven tooling to that assists in 
+    developing solutions. It is used extensively throughout the documentation.</para>
+    <para>To get more information on using Maven see the following:</para>
+    <itemizedlist>
+      <listitem>
+        <para><link xl:href="http://www.sonatype.com/products/maven/documentation/book-defguide"><emphasis>Maven: The Definitive 
+          Guide</emphasis></link></para>
+      </listitem>
+      <listitem>
+        <para><link xl:href="http://www.sonatype.com/books/m2eclipse-book/reference"><emphasis>Developing with Eclipse and 
+          Maven</emphasis></link></para>
+      </listitem>
+      <listitem>
+        <para><link xl:href="http://maven.apache.org/index.html">The Maven Website</link></para>
+      </listitem>
+    </itemizedlist>
+  </simplesect>
+  <simplesect>
+    <title>The Spring Framework</title>
+    <para>The Spring Framework is an open source Java platform that aims to simplify developing complex Java applications. The 
+    &prodnameshort; products use the Spring Framework for several purposes.</para>
+    <para>For more information see the <link xl:href="http://static.springframework.org/spring/docs/2.0.x/reference/">Spring Framework 
+    Reference</link>.</para>
+  </simplesect>
+  <simplesect>
+    <title>Ant</title>
+    <para>Apache Ant is a popular Java build tool. It is used to build a number of the samples provided with the &prodnameshort; 
+    products. The &prodnameshort; products also include Ant-based development tools.</para>
+    <para>For more information about using Ant see the <emphasis xl:href="http://ant.apache.org/manual/index.html">Apache 
+      Ant User Manual</emphasis>.</para>
+  </simplesect>
+</section>

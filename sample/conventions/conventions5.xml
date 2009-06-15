@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<section xmlns="http://docbook.org/ns/docbook"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  version="5.0" xml:id="PrefaceConventions">
+  <title>Document Conventions</title>
+  <simplesect>
+  <title>Typographical conventions</title>
+  <para>This book uses the following typographical conventions:</para>
+  <table pgwide="1">
+    <title>Typographical Conventions</title>
+    <tgroup cols="2">
+      <tbody>
+        <row>
+          <entry>
+            <literal>fixed width</literal>
+          </entry>
+          <entry>
+            <para>Fixed width (Courier font) in normal text represents portions of code and literal names of items such as classes, functions, variables, and data structures. For example, text might refer to the <classname>javax.xml.ws.Endpoint</classname> class.</para>
+            <para>Constant width paragraphs represent code examples or information a system displays on the screen. For example:</para>
+            <programlisting>import java.util.logging.Logger;</programlisting>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <replaceable>Fixed width italic</replaceable>
+          </entry>
+          <entry>
+            <para>Fixed width italic words or characters in code and commands represent variable values you must supply, such as arguments to commands or path names for your particular system. For example:</para>
+            <screen><prompt>%</prompt> cd /users/<replaceable>YourUserName</replaceable></screen>
+          </entry>
+        </row>
+        <row>
+          <entry>
+            <emphasis>Italic</emphasis>
+          </entry>
+          <entry>Italic words in normal text represent <emphasis>emphasis</emphasis> and introduce <firstterm>new terms</firstterm>.</entry>
+        </row>
+        <row>
+          <entry>
+            <emphasis role="bold">Bold</emphasis>
+          </entry>
+          <entry>Bold words in normal text represent graphical user interface components such as menu commands and dialog boxes. For example: the <emphasis role="bold">User Preferences</emphasis> dialog.</entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </table>
+  </simplesect>
+  <simplesect>
+  <title>Keying conventions</title>
+  <para>This book uses the following keying conventions:</para>
+  <table pgwide="1">
+    <title>Keying Conventions</title>
+    <tgroup cols="2">
+      <tbody>
+        <row>
+          <entry>No prompt</entry>
+          <entry>When a command’s format is the same for multiple platforms, the command prompt is not shown.</entry>
+        </row>
+        <row>
+          <entry>
+            <prompt>%</prompt>
+          </entry>
+          <entry>A percent sign represents the UNIX command shell prompt for a command that does not require root privileges.</entry>
+        </row>
+        <row>
+          <entry>
+            <prompt>#</prompt>
+          </entry>
+          <entry>A number sign represents the UNIX command shell prompt for a command that requires root privileges.</entry>
+        </row>
+        <row>
+          <entry>
+            <prompt>&gt;</prompt>
+          </entry>
+          <entry>The notation <prompt>&gt;</prompt> represents the MS-DOS or Windows command prompt.</entry>
+        </row>
+        <row>
+          <entry>
+            <literal>...</literal>
+          </entry>
+          <entry>Horizontal or vertical ellipses in format and syntax descriptions indicate that material has been eliminated to simplify a discussion.</entry>
+        </row>
+        <row>
+          <entry>
+            <literal>[ ]</literal>
+          </entry>
+          <entry>Brackets enclose optional items in format and syntax descriptions.</entry>
+        </row>
+        <row>
+          <entry>
+            <literal>{ }</literal>
+          </entry>
+          <entry>Braces enclose a list from which you must choose an item in format and syntax descriptions.</entry>
+        </row>
+        <row>
+          <entry>
+            <literal>|</literal>
+          </entry>
+          <entry>In format and syntax descriptions, a vertical bar separates items in a list of choices enclosed in <literal>{}</literal> (braces).</entry>
+        </row>
+      </tbody>
+    </tgroup>
+  </table>
+  </simplesect>
+  <simplesect>
+<title>Admonition conventions</title>
+  <para>This book uses the following conventions for admonitions:</para>
+  <table pgwide="1">
+    <title>Admonitions</title>
+    <tgroup cols="2">
+      <colspec colwidth="40px" align="center"/>
+    <tbody>
+      <row>
+        <entry><inlinemediaobject><imageobject><imagedata fileref="./imagesdb/note.gif" width="25px"/></imageobject>
+          <textobject><phrase>Note icon</phrase></textobject></inlinemediaobject></entry>
+        <entry>Notes display information that may be useful, but not critical.</entry>
+      </row>
+      <row>
+        <entry><inlinemediaobject><imageobject><imagedata fileref="imagesdb/tip.gif" width="25px"/></imageobject>
+          <textobject><phrase>Tip icon</phrase></textobject></inlinemediaobject></entry>
+        <entry>Tips provide hints about completing a task or using a tool. They may also provide information about workarounds to possible problems.</entry>
+      </row>
+      <row>
+        <entry><inlinemediaobject><imageobject><imagedata fileref="imagesdb/important.gif" width="25px"/></imageobject>
+          <textobject><phrase>Important icon</phrase></textobject></inlinemediaobject></entry>
+        <entry>Important notes display information that is critical to the task at hand.</entry>
+      </row>
+      <row>
+        <entry><inlinemediaobject><imageobject><imagedata fileref="imagesdb/caution.gif" width="25px"/></imageobject>
+          <textobject><phrase>Caution icon</phrase></textobject></inlinemediaobject></entry>
+        <entry>Cautions display information about likely errors that can be encountered. These errors are unlikely to cause damage to your data or your systems.</entry>
+      </row>
+      <row>
+        <entry><inlinemediaobject><imageobject><imagedata fileref="imagesdb/warning.gif" width="25px"/></imageobject>
+          <textobject><phrase>Warning icon</phrase></textobject></inlinemediaobject></entry>
+        <entry>Warnings display information about errors that may cause damage to your systems. Possible damage from these errors include system failures and loss of data.</entry>
+      </row>
+    </tbody>
+  </tgroup>
+  </table>
+  </simplesect>
+</section>

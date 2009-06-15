@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE keywordset [
+<!ENTITY % vars SYSTEM "../common/vars.xml">
+%vars;]>
+<keywordset xmlns="http://docbook.org/ns/docbook" 
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+        version="5.0">
+ <keyword>&prodname;</keyword>
+ <keyword>&service_eng;</keyword>
+ <keyword>SOA</keyword>
+ <keyword>service-oriented architecture</keyword>
+ <keyword>Open Source</keyword>
+ <keyword>open source</keyword>
+ <keyword>Service-Oriented Architecture</keyword>
+ <keyword>FUSE</keyword>
+</keywordset>

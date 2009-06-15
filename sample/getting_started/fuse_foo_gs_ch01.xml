@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE chapter [
+<!ENTITY % vars SYSTEM "../common/vars.xml">
+%vars;
+]>
+<chapter xmlns="http://docbook.org/ns/docbook" 
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+          xmlns:xl="http://www.w3.org/1999/xlink"
+        version="5.0"
+        xml:id="GSFuseFooCh01">
+  <title>Chapter 1's Title</title>
+  <info>
+    <abstract>
+      <para>Abstract's para.</para>
+    </abstract>
+    <keywordset>
+      <keyword>&hq; requirements</keyword>
+      <keyword>&hq; system requirements</keyword>
+    </keywordset>
+  </info>
+  <section xml:id="GSFuseFooCh01Sect01">
+    <title>Section 1's Title</title>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+  </section>
+  <section xml:id="GSFuseFooCh01Sect02">
+    <title>Section 2's Title</title>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+  </section>
+  <section xml:id="GSFuseFooCh01Sect03">
+    <title>Section 3's Title</title>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+  </section>
+  <section xml:id="GSFuseFooCh01Sect04">
+    <title>Section 4's Title</title>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+    <simplesect>
+      <title>Simplesect's title</title>
+      <para>Simplesect's para.</para>
+    </simplesect>
+  </section>
+</chapter>

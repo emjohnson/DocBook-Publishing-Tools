@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Adds Standard Entities for Docbook 5 -->
+<!ENTITY % sgml.features "IGNORE">
+<!ENTITY % xml.features "INCLUDE">
+<!ENTITY % dbcent PUBLIC "-//OASIS//ENTITIES DocBook Character Entities V4.5//EN"
+   "dbcentx.mod">
+%dbcent;
+
+<!ENTITY prodnameshort "FUSE">
+<!ENTITY version "0.0.0.0">
+<!ENTITY reldate "July 2008">
+<!ENTITY foo "FUSE Foo">
+
+<!-- Apache Products that FUSE are based on -->
+<!ENTITY cxf "Apache CXF">
+<!ENTITY servicemix "Apache ServiceMix">
+<!ENTITY amq "Apache ActiveMQ">
+<!ENTITY camel "Apache Camel">
+<!ENTITY stp "Eclipse SOA Tools Platform">
+<!ENTITY felix "Apache Felix">
+<!ENTITY kernel "Apache ServiceMix Kernel">
+<!ENTITY kernel_esb "FUSE ESB Kernel">

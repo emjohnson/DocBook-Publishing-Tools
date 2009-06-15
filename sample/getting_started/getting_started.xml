@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE book [
+<!ENTITY % vars SYSTEM "../common/vars.xml">
+%vars;]>
+<book xmlns="http://docbook.org/ns/docbook" 
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+          xmlns:xl="http://www.w3.org/1999/xlink"
+        version="5.0"
+        xml:id="GSFuseFoo">
+  <title>Getting Started With &footm;</title>
+  <info>
+    <xi:include href="../common/keywords.xml"/>
+    <mediaobject>
+      <imageobject role="html">
+        <imagedata valign="middle" fileref="./imagesdb/iona_spacer.gif"/>
+      </imageobject>
+    </mediaobject>
+    <productname>&footm;</productname>
+    <releaseinfo>Version &version;</releaseinfo>
+    <date>&reldate;</date>
+    <xi:include href="../conventions/legalblurb5.xml"/>
+    <xi:include href="../conventions/copydate5.xml"/>
+    <pubdate><?dbtimestamp format="d b Y"?></pubdate>
+    <orgname>Progress Software</orgname>
+  </info>
+  <xi:include href="fuse_foo_gs_ch01.xml"/>
+  <xi:include href="fuse_foo_gs_ch02.xml"/>
+  <xi:include href="fuse_foo_gs_ch03.xml"/>
+  <xi:include href="fuse_foo_gs_ch04.xml"/>
+  </book>

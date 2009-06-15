@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE legalnotice [
+<!ENTITY % vars SYSTEM "../common/vars.xml">
+%vars;]>
+<legalnotice xmlns="http://docbook.org/ns/docbook"
+  xmlns:xi="http://www.w3.org/2001/XInclude"
+  version="5.0"
+  xml:id="tmdisclaim">
+<title>Legal Notices</title>
+  <para>Progress Software Corporation and/or its subsidiaries may have patents, patent
+applications, trademarks, copyrights, or other intellectual property rights covering
+subject matter in this publication. Except as expressly provided in any written license
+agreement from Progress Software Corporation, the furnishing of this publication does
+not give you any license to these patents, trademarks, copyrights, or other intellectual
+property. Any rights not expressly granted herein are reserved.</para>
+  <para>Progress, IONA, IONA Technologies, the IONA logo, Orbix, High Performance 
+Integration, Artix;, FUSE, and Making Software Work Together are trademarks or 
+registered trademarks of Progress Software Corporation and/or its subsidiaries in the 
+US and other countries.</para>
+  <para>Java and J2EE are trademarks or registered trademarks of Sun 
+Microsystems, Inc. in the United States and other countries. CORBA is a 
+trademark or registered trademark of the Object Management Group, Inc. in the 
+US and other countries. All other trademarks that appear herein are 
+the property of their respective owners.</para>
+    <para>While the information in this publication is believed to be accurate Progress Software Corporation makes no
+warranty of any kind to this material including, but not limited to, the implied warranties of merchantability and
+fitness for a particular purpose. Progress Software Corporation shall not be liable for errors contained herein, or
+for incidental or consequential damages in connection with the furnishing, performance or use of this material.</para>
+    <para>All products or services mentioned in this manual are covered by the trademarks, service marks, or product
+      names as designated by the companies who market those products.</para>
+  <para>No part of this publication may be reproduced, stored in a retrieval system or transmitted, in any form or by any means, photocopying, 
+    recording or otherwise, without prior written consent of Progress Software Corporation. No third-party intellectual property right liability is 
+    assumed with respect to the use of the information contained herein. Progress Software Corporation assumes no responsibility for errors or 
+    omissions contained in this publication. This publication and features described herein are subject to change without notice. Portions of this 
+    document may include Apache Foundation documentation, all rights reserved.</para>
+</legalnotice>

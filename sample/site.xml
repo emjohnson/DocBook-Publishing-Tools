@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<targetset>
+  <targetsetinfo>
+    <title>Foo Library</title>
+    <desc>Site map for the FUSE Foo HTML doc set</desc>
+  </targetsetinfo>
+  <sitemap>
+    <dir name="foo">
+      <dir name="getting_started">
+        <document targetdoc="GSFuseFoo">
+          <xi:include href="getting_started/target.db" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        </document>
+      </dir>
+      <dir name="install_guide">
+        <document targetdoc="IGFuseFoo">
+          <xi:include href="install_guide/target.db" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        </document>
+      </dir>
+    </dir>
+  </sitemap>
+</targetset>
