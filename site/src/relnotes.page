@@ -1,0 +1,13 @@
+---
+title: Release Notes
+in_menu: true
+--- name:overview
+
+# Release Notes
+
+FUSE Doc Press RC1
+
+--- name:content
+
+This release is based off of the 1.75.1 version of the namespace aware DocBook XSL style sheets. Release notes can be found [here](http://sourceforge.net/project/shownotes.php?group_id=21935&release_id=685608).
+

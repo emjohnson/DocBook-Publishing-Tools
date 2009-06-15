@@ -1,0 +1,31 @@
+--- name:paths
+#
+# You can define metainfo for mutliple pages in this file.
+#
+
+**/*.page: # <-- That means the following attributes get applied to all pages
+     # in the site.
+
+  # -------------------------------------------------------------------
+  # You can easily switch the site from one look to another here:
+  # -------------------------------------------------------------------
+  #template: /styles/default/default.template
+  template: /styles/impact/main.template
+  
+  # -------------------------------------------------------------------
+  # Define the project properties here, these can be accessed in the 
+  # pages using the {var:} syntax.
+  # -------------------------------------------------------------------
+  project_name: "Forge Documentation Press"
+  project_slogan: 'DocBook XML publishing made easy'
+  project_id: 'fusedp'
+  project_jira_key: 'FORGEDP'
+  project_svn_url: 'http://fusesource.com/forge/svn/forgedp/trunk'
+  project_svn_branches_url: 'http://fusesource.com/forge/svn/forgedp/branches'
+  project_issue_url: 'http://fusesource.com/issues/browse/FORGEDP'
+  project_mailing_list_url: 'http://fusesource.com/forge/projects/FORGEDP/mailing-lists'
+  project_docs_url: 'http://forgedp.fusesource.org/docs'
+
+blog/*/**/*:
+  template: /styles/impact/blog.template
+  output_path_style: [:parent, :year, /, :month, /, :cnbase, [., :lang], :ext]

@@ -1,0 +1,27 @@
+---
+title: Source
+in_menu: true
+sort_info: 3
+--- name:overview
+
+# Source
+Get the {project_name:} source code
+
+--- name:content 
+
+The {project_name:} project stores its source code in a [Subversion](http://subversion.tigris.org/)
+ repository at: 
+
+  [{project_svn_url:}]({project_svn_url:})
+  
+We use the trunk for the next main release; then we use a branch for any bug fixes on the previous major release. You can look at a specific branch here:
+
+  [{project_svn_branches_url:}]({project_svn_branches_url:})
+  
+
+
+## Checking Out
+
+Check out the {project_name:} source using the following command:
+
+`svn co {project_svn_url:} {project_id:}`

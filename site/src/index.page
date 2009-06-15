@@ -1,0 +1,64 @@
+---
+title: Home
+in_menu: true
+sort_info: 1
+--- name:overview pipeline:haml,tags
+
+%h1 {project_name:}
+
+{project_slogan:}
+
+--- name:spot 
+<div class='title'>
+  &nbsp;
+</div>
+<div class='content'>
+  <table><tr>
+    <td>
+	    <h2>Get Started</h2>
+	    <br />  
+	    <a href='{relocatable: /download.html}'>
+  	    <img src='{relocatable: /images/download.png}' />
+  	    <br />
+  	    <br />
+  	    Grab a release
+	    </a>
+    </td>
+    <td>
+	    <h2>Get Smart</h2>
+	    <br />
+	    <a href='{relocatable: /documentation}'>
+  	    <img src='{relocatable: /images/book.gif}'/>
+  	    <br />
+  	    <br />
+  	    View the docs
+	    </a>
+    </td>
+    <td>
+	    <h2>Get Coding</h2>
+	    <br />  
+	    <a href='{relocatable: /source.html}'>
+  	    <img src='{relocatable: /images/arrows.gif}' />
+  	    <br />
+  	    <br />
+  	    Checkout the source
+	    </a>
+    </td>
+    <td>
+    <h2>Get Involved</h2>  
+    <div class="spot-balloon">
+    <ul>
+    	<li><a href='{project_mailing_list_url:}'>Mailing List</a></li>
+    	<li><a href='{project_issue_url:}'>Issue Tracker</a></li>
+    	<li><a href='{relocatable: /license.html}'>Licensing</a></li>
+	</ul>    
+	  	    <br />
+	  	    <br />
+
+  	    </div>
+  	        
+	    
+    </td>
+  </tr></table>
+</div>
+--- name:content

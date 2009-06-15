@@ -1,0 +1,14 @@
+---
+title: Documentation
+in_menu: true
+sort_info: 3
+--- name:overview
+# Documentation
+
+All the information you need to be become a {project_name:} expert 
+
+--- name:content
+
+- [Release Notes](../relnotes.html)
+- [Frequently Asked Questions](faq.html)
+- [User Guide]({project_docs_url:}/user_guide/index.html)
