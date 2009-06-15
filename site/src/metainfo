@@ -24,7 +24,7 @@
   project_svn_branches_url: 'http://fusesource.com/forge/svn/forgedp/branches'
   project_issue_url: 'http://fusesource.com/issues/browse/FORGEDP'
   project_mailing_list_url: 'http://fusesource.com/forge/projects/FORGEDP/mailing-lists'
-  project_docs_url: 'http://forgedp.fusesource.org/docs'
+  project_docs_url: 'http://forgedp.fusesource.org/documentation'
 
 blog/*/**/*:
   template: /styles/impact/blog.template
