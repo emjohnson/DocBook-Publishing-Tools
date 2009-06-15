@@ -25,6 +25,7 @@
   project_issue_url: 'http://fusesource.com/issues/browse/FORGEDP'
   project_mailing_list_url: 'http://fusesource.com/forge/projects/FORGEDP/mailing-lists'
   project_docs_url: 'http://forgedp.fusesource.org/documentation'
+  project_download_url: 'http://forgedp.fusesource.org/downloads'
 
 blog/*/**/*:
   template: /styles/impact/blog.template
