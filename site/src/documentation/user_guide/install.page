@@ -1,0 +1,46 @@
+---
+title: Installing
+in_menu: false
+sort_info: 3
+--- name:overview
+# Installing the Tool Chain
+
+--- name:content pipeline:redcloth,tags
+
+h2. Using the ZIP file
+
+The ZIP file distribution is the easiest way to get started using {project_name:} to set up a DocBook XML project. All you need 
+to do is upack the distribution and your project is set up and ready to go. The distrobution includes the following folders:
+* @common@ - keywords and entities that are used for all books in the library
+* @conventions@ - sample legal notices and typographical conventions that are intended to be shared among all the books 
+in the library
+* @getting_started@ - a sample book
+* @install_guide@ - a sample book
+* @template@ - the DocBook XML tool chain
+** @catalog@ - the catalog file used to look up files in the tool chain
+** @custom@ - the customization layer that modifies how the content is generated
+** @lib@ - the static part of the tool chain including the XSLT processor, the FO processor, and the XSLT stylesheets
+* @site.xml@ - the olink site map for HTML content generation
+* @sitepdf.xml@ - the olink site map for PDF content generation
+
+h2. Using SVN
+
+If you use Subversion for source control you can either check out copies of the tool chain or you can use @svn:external@ 
+to import the static parts of the tool chain directly from the project's SVN repository.
+
+The static portion of the tool chain can be accessed at:
+* http://fusesource.com/forge/svn/forgedp/trunk/lib for the bulk of the tool chain
+* http://fusesource.com/forge/svn/forgedp/trunk/catalog for the catalog file used to resolve the style sheets
+
+The customization layer can be accessed at: http://fusesource.com/forge/svn/forgedp/trunk/custom[1]
+
+These three folders should be placed inside a @template@ folder that is a peer with the book folders.
+
+The @custom@ folder includes copies of the Apache Ant build files needed to build books:
+* @build_book.xml@ - build file for books that do not use profiling
+* @build_book_with_conditions.xml@ - build file for books the use profiling
+
+These files should be copied to the folders of each book and modified appropriately.
+
+fn1. The @custom@ folder should be exported and not checked out. The intended use of this folder is that you will 
+modify the templates to fit the needs of your own library.

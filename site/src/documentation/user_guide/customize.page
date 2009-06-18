@@ -1,0 +1,10 @@
+---
+title: Customizing
+in_menu: false
+sort_info: 3
+--- name:overview
+# Customizing the Generated Output
+
+--- name:content pipeline:redcloth,tags
+
+The @custom@ folder is where you will make changes to how the XML source is turned into published content.

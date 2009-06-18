@@ -1,0 +1,13 @@
+---
+title: User's Guide
+in_menu: false
+sort_info: 3
+--- name:overview
+# User's Guide
+
+Information to get a DocBook XML project up and running using {project_name:}.
+
+--- name:content pipeline:redcloth,tags
+
+# "Installing":install.html
+# "Customizing":customize.html
