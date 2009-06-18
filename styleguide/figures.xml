@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE chapter [
+<!ENTITY % vars SYSTEM "vars.xml">
+%vars;]>
+<chapter xmlns="http://docbook.org/ns/docbook"
+xmlns:xi="http://www.w3.org/2001/XInclude"
+xmlns:xl="http://www.w3.org/1999/xlink"
+version="5.0"
+xml:id="figures">
+  <title>Figures, Diagrams, Screen Shots, and In-Line Graphics</title>
+  <info>
+    <abstract>
+      <para>Graphics, such as a diagram or a screen shot of a user interface, make a document more readable. Often, they also help clarify 
+        abstract concepts.</para>
+    </abstract>
+  </info>
+  <section>
+    <title>The Basics</title>
+    <simplesect>
+      <title>General guidelines</title>
+      <para>When using graphics in a document there are a few general guidelines:</para>
+      <itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">All</emphasis> graphics must have alternative text entries.</para>
+          <para>See <xref linkend="figureAltText"/>.</para>
+        </listitem>
+        <listitem>
+          <para>Graphics for figures that appear in PDF cannot be wider than 660px (144mm).</para>
+          <tip>
+            <para>If a screen shot must be shrunk to fit into a PDF and it would look better full size in the HTML, the author can specify that the 
+            larger image is to appear in the HTML using <markup>role="html"</markup>. See <xref linkend="figureAltSizes"/>.</para>
+          </tip>
+        </listitem>
+        <listitem>
+          <para>Figures and screen shots must have titles.</para>
+        </listitem>
+        <listitem>
+          <para>Figures and screen shots should be aligned centered.</para>
+        </listitem>
+        <listitem>
+          <para>Inline graphics should not be taller that 14pt.</para>
+        </listitem>
+      </itemizedlist>
+    </simplesect>
+    <simplesect>
+      <title>Image elements</title>
+      <para>Graphics are inserted into the content using one of the following elements:</para>
+      <itemizedlist>
+        <listitem>
+          <para><tag class="element">figure</tag>&mdash;a titled graphic that is offset from the body of text</para>
+          <para>When the graphic is a screen shot the image is wrapped in a <tag class="element">screenshot</tag> element.</para>
+        </listitem>
+        <listitem>
+          <para> <tag class="element">inlinemediaobject</tag>&mdash;a graphic that occurs inline with text</para>
+        </listitem>
+      </itemizedlist>
+    </simplesect>
+    <simplesect>
+      <title>Image data</title>
+      <para>The preferred data format for images is GIF. However, images can be accepted in the following formats:</para>
+      <itemizedlist>
+        <listitem>
+          <para>JPEG</para>
+        </listitem>
+        <listitem>
+          <para>PNG</para>
+        </listitem>
+      </itemizedlist>
+      <para>Images should be placed in an <filename class="directory">images</filename> folder directly under the folder containing the 
+        document source.</para>
+  </simplesect>
+    </section>
+  <section>
+    <title>Figures and Diagrams</title>
+    <indexterm><primary>figure element</primary></indexterm>
+    <simplesect>
+      <title>Overview</title>
+      <para>Figures and diagrams are marked up using the <tag class="element">figure</tag> element. The <tag class="element">figure</tag> 
+      element is a container for the title and the data used to generate figure or diagram. The data includes both the image data representing the 
+      image and a textual description to populate the HTML <tag class="attribute">alt</tag> attribute.</para>
+    </simplesect>
+    <simplesect>
+      <title>Adding the title</title>
+      <para>The figure title is specified by a <tag class="element">title</tag> element. The <tag class="element">title</tag> element is the first 
+        child element of the<tag class="element">figure</tag> element. The contents of the <tag class="element">title</tag> element is the title 
+        used for the figure. It is also the default text used to generate cross references to the figure.</para>
+    </simplesect>
+    <simplesect>
+      <title>Adding the image</title>
+      <indexterm><primary>mediaobject element</primary></indexterm>
+      <indexterm><primary>imageobject element</primary></indexterm>
+      <indexterm><primary>imagedata element</primary></indexterm>
+      <para>The data used to generate the image is specified in a <tag class="element">mediaobject</tag> element. The 
+        <tag class="element">mediaobject</tag> element is a wrapper for all of the elements that define the generated image. This typically 
+        includes an <tag class="element">imageobject</tag> element and a <tag class="element">textobject element</tag>.</para>
+      <para>The <tag class="element">imageobject</tag> element is a wrapper element for a <tag class="element">imagedata</tag> element 
+      that specifies the name of the file containing the image.</para>
+      <para>The <tag class="element">imagedata</tag> element has no content. All of the information is specified using three attributes:</para>
+      <table xml:id="figureImageDataAttrTble">
+        <title>Attributes for the <tag class="element">imagedata</tag> Element</title>
+        <tgroup cols="2">
+          <thead>
+            <row>
+            <entry>Attribute</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>
+              <indexterm><primary>imagedata element</primary><secondary>align attribute</secondary></indexterm>
+              <tag class="attribute">align</tag>
+            </entry>
+            <entry>Specifies how the image is aligned on the page. Valid values are <tag class="attvalue">left</tag>, 
+              <tag class="attvalue">right</tag>, and <tag class="attvalue">center</tag>. The default, <tag class="attvalue">center</tag>, 
+            is appropriate most cases.</entry>
+          </row>
+          <row>
+            <entry>
+              <indexterm><primary>imagedata element</primary><secondary>fileref attribute</secondary></indexterm>
+              <tag class="attribute">fileref</tag>
+            </entry>
+            <entry>Specifies the location of the file containing the image.</entry>
+          </row>
+          <row>
+            <entry>
+              <indexterm><primary>imagedata element</primary><secondary>format attribute</secondary></indexterm>
+              <tag class="attribute">format</tag>
+            </entry>
+            <entry>Specifies the type of data used to specify the image. Valid values are <tag class="attvalue">GIF</tag>, 
+              <tag class="attvalue">JPG</tag>, and <tag class="attvalue">PNG</tag>.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+      </table>
+      <para>The <tag class="element">textobject</tag> element contains the textual description of the image used for generating the value of 
+        the HTML <tag class="attribute">alt</tag> attribute. See <xref linkend="figureAltText"/>.</para>
+    </simplesect>
+    <simplesect>
+      <title>Example</title>
+      <para><xref linkend="figure_example"/> shows the mark-up for a figure.</para>
+      <example xml:id="figure_example" pgwide="1">
+        <?dbfo pgwide="1"?>
+        <title>Mark-up for a Figure</title>
+        <programlisting>&lt;figure xml:id=&quot;fig_1&quot;&gt;
+  &lt;title&gt;CXF WAR Structure&lt;/title&gt;
+  &lt;mediaobject&gt;
+    &lt;imageobject&gt;
+      &lt;imagedata align=&quot;center&quot; 
+         fileref=&quot;./images/tomcat_war.gif&quot;
+         format=&quot;GIF&quot; /&gt;
+    &lt;/imageobject&gt;
+    &lt;textobject&gt;
+      &lt;phrase&gt;the WAR contains the application classes and their associated meta data&lt;\phrase&gt;
+    &lt;/textobject&gt;
+  &lt;/mediaobject&gt;
+&lt;/figure&gt;</programlisting>
+      </example>
+    </simplesect>
+  </section>
+  <section>
+    <title>Screen Shots</title>
+    <indexterm><primary>figure element</primary></indexterm>
+    <indexterm><primary>screenshot element</primary></indexterm>
+    <simplesect>
+      <title>Overview</title>
+      <para>Screen shots are also marked up using a <tag class="element">figure</tag> element. However, it uses one additional wrapper 
+        element. The <tag class="element">screenshot</tag> element wraps the <tag class="element">mediaobject</tag> element.</para>
+    </simplesect>
+    <simplesect>
+      <title>Example</title>
+      <para><xref linkend="screen_example"/> shows an example of the mark-up for a screen shot.</para>
+      <example xml:id="screen_example" pgwide="1">
+        <?dbfo pgwide="1"?>
+        <title>Mark-up for a Screen Shot</title>
+        <programlisting>&lt;figure xml:id=&quot;screen_1&quot;&gt;
+  &lt;title&gt;SOA Tools Welcome Screen&lt;/title&gt;
+  &lt;screenshot&gt;
+    &lt;mediaobject&gt;
+      &lt;imageobject&gt;
+        &lt;imagedata align=&quot;center&quot; 
+            fileref=&quot;./images/welcome.gif&quot;
+            format=&quot;GIF&quot; /&gt;
+      &lt;/imageobject&gt;
+      &lt;textobject&gt;
+        &lt;phrase&gt;picture of the welcome screen presented when the FUSE workbench opens&lt;/phrase&gt;
+      &lt;/textobject&gt;
+    &lt;/mediaobject&gt;
+  &lt;/screenshot&gt;
+&lt;/figure&gt;</programlisting>
+    </example>
+    </simplesect>
+  </section>
+  <section>
+    <title>In-Line Graphics</title>
+    <indexterm><primary>inlinemediaobject</primary></indexterm>
+    <simplesect>
+      <title>Overview</title>
+      <para>Graphical elements that need to be placed in-line with the text of a paragraph are marked up using the 
+        <tag class="element">inlinemediaobject</tag> element. Like the <tag class="element">mediaobject</tag> element, the 
+        <tag class="element">inlinemediaobject</tag> element wraps an <tag class="element">imageobject</tag> element and a 
+        <tag class="element">textobject</tag> element.</para>
+      <para>The <tag class="element">imageobject</tag> element contains the data for the graphic. It uses the attributes described in 
+        <xref linkend="figureImageDataAttrTble"/>.</para>
+      <para>The <tag class="element">textobject</tag> element contains the textual description of the image used for generating the value of 
+        the HTML <tag class="attribute">alt</tag> attribute. See <xref linkend="figureAltText"/>.</para>
+    </simplesect>
+    <simplesect>
+      <title>Example</title>
+      <para><xref linkend="inline_example"/> shows the mark-up for an in-line graphic.</para>
+    <example xml:id="inline_example">
+      <title>Mark-up for an In-Line Graphic</title>
+      <programlisting>&lt;inlinemediaobject&gt;
+  &lt;imageobject&gt;
+    &lt;imagedata align=&quot;center&quot; fileref=&quot;./images/larrow.gif&quot;
+               format=&quot;GIF&quot; /&gt;
+  &lt;/imageobject&gt;
+  &lt;textobject&gt;
+    &lt;phrase&gt;left pointing arrow&lt;/phrase&gt;
+  &lt;/textobject&gt;
+&lt;/inlinemediaobject&gt;</programlisting>
+    </example>
+    </simplesect>
+  </section>
+  <section xml:id="figureAltText">
+    <title>Adding Text Descriptions</title>
+    <indexterm><primary>textobject element</primary></indexterm>
+    <simplesect>
+      <title>Overview</title>
+      <para>Images on the Web should all have some form of text textual description that screen reading programs can for describing the image and 
+      to meet federal accessibility guidelines. The basic requirement is to provide text that is placed in the <tag class="attribute">alt</tag> 
+      attribute of the HTML <tag class="element">img</tag> element. It is also possible to provide long descriptions of graphics that utilize the 
+        <tag class="attribute">longdesc</tag> attribute of the the HTML <tag class="element">img</tag> element.</para>
+    </simplesect>
+    <simplesect>
+      <title>Simple alt text</title>
+      <indexterm><primary>HTML images</primary><secondary>alt text</secondary></indexterm>
+      <indexterm><primary>phrase element</primary></indexterm>
+      <para>To specify the value of the <tag class="attribute">alt</tag> attribute for an HTML you add a <tag class="element">textobject</tag> 
+        element to the <tag class="element">mediaobject</tag> element or the <tag class="element">inlinemediaobject</tag> element. The 
+        <tag class="element">textobject</tag> element has a single <tag class="element">phrase</tag> child element. The value of the 
+        <tag class="element">phrase</tag> element is used as the value of the generated <tag class="attribute">alt</tag> attribute.</para>
+      <para><xref linkend="alttext_example"/> shows the mark-up for a figure with alt text.</para>
+      <example xml:id="alttext_example">
+        <title>Mark-up for Alternative Text</title>
+        <programlisting>&lt;mediaobject&gt;
+  &lt;imageobject&gt;
+    &lt;imagedata align=&quot;center&quot; fileref=&quot;./images/config.gif&quot;
+               format=&quot;GIF&quot; /&gt;
+  &lt;/imageobject&gt;
+  <emphasis role="bold">&lt;textobject&gt;
+    &lt;phrase&gt;Configuration Hierarchy&lt;/phrase&gt;
+  &lt;/textobject&gt;</emphasis>
+&lt;/mediaobject&gt;</programlisting>
+      </example>
+    </simplesect>
+    <simplesect>
+      <title>Adding a long description</title>
+      <indexterm><primary>HTML images</primary><secondary>longdesc</secondary></indexterm>
+      <indexterm><primary>HTML images</primary><secondary>long descriptions</secondary></indexterm>
+      <para>There are instances where a short description provided in the <tag class="attribute">alt</tag> attribute is not sufficient. HTML 
+        provides a <tag class="attribute">longdesc</tag> attribute that specifies a URL that points to a long description of the image.</para>
+      <para>To create a long description, you add a <tag class="element">textobject</tag> element that does not contain a 
+        <tag class="element">phrase</tag> element. There are limitations on what markup you can use inside the 
+        <tag class="element">textobject</tag> element. No hierarchical elements like <tag class="element">chapter</tag> or 
+        <tag class="element">section</tag> are permitted. You can use block elements like <tag class="element">para</tag>, lists, admonitions, 
+        and <tag class="element">literallayout</tag>.</para>
+      <para><xref linkend="longTextEx"/> shows the mark-up for a figure with a long description.</para>
+      <example xml:id="longTextEx">
+        <title>Mark-up for a Long Description</title>
+        <programlisting>&lt;mediaobject&gt;
+  &lt;imageobject&gt;
+    &lt;imagedata align=&quot;center&quot; fileref=&quot;./images/config.gif&quot;
+               format=&quot;GIF&quot; /&gt;
+  &lt;/imageobject&gt;
+  &lt;textobject&gt;
+    &lt;phrase&gt;Configuration Hierarchy&lt;/phrase&gt;
+  &lt;/textobject&gt;
+  <emphasis role="bold">&lt;textobject xml:id="longDesc"&gt;
+    &lt;para&gt;The configuration hierarchy consists of the following elements:&lt;/para&gt;
+    &lt;itemizedlist&gt;
+      ...
+     &lt;/itemizedlist&gt;
+  &lt;/textobject&gt;</emphasis>
+&lt;/mediaobject&gt;</programlisting>
+      </example>
+      <para>The publishing system does the following when generating the HTML for the long description:</para>
+      <procedure>
+        <step>
+          <para>It creates a file named <filename>ld-<replaceable>xxxx</replaceable>.html</filename> where <replaceable>xxxx</replaceable> is 
+            some generated id.</para>
+        </step>
+        <step>
+          <para>It processes the content of the <tag class="element">textobject</tag> element and writes the output to that file.</para>
+        </step>
+        <step>
+          <para>It sets the value of the HTML <tag class="element">img</tag> element's <tag class="attribute">longdesc</tag> attribute to 
+          the URL of the HTML page generated for the long description.</para>
+        </step>
+        <step>
+          <para>It adds an HTML link below the graphic.</para>
+          <para>The mark <literal>[D]</literal> is the link text and the URL points to the HTML page generated for the long description.</para>
+        </step>
+      </procedure>
+      <para>When the reader clicks on the <literal>[D]</literal> link, another window opens showing the long description.</para>
+    </simplesect>
+  </section>
+  <section xml:id="figureAltSizes">
+    <title>Specifying Different Images for PDF and HTML</title>
+    <simplesect>
+      <title>Overview</title>
+      <para>There are a occasions where an image that is properly sized for PDF output is not appropriate for HTML output. The publication 
+      system provides a mechanism for specifying one image for use in PDF output and another for HTML output. This involves specifying 
+      two <tag class="element">imageobject</tag> elements in the containing <tag class="element">mediaobject</tag> element.</para>
+    </simplesect>
+    <simplesect>
+      <title>Specifying the image for a specific output type</title>
+      <indexterm><primary>imageobject element</primary><secondary>role attribute</secondary></indexterm>
+      <para>When a writer wants to use different images for HTML and PDF output they need to create two 
+        <tag class="element">imageobject</tag> elements for the graphic. The <tag class="element">imageobject</tag> elements' 
+        <tag class="attribute">role</tag> attribute specifies the output format for which the image is targeted. For the HTML image the 
+        <tag class="attribute">role</tag> attribute is set to <tag class="attvalue">html</tag>. For the PDF image the 
+        <tag class="attribute">role</tag> attribute is set to <tag class="attvalue">fo</tag>.</para>
+    </simplesect>
+    <simplesect>
+      <title>Example</title>
+      <para><xref linkend="altImgEx"/> shows the mark-up for a figure with a long description.</para>
+      <example xml:id="altImgEx">
+        <title>Using Different Images for PDF and HTML</title>
+        <programlisting>&lt;mediaobject&gt;
+  &lt;imageobject role="html"&gt;
+    &lt;imagedata align=&quot;center&quot; fileref=&quot;./images/configHtml.gif&quot;
+               format=&quot;GIF&quot; /&gt;
+  &lt;/imageobject&gt;
+  &lt;imageobject role="fo"&gt;
+    &lt;imagedata align=&quot;center&quot; fileref=&quot;./images/configPDF.png&quot;
+               format=&quot;PNG&quot; /&gt;
+  &lt;/imageobject&gt;
+  &lt;textobject&gt;
+    &lt;phrase&gt;Configuration Hierarchy&lt;/phrase&gt;
+  &lt;/textobject&gt;
+&lt;/mediaobject&gt;</programlisting>
+      </example>
+    </simplesect>
+  </section>
+</chapter>

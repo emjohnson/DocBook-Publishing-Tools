@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+xmlns:xi="http://www.w3.org/2001/XInclude"
+xmlns:xl="http://www.w3.org/1999/xlink"
+version="5.0"
+xml:id="overview">
+  <title>Writing XML Documents</title>
+  <info>
+    <abstract>
+      <para>The advantages of using XML as content source outweighs the draw backs. These include better interaction with source control 
+      mechanisms, smaller file sizes, and better searching tools. The biggest advantage is that it make single-sourcing much easier. One 
+      drawback is that XML source can be difficult to read. Authors can mitigate this difficulty by keeping the XML well formatted.</para>
+    </abstract>
+  </info>
+  <section>
+    <title>Why XML Based Documents?</title>
+    <simplesect>
+      <title>Overview</title>
+      <para>The easy answer is because XML is cool!! However, it does have some distinct advantages over other means of sourcing 
+        documentation:</para>
+    <itemizedlist>
+      <listitem>
+        <para>It is stored as text files.</para>
+      </listitem>
+      <listitem>
+        <para>It provides structure to a document.</para>
+      </listitem>
+      <listitem>
+        <para>It is an easy way to single source documentation.</para>
+      </listitem>
+    </itemizedlist></simplesect>
+    <simplesect>
+      <title>Text vs. Binary</title>
+      <para>Text files have a number of advantages over binary formats:</para>
+      <itemizedlist>
+        <listitem>
+          <para>They tend to take up less space.</para>
+        </listitem>
+        <listitem>
+          <para>They can be edited by a slew of freely available tools.</para>
+        </listitem>
+        <listitem>
+          <para>They can be easily diffed when being committed to a repository.</para>
+        </listitem>
+        <listitem>
+          <para>They are readable by both humans and machines.</para>
+        </listitem>
+      </itemizedlist>
+    </simplesect>
+    <simplesect>
+      <title>Structure</title>
+      <para>Writing documentation with a markup language may give writers visions of troff and LaTex. Unlike those markups, the XML tags used by DocBook describe the structure of a document. It also provides tags to help identify different types of content with in your document.</para>
+      <para>This means that it It makes no assumptions about the presentation of the content. Using a structured markup allows you to worry about creating and structuring your content without worrying about how it will be presented.</para>
+    </simplesect>
+    <simplesect>
+      <title>Single source, multiple outputs</title>
+      <para>Formatting is handled by back end processing tools. The tool chain uses a set of XSLT scripts and back-end processors to generate HTML and PDF versions of its content. There are also a number of other tools, both open source and commercial, that generate documentation from XML source. This means that all of the writers can work on a consistent framework no matter what the eventual output medium is going to be.</para>
+      <para>Using these tools, you can completely customize the look of your documentation without needing to change the documentation source. If at some point in the future you decide to update the look and feel of your documentation, you simply update the style sheets used to process the XML. The source content never needs to change.</para>
+    </simplesect>
+  </section>
+  <section>
+    <title>Formatting the XML</title>
+    <simplesect>
+      <title>Overview</title>
+      <para>Many authors choose to write in tools that provide a WYSIWYG editor and never see the underlying XML. For these authors, it does 
+        not matter how the underlying source looks. They also have very little control over how the XML source is formated. The editor will 
+      format the XML as it feels is appropriate.</para>
+      <para>On the other hand, there are authors who prefer to work with the XML source code without the WYSIWYG filter. For these authors 
+      it is important that the XML is easy to read and well formated. In fact, there will be cases when every author will find themselves looking 
+      at raw XML.</para>
+      <para>For the most part the oXygen XML editor's author mode produces readable XML source, so when using it authors do not need to 
+        concern themselves with how the source looks. Authors who use the raw XML source, however, need to make sure the source is left in a 
+        readable state.</para>
+    </simplesect>
+    <simplesect>
+      <title>Guidelines</title>
+      <para>To make the source as readable as possible there are a few general guidelines to follow when writing documentation:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Keep lines under 80 characters long so that they can be read easily.</para>
+      </listitem>
+      <listitem>
+        <para>Do not leave white space between elements.</para>
+      </listitem>
+      <listitem>
+        <para>Do not indent.</para>
+      </listitem>
+    </itemizedlist></simplesect>
+  </section>
+  <section xml:id="info">
+    <title>Other Resources</title>
+    <simplesect>
+      <title>Overview</title>
+      <para>All documentation is written using DocBook 5.0. DocBook 5.0 provides a structured, XML based grammar for writing complex technical 
+      documentation. It is also an OASIS standard. The remainder of this style guide discusses how to use DocBook.</para>
+      <para>The templates used in the FUSE documentation set is heavily influenced by Information Mapping. This style guide does not discuss 
+      information mapping directly. It assumes the author has a basic understanding of information mapping techniques.</para>
+    </simplesect>
+    <simplesect>
+      <title>DocBook References</title>
+      <para>For more general references and some help getting familiar with DocBook, see the following:</para>
+    <itemizedlist>
+      <listitem>
+        <para><link xl:href="http://DocBook.org/">DocBook.org</link></para>
+      </listitem>
+      <listitem>
+        <para><link xl:href="http://opensource.bureau-cornavin.com/crash-course/">The Crash Course to DocBook</link></para>
+      </listitem>
+      <listitem>
+        <para><link xl:href="http://nwalsh.com/docbook/">Norman Walsh's DocBook page</link></para>
+      </listitem>
+    </itemizedlist>
+    </simplesect>
+    <simplesect>
+      <title>Information mapping resources</title>
+      <para>There are a number of organizations that provide information mapping training. The following is a list of on-line resources:</para>
+      <itemizedlist>
+      <listitem>
+        <para><link xl:href="http://www.infomap.com/">Information Mapping, Inc.</link></para>
+      </listitem>
+      <listitem>
+        <para><link xl:href="http://en.wikipedia.org/wiki/Information_mapping">Wikipedia's</link> entry</para>
+      </listitem>
+      <listitem>
+        <para>San Diego State University's <link xl:href="http://coe.sdsu.edu/eet/articles/infomap/index.htm">EET</link> entry</para>
+      </listitem>
+    </itemizedlist>
+    </simplesect>
+  </section>
+</chapter>

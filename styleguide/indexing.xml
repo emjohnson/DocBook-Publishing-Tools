@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<chapter  xmlns="http://docbook.org/ns/docbook"
+xmlns:xi="http://www.w3.org/2001/XInclude"
+xmlns:xl="http://www.w3.org/1999/xlink"
+version="5.0"
+xml:id="indexing">
+  <title>Indexing and Search Metadata</title>
+  <info>
+    <abstract>
+      <para>While good content is the most important part of a book, it does little good if a reader cannot find the content they need. There 
+      are two mechanisms that help the reader locate information in book: an index and a search engine. DocBook provides mark-up 
+      for adding indexing and search metadata to content.</para>
+    </abstract>
+  </info>
+  <section>
+    <title>Adding an Index</title>
+    <simplesect>
+      <title>Overview</title>
+      <para>An index makes it easy for a reader to locate key topics in a book. The index contains a list of key topics or phrases with 
+      pointer to where the relevant content can be found in a book. It should contain entries for any topics the author thinks a reader 
+      may want to find quickly.</para>
+      <para>In DocBook creating an index requires two sets of mark-up. One set is for specifying the entries in the index. The second 
+        instructs the build system to generate the index.</para>
+    </simplesect>
+    <simplesect>
+      <title>Specifying index entries</title>
+      <indexterm><primary>indexterm element</primary></indexterm>
+      <indexterm><primary>primary element</primary></indexterm>
+      <para>Index entries are specified by adding <tag class="element">indexterm</tag> elements in the text of the book. An index entry must 
+        contain one <tag class="element">primary</tag> element. The value of the <tag class="element">primary</tag> element is the top-level 
+        entry that will appear in the generated index.</para>
+      <para>In addition, an <tag class="element">indexterm</tag> element can contain the following optional elements:</para>
+      <itemizedlist>
+        <listitem>
+          <indexterm><primary>secondary element</primary></indexterm>
+          <para>One <tag class="element">secondary</tag> element that specifies a second level entry in the generated index.</para>
+        </listitem>
+        <listitem>
+          <indexterm><primary>tertiary element</primary></indexterm>
+          <para>One <tag class="element">tertiary</tag> element that specifies a third level index entry.</para>
+        </listitem>
+        <listitem>
+          <indexterm><primary>see element</primary></indexterm>
+          <para>One <tag class="element">see</tag> element that specifies an alternate entry to which the reader is redirected.</para>
+        </listitem>
+        <listitem>
+          <indexterm><primary>seealso element</primary></indexterm>
+          <para>One <tag class="element">seealso</tag> element that specifies an additional entry with relevant information.</para>
+        </listitem>
+      </itemizedlist>
+      <para><tag class="element">indexterm</tag> elements can be placed virtually anywhere in the XML mark-up and ideally they should 
+      be placed as close to the content being indexed as possible. However, breaking up sentences with 
+        <tag class="element">indexterm</tag> elements will make the source hard to read. It is recommended that authors place 
+        <tag class="element">indexterm</tag> elements at either the beginning of the block containing the indexed content or just before 
+        the paragraph containing the content. When indexing a table entry, the <tag class="element">indexterm</tag> element should 
+      be placed before the contents of the entry.</para>
+    </simplesect>
+    <simplesect>
+      <title>Example entries</title>
+      <para><xref linkend="indexingex1"/> shows the mark-up an index entry that would generate the index entry <literal>foo</literal>.</para>
+      <example xml:id="indexingex1">
+        <title>Simple Index Entry</title>
+        <programlisting>&lt;indexterm&gt;
+  &lt;primary&gt;foo&lt;/primary&gt;
+&lt;/indexterm&gt;</programlisting>
+      </example>
+      <para><xref linkend="indexingex2"/> shows the mark-up an index entry that would generate the index entry 
+        <literal>foo, see bar</literal>.</para>
+      <example xml:id="indexingex2">
+        <title>Simple Index Entry</title>
+        <programlisting>&lt;indexterm&gt;
+  &lt;primary&gt;foo&lt;/primary&gt;
+  &lt;see&gt;bar&lt;/see&gt;
+&lt;/indexterm&gt;</programlisting>
+      </example>
+    </simplesect>
+    <simplesect>
+      <title>Specifying where the index is generated</title>
+      <indexterm><primary>index element</primary></indexterm>
+      <para>In order to get the index to auto generate, you must add an <tag class="emptytag">index</tag> element to your book file. The 
+        index will be generated in the position that corresponds to the element's location in the book file. You should place the 
+        <tag class="emptytag">index</tag> element after all other chapters and appendices.</para>
+    </simplesect>
+  </section>
+  <section xml:id="indexingSearch">
+    <title>Adding Search Metadata</title>
+    <simplesect>
+      <title>Overview</title>
+      <para>Content stored on the Web is searchable using both site specific search engines and Web search engines such as Google. 
+      While the search engines will index sites based on the page contents, it is possible to optimize a pages likelihood of 
+      being indexed by adding keywords to their metadata. It is also possible to add extra terms that the search engines will use 
+      when indexing a page.</para>
+      <note>
+        <para>This information is also added into the keywords property of generated PDF files.</para>
+      </note>
+    </simplesect>
+    <simplesect>
+      <title>Keyword mark-up</title>
+      <indexterm><primary>keywordset element</primary></indexterm>
+      <indexterm><primary>keyword element</primary></indexterm>
+      <para>Keywords are added to the <tag class="element">info</tag> elements of a book, chapter, or section. They are added as a list 
+      using the <tag class="element">keywordset</tag> element. The <tag class="element">keywordset</tag> element contains one or 
+      more <tag class="element">keyword</tag> elements. The <tag class="element">keyword</tag> elements have string values that 
+      represent the keyword to be added to the search metadata.</para>
+      <note>
+        <para>An <tag class="element">info</tag> element can have more than one keyword list, but this is not recommended. It is 
+        best to place all of the keywords for a structural block into a single keyword list.</para>
+      </note>
+    </simplesect>
+    <simplesect>
+      <title>How keywords are applied to generated content</title>
+      <para>How the keyword are turned into search metadata depends on the output format:</para>
+      <variablelist>
+        <varlistentry>
+          <term>PDF</term>
+          <listitem>
+            <para>When content is generated into a PDF, all of the keyword entries are added to the PDF's <property>keyword</property> 
+            property. The build system will strip duplicate entries from the generated PDF.</para>
+          </listitem>
+        </varlistentry>
+        <varlistentry>
+          <term>HTML</term>
+          <listitem>
+            <para>When content is generated into HTML the following procedure is used:</para>
+            <procedure>
+              <step>
+                <para>Each keyword list specified in the <tag class="element">book</tag> element generates a keyword list for every HTML 
+                page generated for the book.</para>
+              </step>
+              <step>
+                <para>Each keyword list specified in a <tag class="element">chapter</tag> element generates a keyword list for every HTML 
+                  chapter generated for the chapter.</para>
+              </step>
+              <step>
+                <para>Each keyword list specified in a <tag class="element">section</tag> element generates a keyword list for every HTML 
+                  chapter generated for the section.</para>
+              </step>
+            </procedure>
+            <para>An HTML page generated for a <tag class="element">section</tag> element can conceivably have three keyword lists 
+            in its HTML header: one for the book it is in, one for the chapter it is in, and one for itself.</para>
+          </listitem>
+        </varlistentry>
+      </variablelist>
+    </simplesect>
+    <simplesect>
+      <title>Example</title>
+      <para><xref linkend="indexingex3"/> shows the mark-up for adding search metadata to a chapter.</para>
+      <example xml:id="indexingex3">
+        <title>Keywords for a Chapter</title>
+        <programlisting>&lt;chapter&gt;
+  ...
+  &lt;info&gt;
+    ...
+    &lt;keywordlist&gt;
+      &lt;keyword&gt;Godzilla&lt;/keyword&gt;
+      &lt;keyword&gt;Mothra&lt;/keyword&gt;
+      &lt;keyword&gt;Anguirus&lt;/keyword&gt;
+      &lt;keyword&gt;Rodan&lt;/keyword&gt;
+    &lt;/keywordlist&gt;
+    ...
+  &lt;/info&gt;
+  ...
+&lt;/chapter&gt;</programlisting>
+      </example>
+      <para>The XML in <xref linkend="indexingex3"/> would result in the generation of the following HTML:</para>
+      <informalexample>
+        <programlisting>&lt;meta name="keywords" content="Godzilla, Mothra, Anguirus, Rodan"/&gt;</programlisting>
+      </informalexample>
+    </simplesect>
+  </section>
+</chapter>

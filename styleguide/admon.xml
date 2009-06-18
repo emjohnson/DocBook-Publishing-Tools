@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter xmlns="http://docbook.org/ns/docbook"
+xmlns:xi="http://www.w3.org/2001/XInclude"
+xmlns:xl="http://www.w3.org/1999/xlink"
+version="5.0"
+xml:id="admonitions">
+  <title>Admonitions</title>
+  <info>
+    <abstract>
+      <para>Admonitions when used sparingly can provide valuable information to users. DocBook XML provides a number of different 
+      admonition types that can be used to callout important information.</para>
+    </abstract>
+  </info>
+  <para>Admonitions are pieces of text that are offset from the main flow of text. They include things like warnings, notes, and tips. They should 
+  be used sparingly because they interrupt the flow of the text. However, if you think one is needed, use one.</para>
+<section xml:id="warn">
+<title>Warnings</title>
+<simplesect>
+  <title>Overview</title>
+  <para>Warnings are used to call out instances where a serious loss of data could occur. The text of the warning should make it clear what will cause the data loss and what data is at risk. For example, if using a value greater than 1 million will cause a method invocation to return garbage, use a warning to mention this.</para>
+</simplesect>
+<simplesect>
+  <title>Markup</title>
+  <para>Warnings are marked up using a <tag class="element">warning</tag> element. The <tag class="element">warning</tag> element should contain a single <tag class="element">para</tag> element that contains the text for the warning.</para>
+<para>The <tag class="element">warning</tag> element can, however, contain more than one paragraph, a code listing, or a table. These are exceptions that are to be used sparingly.</para>
+</simplesect>
+</section>
+<section xml:id="note">
+<title>Notes</title>
+<simplesect>
+  <title>Overview</title>
+  <para>Notes are used to call out information that the reader should be aware of, but is ancillary to the topic being discussed in the main flow of the text. For example, if you are discussing the mapping of a CORBA service from IDL to WSDL and want to reference the official IDL to WSDL mapping, you might put the reference in a note.</para>
+</simplesect>
+  <simplesect>
+    <title>Markup</title>
+    <para>Notes are marked up using a <tag class="element">note</tag> element. Like the <tag class="element">warning</tag> element, the
+<tag class="element">note</tag> element should contain a single
+<tag class="element">para</tag> element that contains the text for the warning. The <tag class="element">note</tag> element can also contain more than one paragraph, a code listing, or a table.</para>
+  </simplesect>
+</section>
+<section>
+<title>Footnotes</title>
+<simplesect>
+  <title>Overview</title>
+<para>In general footnotes should be avoided. If you find that a footnote is required, you can use one. However, most information that 
+  would be put in a footnote is more appropriately placed in a note. For example, if there is a related specification for a feature or some other ancillary piece of information, you might put it in a footnote.</para>
+</simplesect>
+<simplesect>
+  <title>Markup</title>
+  <para>Footnotes are marked up using the <tag class="element">footnote</tag> element. The <tag class="element">footnote</tag> element 
+    must contain a block element such as a <tag class="element">para</tag> element or a <tag class="element">table</tag> element. The 
+    contents of the footnote will be placed according to the formatting rules and a link will be inserted where the 
+    <tag class="element">footnote</tag> element was in the text.</para>
+  <para>In addition to using a footnote as a holder for text, you can also create a footnote that refers to another footnote. To do this you use 
+    the <tag class="element">footnoteref</tag> element. It takes a single attribute, <tag class="attribute">linkend</tag>, that specifies the 
+    value of the referenced footnote's <tag class="attribute">xml:id</tag> attribute . The generated link will point back to the referenced 
+    footnote.</para>
+</simplesect>
+</section>
+<section>
+<title>Others</title>
+<para>In addition to the above admonition types, DocBook has elements for three other types:</para>
+<itemizedlist>
+<listitem>
+<para><link linkend="caution">cautions</link></para>
+</listitem>
+<listitem>
+<para><link linkend="important">important notes</link></para>
+</listitem>
+<listitem>
+<para><link linkend="tip">tips</link></para>
+</listitem>
+</itemizedlist>
+<section xml:id="caution">
+<title>Cautions</title>
+<simplesect>
+  <title>Overview</title>
+  <para>Cautions are intended for use when a <link linkend="warn">warning</link> is too strong. For example, a caution may be used when an action will potentially cause a service to return an exception, but not crash or result in any loss of critical data. In general, it is best to use a <link linkend="warn">warning</link>.</para>
+</simplesect>
+<simplesect>
+  <title>Markup</title>
+  <para>Cautions are marked up using the <tag class="element">caution</tag> element. As with warnings elements, the <tag class="element">caution</tag> element should contain only a
+single <tag class="element">para</tag> element.</para>
+</simplesect>
+</section>
+<section xml:id="important">
+<title>Important Notes</title>
+<simplesect>
+  <title>Overview</title>
+<para>Important notes are used to point out information that is important for
+the user to know, but that may not be obvious. For example, if you change a
+value in a context and the new value overrides a transport setting for the
+service. Or if the new value persists for all future uses of the
+context.</para>
+</simplesect>
+<simplesect>
+  <title>Markup</title>
+  <para>Important notes are marked up using the <tag class="element">important</tag> element. The <tag class="element">important</tag> element should contain only a single <tag class="element">para</tag> element. However, it is allowable to use other block elements in an important note.</para>
+</simplesect>
+</section>
+<section xml:id="tip">
+<title>Tips</title>
+<simplesect>
+  <title>Overview</title>
+<para>Tips are bits of information that may help a user be more productive, but that are not critical to using the product. In general, this type of information should either be worked directly into the text or placed in a <link linkend="note">note</link>.</para>
+</simplesect>
+<simplesect>
+  <title>Markup</title>
+  <para>Tips are marked up using the <tag class="element">tip</tag> element. The <tag class="element">tip</tag> element should contain only a single <tag class="element">para</tag> element. However, it is allowable to use other block elements in a tip.</para>
+</simplesect></section>
+</section>
+</chapter>
