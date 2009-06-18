@@ -23,6 +23,9 @@
   <!-- Customizes the navigation header and footer added to HTML pages. -->
   <xsl:import href="html_navigation.xsl"/>
   
+  <!--Adds a user defined navigation header to the generated pages. -->
+  <xsl:import href="html_header.xsl"/>
+  
   <!-- Imports the title page customization. -->
   <xsl:import href="html_titlepage.xsl" />
   

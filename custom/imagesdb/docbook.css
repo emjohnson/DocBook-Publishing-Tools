@@ -369,3 +369,34 @@ dt {
 	margin-top:1ex;
 	margin-bottom:0.5ex;
 }
+
+#forgeheader {
+    width: 100%;
+    font-family: Arial,Verdana,Helvetica,sans-serif;
+    background: #0D4D82;
+    text-align:center;
+    padding: 8px;
+    color: white;
+    font-size: 10pt;
+    font-weight: bold;
+    top: 0px;
+    margin-bottom: 20px;
+    left: 0px;
+    position:fixed;
+}
+#forgeheader a {
+    color: white;
+}
+#forgeheader a:hover {
+    text-decoration: underline;
+}
+#forgeheader ul {
+    display: block;
+    margin:0;
+    padding:0;
+}
+#forgeheader li {
+    list-style-type: none;
+    display: inline;
+    margin:0 5px 0 5px;
+}
