@@ -14,6 +14,12 @@ version="1.0">
   <!-- Imports the base DocBook style sheet for HTML. -->
   <xsl:import href="../lib/docbook-xsl-ns/html/chunk.xsl"/>
  
+  <!-- Sets up the target database for using olinks. -->
+  <xsl:import href="html_olinks_use.xsl"/>
+  
+  <!-- Customizes xref generation to look cleaner. -->
+  <xsl:import href="html_xrefs.xsl"/>
+  
   <!--Create separate legal notice page"-->
   <xsl:param name="generate.legalnotice.link" select="1"/>
   
