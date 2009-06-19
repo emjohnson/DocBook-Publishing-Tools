@@ -16,7 +16,7 @@
           <li><a href="http://forgedp.fusesource.org/download.html">Download</a></li>
           <li><a href="http://forgedp.fusesource.org/source.html">Source</a></li>
           <li><a href="http://forgedp.fusesource.org/license.html">Licensing</a></li>
-          <li><a href="http://depot.fusesource.org/documentation/index.html">Documentation</a></li>
+          <li><a href="http://forgedp.fusesource.org/documentation/index.html">Documentation</a></li>
         </ul>
       </div>
     </div>

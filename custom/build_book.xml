@@ -8,9 +8,8 @@
   <import file="../template/custom/xslt_build.xml"/>
 
 	<!-- Edit the following properties for your book: -->
-	<property name="ROOT" value="getting_started" />
-	<property name="DOCID" value="FuseMRStarted" />
-	<property name="LOGO" value="fmr" />
+	<property name="ROOT" value="book" />
+	<property name="DOCID" value="BookID" />
 
 	<!-- Notes:
      ROOT - Root file name of your XML book file. For example,
@@ -18,11 +17,7 @@
        ROOT equal to 'getting_started'.
 
      DOCID - Value of the 'id' attribute in the <book> tag.
-
-     LOGO  - See the logo_*.gif files under custom/imagesdb.
-       At the time of writing, could be one of:
-       artix, fesb, fmb, fmr, fsf, fuse, iona
-    -->
+     -->
 
 	<!-- Edit the following properties if you are building Eclipse help: -->
 	<property name="pluginId" value="com.iona.fuse.mb.gs"/>

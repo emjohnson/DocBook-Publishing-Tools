@@ -29,8 +29,13 @@
   <!-- Imports the title page customization. -->
   <xsl:import href="html_titlepage.xsl" />
   
-  <!-- Makes sure the XHTML is properly encoded. -->
-  <xsl:param name="chunker.output.encoding" select="'UTF-8'" />
+  <!-- Adds a line needed by IE to figure out the proper encoding -->
+  <xsl:template name="user.head.content">
+    <meta  content="text/html;  charset=UTF-8"  http-equiv="Content-Type" />
+  </xsl:template>
+  
+  <!-- Activates the use of processor extensions -->
+  <xsl:param name="use.extensions" select="1"></xsl:param>
   
   <!-- Specifies the name of the output directory into which the chunks are 
     written .-->

@@ -8,11 +8,6 @@ xmlns:xl="http://www.w3.org/1999/xlink"
 version="5.0">
   <title>DocBook XML Mark-up Guide</title>
   <info>
-    <mediaobject>
-      <imageobject>
-        <imagedata valign="top" align="right" fileref="./imagesdb/cover_logo.gif"/>
-      </imageobject>
-    </mediaobject>
     <pubdate><?dbtimestamp format="d b Y"?></pubdate>
   </info>
   <xi:include href="overview.xml"/>
