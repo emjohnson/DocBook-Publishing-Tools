@@ -22,6 +22,5 @@ version="5.0">
   <xi:include href="indexing.xml" />
   <xi:include href="conditional.xml"/>
   <xi:include href="general.xml"/>
-  <xi:include href="exclude.xml"/>
   <index/>
 </book>
