@@ -323,7 +323,6 @@ dt {
     margin-top:1ex;
     margin-bottom:0.5ex;
 }
-/* Styles for the navigation header */
 #forgeheader {
     width: 100%;
     background: #0D4D82;
@@ -331,11 +330,12 @@ dt {
     color: white;
     text-align:center;
     padding: 8px;
-    font-size: 9pt;
+    font-size: 10pt;
     font-weight: bold;
     top: 0px;
     margin-bottom: 20px;
     left: 0px;
+    position:fixed;
 }
 
 #forgeheader a {
