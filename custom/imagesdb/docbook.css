@@ -75,7 +75,7 @@ div.abstract p {
     padding-bottom: 0;
     padding-top: 0;
 }
-div.book, div.section, div.chapter, div.glossary {
+div.book, div.section, div.chapter, div.glossary, div.appendix {
     width: 762px;
     margin: 0 auto;
 }
