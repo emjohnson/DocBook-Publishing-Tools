@@ -5,7 +5,7 @@
 version="1.0">
 
 <!-- ********************************************************************
-     $Id: htmltbl.xsl 8310 2009-03-11 08:29:45Z bobstayton $
+     $Id: htmltbl.xsl 8477 2009-07-13 11:38:55Z nwalsh $
      ********************************************************************
 
      This file is part of the XSL DocBook Stylesheet distribution.
@@ -72,7 +72,6 @@ version="1.0">
                    | @char
                    | @charoff
                    | @class
-                   | @colspan
                    | @dir
                    | @frame
                    | @headers
@@ -89,9 +88,7 @@ version="1.0">
                    | @onmouseout
                    | @onmouseover
                    | @onmouseup
-                   | @rowspan
                    | @rules
-                   | @span
                    | @style
                    | @summary
                    | @title

@@ -6,7 +6,7 @@
 xmlns="http://www.w3.org/1999/xhtml" version="1.0">
 
 <!-- ********************************************************************
-     $Id: titlepage.xsl 8421 2009-05-04 07:49:49Z bobstayton $
+     $Id: titlepage.xsl 8491 2009-07-19 10:02:57Z mzjn $
      ********************************************************************
 
      This file is part of the XSL DocBook Stylesheet distribution.
@@ -348,7 +348,7 @@ xmlns="http://www.w3.org/1999/xhtml" version="1.0">
 
 <xsl:template match="d:copyright" mode="titlepage.mode">
 
-  <xsl:if test="generate-id() = generate-id(//d:refentryinfo/d:copyright[1])">
+  <xsl:if test="generate-id() = generate-id(//d:refentryinfo/d:copyright[1])       and ($stylesheet.result.type = 'html' or $stylesheet.result.type = 'xhtml')">
     <h2>Copyright</h2>
   </xsl:if>
 

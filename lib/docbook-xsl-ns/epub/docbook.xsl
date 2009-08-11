@@ -42,6 +42,7 @@ xmlns:xtext="xalan://com.nwalsh.xalan.Text"
   <xsl:param name="epub.opf.filename" select="concat($epub.oebps.dir, 'content.opf')"/> 
   <xsl:param name="epub.cover.filename" select="concat($epub.oebps.dir, 'cover', $html.ext)"/> 
   <xsl:param name="epub.cover.id" select="'cover'"/> 
+  <xsl:param name="epub.cover.html" select="'cover.html'" />
   <xsl:param name="epub.cover.image.id" select="'cover-image'"/> 
   <xsl:param name="epub.cover.linear" select="0" />
   <xsl:param name="epub.ncx.toc.id">ncxtoc</xsl:param>
@@ -351,8 +352,7 @@ xmlns:xtext="xalan://com.nwalsh.xalan.Text"
           <xsl:element namespace="urn:oasis:names:tc:opendocument:xmlns:container" name="rootfiles">
             <xsl:element namespace="urn:oasis:names:tc:opendocument:xmlns:container" name="rootfile">
               <xsl:attribute name="full-path">
-                <!-- TODO: Figure out how to get this to work right with generation but also not be hardcoded -->
-                <xsl:value-of select="'OEBPS/content.opf'"/>
+                <xsl:value-of select="$epub.opf.filename" />
               </xsl:attribute>
               <xsl:attribute name="media-type">
                 <xsl:text>application/oebps-package+xml</xsl:text>
@@ -573,9 +573,6 @@ xmlns:xtext="xalan://com.nwalsh.xalan.Text"
           </xsl:when>
           <xsl:otherwise>
             <xsl:value-of select="$order - 0"/>
-            <!-- TODO hrm
-            <xsl:value-of select="$order - 1"/>
-            -->
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
@@ -696,8 +693,7 @@ xmlns:xtext="xalan://com.nwalsh.xalan.Text"
         <xsl:if test="/*/*[d:cover or contains(name(.), 'info')]//d:mediaobject[@role='cover' or ancestor::d:cover]"> 
           <xsl:element namespace="http://www.idpf.org/2007/opf" name="reference">
             <xsl:attribute name="href">
-              <!-- TODO: Figure out how to get this to work right with generation but also not be hardcoded -->
-              <xsl:value-of select="'cover.html'"/>
+              <xsl:value-of select="$epub.cover.html" />
             </xsl:attribute>
             <xsl:attribute name="type">cover</xsl:attribute>
             <xsl:attribute name="title">Cover</xsl:attribute>
@@ -707,7 +703,6 @@ xmlns:xtext="xalan://com.nwalsh.xalan.Text"
         <xsl:if test="contains($toc.params, 'toc')">
           <xsl:element namespace="http://www.idpf.org/2007/opf" name="reference">
             <xsl:attribute name="href">
-              <!-- TODO: Figure out how to get this to work right with generation but also not be hardcoded -->
               <xsl:call-template name="toc-href">
                 <xsl:with-param name="node" select="/*"/>
               </xsl:call-template>
@@ -783,7 +778,6 @@ xmlns:xtext="xalan://com.nwalsh.xalan.Text"
 
   <xsl:template name="opf.manifest">
     <xsl:element namespace="http://www.idpf.org/2007/opf" name="manifest">
-      <!-- TODO: Figure out how to get this to work right with generation but also not be hardcoded -->
       <xsl:element namespace="http://www.idpf.org/2007/opf" name="item">
         <xsl:attribute name="id"> <xsl:value-of select="$epub.ncx.toc.id"/> </xsl:attribute>
         <xsl:attribute name="media-type">application/x-dtbncx+xml</xsl:attribute>
@@ -814,8 +808,7 @@ xmlns:xtext="xalan://com.nwalsh.xalan.Text"
         <xsl:element namespace="http://www.idpf.org/2007/opf" name="item">
           <xsl:attribute name="id"> <xsl:value-of select="$epub.cover.id"/> </xsl:attribute>
           <xsl:attribute name="href"> 
-            <!-- TODO: Figure out how to get this to work right with generation but also not be hardcoded -->
-            <xsl:value-of select="'cover.html'"/>
+            <xsl:value-of select="$epub.cover.html"/>
           </xsl:attribute>
           <xsl:attribute name="media-type">application/xhtml+xml</xsl:attribute>
         </xsl:element>
@@ -835,7 +828,7 @@ xmlns:xtext="xalan://com.nwalsh.xalan.Text"
                 <xsl:value-of select="$epub.embedded.font"/>
                 <xsl:text>)</xsl:text>
               </xsl:message>
-            </xsl:otherwise>
+            </xsl:otherwise>  
             </xsl:choose>
         </xsl:element>
      </xsl:if>
@@ -986,7 +979,6 @@ xmlns:xtext="xalan://com.nwalsh.xalan.Text"
 
   <!-- TODO: Barf (xsl:message terminate=yes) if you find a graphic with no reasonable format or a mediaobject w/o same? [option to not die?] -->
 
-  <!-- TODO: Remove hardcoding -->
   <!-- wish I had XSLT2 ...-->
   <!-- TODO: priority a hack -->
   <xsl:template match="d:graphic[not(@format)]|
@@ -1042,7 +1034,6 @@ xmlns:xtext="xalan://com.nwalsh.xalan.Text"
     </xsl:if>
   </xsl:template>
 
-  <!-- TODO: Remove hardcoding -->
   <!-- Note: Selection of the first interesting imagedata is done in the select -->
   <xsl:template match="d:graphic[@format = 'GIF' or @format = 'GIF87a' or @format = 'GIF89a' or @format = 'JPEG' or @format = 'JPG' or @format = 'PNG' or @format = 'SVG']|
                        d:inlinegraphic[@format = 'GIF' or @format = 'GIF87a' or @format = 'GIF89a' or @format = 'JPEG' or @format = 'JPG' or @format = 'PNG' or @format = 'SVG']|
@@ -1291,7 +1282,6 @@ xmlns:xtext="xalan://com.nwalsh.xalan.Text"
   
   <!-- OVERRIDES xhtml-1_1/chunk-common.xsl   -->
   <!-- make a bibliography always a chunk -->
-  <!-- TODO: Confirm that above isn't a mistake -->
   <xsl:template name="chunk"
                 priority="1">       
     <xsl:param name="node" select="."/>

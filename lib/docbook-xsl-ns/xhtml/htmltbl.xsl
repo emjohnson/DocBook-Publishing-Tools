@@ -6,7 +6,7 @@
 xmlns="http://www.w3.org/1999/xhtml" version="1.0">
 
 <!-- ********************************************************************
-     $Id: htmltbl.xsl 8310 2009-03-11 08:29:45Z bobstayton $
+     $Id: htmltbl.xsl 8477 2009-07-13 11:38:55Z nwalsh $
      ********************************************************************
 
      This file is part of the XSL DocBook Stylesheet distribution.
@@ -62,7 +62,7 @@ xmlns="http://www.w3.org/1999/xhtml" version="1.0">
 <xsl:template mode="htmlTableAtt" match="@*"/>
 
 <!-- copy these through -->
-<xsl:template mode="htmlTableAtt" match="@abbr                    | @align                    | @axis                    | @bgcolor                    | @border                    | @cellpadding                    | @cellspacing                    | @char                    | @charoff                    | @class                    | @colspan                    | @dir                    | @frame                    | @headers                    | @height                    | @lang                    | @nowrap                    | @onclick                    | @ondblclick                    | @onkeydown                    | @onkeypress                    | @onkeyup                    | @onmousedown                    | @onmousemove                    | @onmouseout                    | @onmouseover                    | @onmouseup                    | @rowspan                    | @rules                    | @span                    | @style                    | @summary                    | @title                    | @valign                    | @valign                    | @width                    | @xml:lang">
+<xsl:template mode="htmlTableAtt" match="@abbr                    | @align                    | @axis                    | @bgcolor                    | @border                    | @cellpadding                    | @cellspacing                    | @char                    | @charoff                    | @class                    | @dir                    | @frame                    | @headers                    | @height                    | @lang                    | @nowrap                    | @onclick                    | @ondblclick                    | @onkeydown                    | @onkeypress                    | @onkeyup                    | @onmousedown                    | @onmousemove                    | @onmouseout                    | @onmouseover                    | @onmouseup                    | @rules                    | @style                    | @summary                    | @title                    | @valign                    | @valign                    | @width                    | @xml:lang">
   <xsl:copy-of select="."/>
 </xsl:template>
 

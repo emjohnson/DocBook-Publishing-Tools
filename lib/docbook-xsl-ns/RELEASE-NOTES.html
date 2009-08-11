@@ -1,15 +1,15 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Release Notes for the DocBook XSL Stylesheets</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.1"><meta name="description" content="This release-notes document is available in the following formats: HTML, PDF, plain text; it provides a per-release list of enhancements and changes to the stylesheets&#8217; public APIs (user-configurable parameters) and excludes descriptions of most bug fixes. For a complete list of all changes (including all bug fixes) that have been made since the previous release, see the separate NEWS (plain text) or NEWS.html files. Also available: An online hyperlinked change history (warning: big file) of all changes made over the entire history of the codebase. As with all DocBook Project &#8220;dot one plus&#8221; releases, this release aspires to be stable (in contrast to dot-zero releases, which are experimental)."></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="article" title="Release Notes for the DocBook XSL Stylesheets"><div class="titlepage"><div><div><h2 class="title"><a name="releasenotes"></a>Release Notes for the DocBook XSL Stylesheets</h2></div><div><p class="releaseinfo">$Revision: 8446 $ $Date: 2009-05-27 17:31:50 -0700 (Wed, 27 May 2009) $</p></div><div><p class="pubdate">2009-05-27</p></div><div><div class="abstract" title="Abstract">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Release Notes for the DocBook XSL Stylesheets</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><meta name="description" content="This release-notes document is available in the following formats: HTML, PDF, plain text; it provides a per-release list of enhancements and changes to the stylesheets&#8217; public APIs (user-configurable parameters) and excludes descriptions of most bug fixes. For a complete list of all changes (including all bug fixes) that have been made since the previous release, see the separate NEWS (plain text) or NEWS.html files. Also available: An online hyperlinked change history (warning: big file) of all changes made over the entire history of the codebase. As with all DocBook Project &#8220;dot one plus&#8221; releases, this release aspires to be stable (in contrast to dot-zero releases, which are experimental)."></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="article" title="Release Notes for the DocBook XSL Stylesheets"><div class="titlepage"><div><div><h2 class="title"><a name="releasenotes"></a>Release Notes for the DocBook XSL Stylesheets</h2></div><div><p class="releaseinfo">$Revision: 8504 $ $Date: 2009-07-21 07:22:11 -0700 (Tue, 21 Jul 2009) $</p></div><div><p class="pubdate">2009-07-21</p></div><div><div class="abstract" title="Abstract">
 <p>This release-notes
   document is available in the following formats:
-  <a class="link" href="http://docbook.sourceforge.net/release/xsl/current/RELEASE-NOTES.html" target="_top">HTML</a>,
-  <a class="link" href="http://docbook.sourceforge.net/release/xsl/current/RELEASE-NOTES.pdf" target="_top">PDF</a>,
-  <a class="link" href="http://docbook.sourceforge.net/release/xsl/current/RELEASE-NOTES.txt" target="_top">plain text</a>; it provides a per-release list
+  <a class="ulink" href="http://docbook.sourceforge.net/release/xsl/current/RELEASE-NOTES.html" target="_top">HTML</a>,
+  <a class="ulink" href="http://docbook.sourceforge.net/release/xsl/current/RELEASE-NOTES.pdf" target="_top">PDF</a>,
+  <a class="ulink" href="http://docbook.sourceforge.net/release/xsl/current/RELEASE-NOTES.txt" target="_top">plain text</a>; it provides a per-release list
 of enhancements and changes to the stylesheets&#8217; public APIs
 (user-configurable parameters) and excludes descriptions of most
 bug fixes. For a complete list of all changes (including all bug
 fixes) that have been made since the previous release, see the
-separate <a class="link" href="NEWS" target="_top">NEWS</a> (plain text) or <a class="link" href="NEWS.html" target="_top">NEWS.html</a> files. Also available:
-An online <a class="link" href="http://docbook.svn.sourceforge.net/viewvc/docbook/trunk/xsl/?view=log" target="_top">hyperlinked change history</a> (warning: big file) of all
+separate <a class="ulink" href="NEWS" target="_top">NEWS</a> (plain text) or <a class="ulink" href="NEWS.html" target="_top">NEWS.html</a> files. Also available:
+An online <a class="ulink" href="http://docbook.svn.sourceforge.net/viewvc/docbook/trunk/xsl/?view=log" target="_top">hyperlinked change history</a> (warning: big file) of all
 changes made over the entire history of the codebase.</p>
 
 <p>As with all DocBook Project &#8220;dot
@@ -18,10 +18,123 @@ changes made over the entire history of the codebase.</p>
   are experimental).</p>
 
 
-</div></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="#rn_V1.75.1">Release Notes: 1.75.1</a></span></dt><dd><dl><dt><span class="sect2"><a href="#rn_V1.75.1_FO">FO</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.1_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.1_Epub">Epub</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.1_Params">Params</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.75.0">Release Notes: 1.75.0</a></span></dt><dd><dl><dt><span class="sect2"><a href="#rn_V1.75.0_Gentext">Gentext</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_Common">Common</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_FO">FO</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_Epub">ePub</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_HTMLHelp">HTMLHelp</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_Params">Params</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_Highlighting">Highlighting</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_XSL-Saxon">XSL-Saxon</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_XSL-Xalan">XSL-Xalan</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.74.3">Release Notes: 1.74.3</a></span></dt><dt><span class="sect1"><a href="#V1.74.2">Release Notes: 1.74.2</a></span></dt><dt><span class="sect1"><a href="#V1.74.1">Release Notes: 1.74.1</a></span></dt><dd><dl><dt><span class="sect2"><a href="#summary_V1.74.1_Gentext">Gentext</a></span></dt><dt><span class="sect2"><a href="#summary_V1.74.1_FO">FO</a></span></dt><dt><span class="sect2"><a href="#summary_V1.74.1_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#summary_V1.74.1_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#summary_V1.74.1_Epub">ePub</a></span></dt><dt><span class="sect2"><a href="#summary_V1.74.1_Roundtrip">Roundtrip</a></span></dt><dt><span class="sect2"><a href="#summary_V1.74.1_Params">Params</a></span></dt><dt><span class="sect2"><a href="#summary_V1.74.1_Highlighting">Highlighting</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.74.0">Release Notes: 1.74.0</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1.74.0_Gentext">Gentext</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Common">Common</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Epub">Epub</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_HTMLHelp">HTMLHelp</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Eclipse">Eclipse</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_JavaHelp">JavaHelp</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Roundtrip">Roundtrip</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Slides">Slides</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Website">Website</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Params">Params</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Profiling">Profiling</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Tools">Tools</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Extensions">Extensions</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_XSL-Saxon">XSL-Saxon</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_XSL-Xalan">XSL-Xalan</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_XSL-libxslt">XSL-libxslt</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.73.2">Release Notes: 1.73.2</a></span></dt><dt><span class="sect1"><a href="#V1.73.1">Release: 1.73.1</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1.73.1_Gentext">Gentext</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_HTMLHelp">HTMLHelp</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_Eclipse">Eclipse</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_JavaHelp">JavaHelp</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_Roundtrip">Roundtrip</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_Params">Params</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.73.0">Release: 1.73.0</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1.73.0_Gentext">Gentext</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Common">Common</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Eclipse">Eclipse</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_JavaHelp">JavaHelp</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Roundtrip">Roundtrip</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Params">Params</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Highlighting">Highlighting</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Profiling">Profiling</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Lib">Lib</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Tools">Tools</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_XSL-Saxon">XSL-Saxon</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_XSL-Xalan">XSL-Xalan</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.72.0">Release: 1.72.0</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1.72.0_Common">Common</a></span></dt><dt><span class="sect2"><a href="#V1.72.0_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1.72.0_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1.72.0_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#V1.72.0_Params">Params</a></span></dt><dt><span class="sect2"><a href="#V1.72.0_Template">Template</a></span></dt><dt><span class="sect2"><a href="#V1.72.0_Roundtrip">Roundtrip</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.71.1">Release: 1.71.1</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1.71.1_Common">Common</a></span></dt><dt><span class="sect2"><a href="#V1.71.1_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1.71.1_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1.71.1_Highlighting">Highlighting</a></span></dt><dt><span class="sect2"><a href="#V1.71.1_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#V1.71.1_Params">Params</a></span></dt><dt><span class="sect2"><a href="#V1.71.1_Profiling">Profiling</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.71.0">Release: 1.71.0</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1.71.0_Common">Common</a></span></dt><dt><span class="sect2"><a href="#V1.71.0_Extensions">Extensions</a></span></dt><dt><span class="sect2"><a href="#V1.71.0_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1.71.0_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1.71.0_Highlighting">Highlighting</a></span></dt><dt><span class="sect2"><a href="#V1.71.0_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#V1.71.0_Params">Params</a></span></dt><dt><span class="sect2"><a href="#V1.71.0_Tools">Tools</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1701">Release: 1.70.1</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1701_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1701_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1701_HTMLHelp">HTMLHelp</a></span></dt><dt><span class="sect2"><a href="#V1701_Params">Params</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1700">Release: 1.70.0</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1700_Common">Common</a></span></dt><dt><span class="sect2"><a href="#V1700_Extensions">Extensions</a></span></dt><dt><span class="sect2"><a href="#V1700_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1700_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1700_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#V1700_Params">Params</a></span></dt><dt><span class="sect2"><a href="#V1700_Profiling">Profiling</a></span></dt><dt><span class="sect2"><a href="#V1700_Tools">Tools</a></span></dt><dt><span class="sect2"><a href="#V1700_WordML">WordML</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1691">Release 1.69.1</a></span></dt><dt><span class="sect1"><a href="#V1690">Release 1.69.0</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1690_COMMON">Common</a></span></dt><dt><span class="sect2"><a href="#V1690_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1690_HELP">Help</a></span></dt><dt><span class="sect2"><a href="#V1690_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1690_MAN">man</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1681">Release 1.68.1</a></span></dt><dt><span class="sect1"><a href="#V1680">Release 1.68.0</a></span></dt><dt><span class="sect1"><a href="#V1672">Release 1.67.2</a></span></dt><dt><span class="sect1"><a href="#V1671">Release 1.67.1</a></span></dt><dt><span class="sect1"><a href="#V1670">Release 1.67.0</a></span></dt><dt><span class="sect1"><a href="#V1661">Release 1.66.1</a></span></dt><dt><span class="sect1"><a href="#V1650">Release 1.65.0</a></span></dt><dt><span class="sect1"><a href="#V1641">Release 1.64.1</a></span></dt><dt><span class="sect1"><a href="#V1610">Release 1.61.0</a></span></dt><dt><span class="sect1"><a href="#V1601">Release 1.60.1</a></span></dt><dt><span class="sect1"><a href="#V1592">Release 1.59.2</a></span></dt><dt><span class="sect1"><a href="#V1591">Release 1.59.1</a></span></dt><dt><span class="sect1"><a href="#V1580">Release 1.58.0</a></span></dt><dt><span class="sect1"><a href="#V1570">Release 1.57.0</a></span></dt><dt><span class="sect1"><a href="#V1560">Release 1.56.0</a></span></dt><dt><span class="sect1"><a href="#VOlder">Older releases</a></span></dt><dt><span class="sect1"><a href="#dot0">About dot-zero releases</a></span></dt></dl></div>
+</div></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="sect1"><a href="#rn_V1.75.2">Release Notes: 1.75.2</a></span></dt><dd><dl><dt><span class="sect2"><a href="#rn_V1.75.2_Gentext">Gentext</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.2_Common">Common</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.2_FO">FO</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.2_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.2_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.2_Epub">Epub</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.2_Profiling">Profiling</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.2_XSL-Saxon">XSL-Saxon</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.2_XSL-Xalan">XSL-Xalan</a></span></dt></dl></dd><dt><span class="sect1"><a href="#rn_V1.75.1">Release Notes: 1.75.1</a></span></dt><dd><dl><dt><span class="sect2"><a href="#rn_V1.75.1_FO">FO</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.1_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.1_Epub">Epub</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.1_Params">Params</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.75.0">Release Notes: 1.75.0</a></span></dt><dd><dl><dt><span class="sect2"><a href="#rn_V1.75.0_Gentext">Gentext</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_Common">Common</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_FO">FO</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_Epub">ePub</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_HTMLHelp">HTMLHelp</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_Params">Params</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_Highlighting">Highlighting</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_XSL-Saxon">XSL-Saxon</a></span></dt><dt><span class="sect2"><a href="#rn_V1.75.0_XSL-Xalan">XSL-Xalan</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.74.3">Release Notes: 1.74.3</a></span></dt><dt><span class="sect1"><a href="#V1.74.2">Release Notes: 1.74.2</a></span></dt><dt><span class="sect1"><a href="#V1.74.1">Release Notes: 1.74.1</a></span></dt><dd><dl><dt><span class="sect2"><a href="#summary_V1.74.1_Gentext">Gentext</a></span></dt><dt><span class="sect2"><a href="#summary_V1.74.1_FO">FO</a></span></dt><dt><span class="sect2"><a href="#summary_V1.74.1_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#summary_V1.74.1_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#summary_V1.74.1_Epub">ePub</a></span></dt><dt><span class="sect2"><a href="#summary_V1.74.1_Roundtrip">Roundtrip</a></span></dt><dt><span class="sect2"><a href="#summary_V1.74.1_Params">Params</a></span></dt><dt><span class="sect2"><a href="#summary_V1.74.1_Highlighting">Highlighting</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.74.0">Release Notes: 1.74.0</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1.74.0_Gentext">Gentext</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Common">Common</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Epub">Epub</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_HTMLHelp">HTMLHelp</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Eclipse">Eclipse</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_JavaHelp">JavaHelp</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Roundtrip">Roundtrip</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Slides">Slides</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Website">Website</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Params">Params</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Profiling">Profiling</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Tools">Tools</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_Extensions">Extensions</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_XSL-Saxon">XSL-Saxon</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_XSL-Xalan">XSL-Xalan</a></span></dt><dt><span class="sect2"><a href="#V1.74.0_XSL-libxslt">XSL-libxslt</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.73.2">Release Notes: 1.73.2</a></span></dt><dt><span class="sect1"><a href="#V1.73.1">Release: 1.73.1</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1.73.1_Gentext">Gentext</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_HTMLHelp">HTMLHelp</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_Eclipse">Eclipse</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_JavaHelp">JavaHelp</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_Roundtrip">Roundtrip</a></span></dt><dt><span class="sect2"><a href="#V1.73.1_Params">Params</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.73.0">Release: 1.73.0</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1.73.0_Gentext">Gentext</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Common">Common</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Eclipse">Eclipse</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_JavaHelp">JavaHelp</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Roundtrip">Roundtrip</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Params">Params</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Highlighting">Highlighting</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Profiling">Profiling</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Lib">Lib</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_Tools">Tools</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_XSL-Saxon">XSL-Saxon</a></span></dt><dt><span class="sect2"><a href="#V1.73.0_XSL-Xalan">XSL-Xalan</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.72.0">Release: 1.72.0</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1.72.0_Common">Common</a></span></dt><dt><span class="sect2"><a href="#V1.72.0_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1.72.0_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1.72.0_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#V1.72.0_Params">Params</a></span></dt><dt><span class="sect2"><a href="#V1.72.0_Template">Template</a></span></dt><dt><span class="sect2"><a href="#V1.72.0_Roundtrip">Roundtrip</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.71.1">Release: 1.71.1</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1.71.1_Common">Common</a></span></dt><dt><span class="sect2"><a href="#V1.71.1_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1.71.1_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1.71.1_Highlighting">Highlighting</a></span></dt><dt><span class="sect2"><a href="#V1.71.1_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#V1.71.1_Params">Params</a></span></dt><dt><span class="sect2"><a href="#V1.71.1_Profiling">Profiling</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1.71.0">Release: 1.71.0</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1.71.0_Common">Common</a></span></dt><dt><span class="sect2"><a href="#V1.71.0_Extensions">Extensions</a></span></dt><dt><span class="sect2"><a href="#V1.71.0_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1.71.0_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1.71.0_Highlighting">Highlighting</a></span></dt><dt><span class="sect2"><a href="#V1.71.0_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#V1.71.0_Params">Params</a></span></dt><dt><span class="sect2"><a href="#V1.71.0_Tools">Tools</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1701">Release: 1.70.1</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1701_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1701_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1701_HTMLHelp">HTMLHelp</a></span></dt><dt><span class="sect2"><a href="#V1701_Params">Params</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1700">Release: 1.70.0</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1700_Common">Common</a></span></dt><dt><span class="sect2"><a href="#V1700_Extensions">Extensions</a></span></dt><dt><span class="sect2"><a href="#V1700_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1700_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1700_Manpages">Manpages</a></span></dt><dt><span class="sect2"><a href="#V1700_Params">Params</a></span></dt><dt><span class="sect2"><a href="#V1700_Profiling">Profiling</a></span></dt><dt><span class="sect2"><a href="#V1700_Tools">Tools</a></span></dt><dt><span class="sect2"><a href="#V1700_WordML">WordML</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1691">Release 1.69.1</a></span></dt><dt><span class="sect1"><a href="#V1690">Release 1.69.0</a></span></dt><dd><dl><dt><span class="sect2"><a href="#V1690_COMMON">Common</a></span></dt><dt><span class="sect2"><a href="#V1690_FO">FO</a></span></dt><dt><span class="sect2"><a href="#V1690_HELP">Help</a></span></dt><dt><span class="sect2"><a href="#V1690_HTML">HTML</a></span></dt><dt><span class="sect2"><a href="#V1690_MAN">man</a></span></dt></dl></dd><dt><span class="sect1"><a href="#V1681">Release 1.68.1</a></span></dt><dt><span class="sect1"><a href="#V1680">Release 1.68.0</a></span></dt><dt><span class="sect1"><a href="#V1672">Release 1.67.2</a></span></dt><dt><span class="sect1"><a href="#V1671">Release 1.67.1</a></span></dt><dt><span class="sect1"><a href="#V1670">Release 1.67.0</a></span></dt><dt><span class="sect1"><a href="#V1661">Release 1.66.1</a></span></dt><dt><span class="sect1"><a href="#V1650">Release 1.65.0</a></span></dt><dt><span class="sect1"><a href="#V1641">Release 1.64.1</a></span></dt><dt><span class="sect1"><a href="#V1610">Release 1.61.0</a></span></dt><dt><span class="sect1"><a href="#V1601">Release 1.60.1</a></span></dt><dt><span class="sect1"><a href="#V1592">Release 1.59.2</a></span></dt><dt><span class="sect1"><a href="#V1591">Release 1.59.1</a></span></dt><dt><span class="sect1"><a href="#V1580">Release 1.58.0</a></span></dt><dt><span class="sect1"><a href="#V1570">Release 1.57.0</a></span></dt><dt><span class="sect1"><a href="#V1560">Release 1.56.0</a></span></dt><dt><span class="sect1"><a href="#VOlder">Older releases</a></span></dt><dt><span class="sect1"><a href="#dot0">About dot-zero releases</a></span></dt></dl></div>
 
 
 
+
+<div class="sect1" title="Release Notes: 1.75.2"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="rn_V1.75.2"></a>Release Notes: 1.75.2</h2></div></div></div>
+
+<p>The following is a list of changes that have been made
+        since the 1.75.1 release.</p>
+
+<div class="sect2" title="Gentext"><div class="titlepage"><div><div><h3 class="title"><a name="rn_V1.75.2_Gentext"></a>Gentext</h3></div></div></div>
+
+<p>The following changes have been made to the
+            <code class="filename">gentext</code> code
+            since the 1.75.1 release.</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<p><code class="literal">dleidert: locale/ja.xml</code></p><pre class="screen"><span class="commit-message">Improved Japanese translation for Note(s). Closes bug #2823965.</span></pre>
+</li><li class="listitem">
+<p><code class="literal">dleidert: locale/pl.xml</code></p><pre class="screen"><span class="commit-message">Polish alphabet contains O with acute accent, not with grave accent. Closes bug #2823964.</span></pre>
+</li><li class="listitem">
+<p><code class="literal">Robert Stayton: locale/ja.xml</code></p><pre class="screen"><span class="commit-message">Fix translation of "<a href="http://docbook.org/tdg5/en/html/index.html"><code class="sgmltag-element">index</code></a>", per bug report 2796064.</span></pre>
+</li><li class="listitem">
+<p><code class="literal">Robert Stayton: locale/is.xml</code></p><pre class="screen"><span class="commit-message">New Icelandic locale file.</span></pre>
+</li></ul></div>
+</div>
+
+<div class="sect2" title="Common"><div class="titlepage"><div><div><h3 class="title"><a name="rn_V1.75.2_Common"></a>Common</h3></div></div></div>
+
+<p>The following changes have been made to the
+            <code class="filename">common</code> code
+            since the 1.75.1 release.</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<p><code class="literal">Norman Walsh: stripns.xsl</code></p><pre class="screen"><span class="commit-message">Support more downconvert cases</span></pre>
+</li><li class="listitem">
+<p><code class="literal">Robert Stayton: titles.xsl</code></p><pre class="screen"><span class="commit-message">Make sure <a href="http://docbook.org/tdg5/en/html/title.html"><code class="sgmltag-element">title</code></a> inside <a href="http://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a> is used if no other <a href="http://docbook.org/tdg5/en/html/title.html"><code class="sgmltag-element">title</code></a>.</span></pre>
+</li></ul></div>
+</div>
+
+<div class="sect2" title="FO"><div class="titlepage"><div><div><h3 class="title"><a name="rn_V1.75.2_FO"></a>FO</h3></div></div></div>
+
+<p>The following changes have been made to the
+            <code class="filename">fo</code> code
+            since the 1.75.1 release.</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<p><code class="literal">Robert Stayton: pi.xsl</code></p><pre class="screen"><span class="commit-message">Turn off dbfo-need for <a href="http://docbook.sourceforge.net/release/xsl/current/doc/fo/fop1.extensions.html"><em class="parameter"><code>fop1.extensions</code></em></a> also, per bug #2816141.</span></pre>
+</li></ul></div>
+</div>
+
+<div class="sect2" title="HTML"><div class="titlepage"><div><div><h3 class="title"><a name="rn_V1.75.2_HTML"></a>HTML</h3></div></div></div>
+
+<p>The following changes have been made to the
+            <code class="filename">html</code> code
+            since the 1.75.1 release.</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<p><code class="literal">Mauritz Jeanson: titlepage.xsl</code></p><pre class="screen"><span class="commit-message">Output "<a href="http://docbook.org/tdg5/en/html/copyright.html"><code class="sgmltag-element">Copyright</code></a>" heading in XHTML too.</span></pre>
+</li><li class="listitem">
+<p><code class="literal">Mauritz Jeanson: titlepage.xsl</code></p><pre class="screen"><span class="commit-message">Added stylesheet.result.type test for <a href="http://docbook.org/tdg5/en/html/copyright.html"><code class="sgmltag-element">copyright</code></a>. Closes bug #2813289.</span></pre>
+</li><li class="listitem">
+<p><code class="literal">Norman Walsh: htmltbl.xsl</code></p><pre class="screen"><span class="commit-message">Remove ambiguity wrt @span, @rowspan, and @colspan</span></pre>
+</li></ul></div>
+</div>
+
+<div class="sect2" title="Manpages"><div class="titlepage"><div><div><h3 class="title"><a name="rn_V1.75.2_Manpages"></a>Manpages</h3></div></div></div>
+
+<p>The following changes have been made to the
+            <code class="filename">manpages</code> code
+            since the 1.75.1 release.</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<p><code class="literal">Mauritz Jeanson: endnotes.xsl</code></p><pre class="screen"><span class="commit-message">Added normalize-space() for ulink content. Closes bug #2793877.</span></pre>
+</li><li class="listitem">
+<p><code class="literal">Mauritz Jeanson: docbook.xsl</code></p><pre class="screen"><span class="commit-message">Added stylesheet.result.type test for <a href="http://docbook.org/tdg5/en/html/copyright.html"><code class="sgmltag-element">copyright</code></a>. Closes bug #2813289.</span></pre>
+</li></ul></div>
+</div>
+
+<div class="sect2" title="Epub"><div class="titlepage"><div><div><h3 class="title"><a name="rn_V1.75.2_Epub"></a>Epub</h3></div></div></div>
+
+<p>The following changes have been made to the
+            <code class="filename">epub</code> code
+            since the 1.75.1 release.</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<p><code class="literal">Keith Fahlgren: bin/dbtoepub; bin/lib/docbook.rb</code></p><pre class="screen"><span class="commit-message">Corrected bugs caused by path and file assumptions were not met</span></pre>
+</li><li class="listitem">
+<p><code class="literal">Keith Fahlgren: bin/lib/docbook.rb; docbook.xsl</code></p><pre class="screen"><span class="commit-message">Cleaning up hardcoded values into parameters and fixing Ruby library to pass them properly; all thanks to patch from Liza Daly</span></pre>
+</li></ul></div>
+</div>
+
+<div class="sect2" title="Profiling"><div class="titlepage"><div><div><h3 class="title"><a name="rn_V1.75.2_Profiling"></a>Profiling</h3></div></div></div>
+
+<p>The following changes have been made to the
+            <code class="filename">profiling</code> code
+            since the 1.75.1 release.</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<p><code class="literal">Robert Stayton: profile.xsl</code></p><pre class="screen"><span class="commit-message">Fix bug 2815493 missing <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/exsl.node.set.available.html"><em class="parameter"><code>exsl.node.set.available</code></em></a> parameter.</span></pre>
+</li></ul></div>
+</div>
+
+<div class="sect2" title="XSL-Saxon"><div class="titlepage"><div><div><h3 class="title"><a name="rn_V1.75.2_XSL-Saxon"></a>XSL-Saxon</h3></div></div></div>
+
+<p>The following changes have been made to the
+            <code class="filename">xsl-saxon</code> code
+            since the 1.75.1 release.</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<p><code class="literal">Mauritz Jeanson: src/com/nwalsh/saxon/ColumnUpdateEmitter.java; src/com/nwalsh/saxon/Colum&#8943;</code></p><pre class="screen"><span class="commit-message">Added fixes so that colgroups in the XHTML namespace are processed properly.</span></pre>
+</li></ul></div>
+</div>
+
+<div class="sect2" title="XSL-Xalan"><div class="titlepage"><div><div><h3 class="title"><a name="rn_V1.75.2_XSL-Xalan"></a>XSL-Xalan</h3></div></div></div>
+
+<p>The following changes have been made to the
+            <code class="filename">xsl-xalan</code> code
+            since the 1.75.1 release.</p>
+<div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<p><code class="literal">Mauritz Jeanson: nbproject/project.xml</code></p><pre class="screen"><span class="commit-message">Added missing NetBeans configuration.</span></pre>
+</li></ul></div>
+</div>
+
+</div>
 
 
 <div class="sect1" title="Release Notes: 1.75.1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="rn_V1.75.1"></a>Release Notes: 1.75.1</h2></div></div></div>
@@ -2201,7 +2314,7 @@ significant feature changes:
         <code class="literal">iso690</code> to use ISO690 style.</p>
     </dd><dt><span class="term">New documentation for processing instructions (PI)</span></dt><dd>
       <p>The reference documentation that ships with the
-        release now includes <a class="link" href="http://docbook.sourceforge.net/release/xsl/current/doc/pi/" target="_top">documentation on all PIs</a> that you can use to
+        release now includes <a class="ulink" href="http://docbook.sourceforge.net/release/xsl/current/doc/pi/" target="_top">documentation on all PIs</a> that you can use to
         control output from the stylesheets.</p>
     </dd><dt><span class="term">New profiling parameters for <code class="literal">audience</code> and <code class="literal">wordsize</code></span></dt><dd>
       <p>You can now do profiling based on the values of the
@@ -2891,15 +3004,15 @@ release.</p>
             <code class="filename">common</code> code
             since the 1.71.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/common/labels.xsl - Robert Stayton" class="commit-message">Add support for arabicindic numbering to autolabel.format template.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add support for arabicindic numbering to autolabel.format template.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/common/gentext.xsl; M: /trunk/xsl/common/titles.xsl - Robert Stayton" class="commit-message">Finish support for @xml:id everywhere @id is used.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Finish support for @xml:id everywhere @id is used.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/common/l10n.xsl; M: /trunk/xsl/common/olink.xsl; M: /trunk/xsl/common/subtitles.xsl; M: /trunk/xsl/common/labels.xsl; M: /trunk/xsl/common/titles.xsl; M: /trunk/xsl/common/common.xsl - Robert Stayton" class="commit-message">replace name() with local-name() in most cases.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">replace name() with local-name() in most cases.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/common/subtitles.xsl; M: /trunk/xsl/common/labels.xsl; M: /trunk/xsl/common/titles.xsl; M: /trunk/xsl/common/common.xsl; M: /trunk/xsl/common/targets.xsl - Robert Stayton" class="commit-message">Add support for <a href="http://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a>.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add support for <a href="http://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a>.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/common/table.xsl - Robert Stayton" class="commit-message">Add utility template tabstyle to return the tabstyle from<br>
+<div class="literallayout"><p><span class="commit-message">Add utility template tabstyle to return the tabstyle from<br>
 any <a href="http://docbook.org/tdg5/en/html/table.html"><code class="sgmltag-element">table</code></a> element.</span></p></div>
 </li></ul></div>
 </div>
@@ -2910,21 +3023,21 @@ any <a href="http://docbook.org/tdg5/en/html/table.html"><code class="sgmltag-el
             <code class="filename">fo</code> code
             since the 1.71.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/param.xweb; M: /trunk/xsl/fo/param.ent; M: /trunk/xsl/fo/glossary.xsl - Robert Stayton" class="commit-message">Add support for sorting <a href="http://docbook.org/tdg5/en/html/glossary.html"><code class="sgmltag-element">glossary</code></a> entries</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add support for sorting <a href="http://docbook.org/tdg5/en/html/glossary.html"><code class="sgmltag-element">glossary</code></a> entries</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/table.xsl - Robert Stayton" class="commit-message">Add table.row.properties template to customize <a href="http://docbook.org/tdg5/en/html/table.html"><code class="sgmltag-element">table</code></a> rows.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add table.row.properties template to customize <a href="http://docbook.org/tdg5/en/html/table.html"><code class="sgmltag-element">table</code></a> rows.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/verbatim.xsl - Robert Stayton" class="commit-message">Moved all properties to attribute-sets so can be customized more easily.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Moved all properties to attribute-sets so can be customized more easily.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/autoidx.xsl - Robert Stayton" class="commit-message">Add index.page.number.properties attribute-set to format page numbers.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add index.page.number.properties attribute-set to format page numbers.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/xref.xsl - Robert Stayton" class="commit-message"><a href="http://docbook.org/tdg5/en/html/xref.html"><code class="sgmltag-element">xref</code></a> now supports xlink:href, using simple.xlink template.</span></p></div>
+<div class="literallayout"><p><span class="commit-message"><a href="http://docbook.org/tdg5/en/html/xref.html"><code class="sgmltag-element">xref</code></a> now supports xlink:href, using simple.xlink template.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/inline.xsl - Robert Stayton" class="commit-message">Rewrote simple.xlink, and call it with all charseq templates.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Rewrote simple.xlink, and call it with all charseq templates.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/lists.xsl - Robert Stayton" class="commit-message">Add simple.xlink processing to <a href="http://docbook.org/tdg5/en/html/term.html"><code class="sgmltag-element">term</code></a> and <a href="http://docbook.org/tdg5/en/html/member.html"><code class="sgmltag-element">member</code></a> elements.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add simple.xlink processing to <a href="http://docbook.org/tdg5/en/html/term.html"><code class="sgmltag-element">term</code></a> and <a href="http://docbook.org/tdg5/en/html/member.html"><code class="sgmltag-element">member</code></a> elements.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/axf.xsl; M: /trunk/xsl/fo/pagesetup.xsl - Robert Stayton" class="commit-message">Add support for crop marks in Antenna House.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add support for crop marks in Antenna House.</span></p></div>
 </li></ul></div>
 </div>
 
@@ -2934,40 +3047,40 @@ any <a href="http://docbook.org/tdg5/en/html/table.html"><code class="sgmltag-el
             <code class="filename">html</code> code
             since the 1.71.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/glossary.xsl - Robert Stayton" class="commit-message">Add support for sorting <a href="http://docbook.org/tdg5/en/html/glossary.html"><code class="sgmltag-element">glossary</code></a> entries</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add support for sorting <a href="http://docbook.org/tdg5/en/html/glossary.html"><code class="sgmltag-element">glossary</code></a> entries</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/autotoc.xsl; M: /trunk/xsl/html/param.xweb; M: /trunk/xsl/html/param.ent - Robert Stayton" class="commit-message">Add support for <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/qanda.in.toc.html"><em class="parameter"><code>qanda.in.toc</code></em></a> to add <a href="http://docbook.org/tdg5/en/html/qandaentry.html"><code class="sgmltag-element">qandaentry</code></a> questions to document <a href="http://docbook.org/tdg5/en/html/toc.html"><code class="sgmltag-element">TOC</code></a>.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add support for <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/qanda.in.toc.html"><em class="parameter"><code>qanda.in.toc</code></em></a> to add <a href="http://docbook.org/tdg5/en/html/qandaentry.html"><code class="sgmltag-element">qandaentry</code></a> questions to document <a href="http://docbook.org/tdg5/en/html/toc.html"><code class="sgmltag-element">TOC</code></a>.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/lists.xsl - Robert Stayton" class="commit-message">add simple.xlink support to <a href="http://docbook.org/tdg5/en/html/variablelist.html"><code class="sgmltag-element">variablelist</code></a> <a href="http://docbook.org/tdg5/en/html/term.html"><code class="sgmltag-element">term</code></a> and <a href="http://docbook.org/tdg5/en/html/simplelist.html"><code class="sgmltag-element">simplelist</code></a> <a href="http://docbook.org/tdg5/en/html/member.html"><code class="sgmltag-element">member</code></a>.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">add simple.xlink support to <a href="http://docbook.org/tdg5/en/html/variablelist.html"><code class="sgmltag-element">variablelist</code></a> <a href="http://docbook.org/tdg5/en/html/term.html"><code class="sgmltag-element">term</code></a> and <a href="http://docbook.org/tdg5/en/html/simplelist.html"><code class="sgmltag-element">simplelist</code></a> <a href="http://docbook.org/tdg5/en/html/member.html"><code class="sgmltag-element">member</code></a>.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/inline.xsl; M: /trunk/xsl/html/lists.xsl; M: /trunk/xsl/html/table.xsl; M: /trunk/xsl/html/block.xsl; M: /trunk/xsl/html/footnote.xsl - Robert Stayton" class="commit-message">*.propagates.style now handled in class.attribute mode.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">*.propagates.style now handled in class.attribute mode.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/html.xsl - Robert Stayton" class="commit-message">add class parameter to class.attribute mode to set default class.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">add class parameter to class.attribute mode to set default class.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/titlepage.xsl; M: /trunk/xsl/html/chunk-code.xsl; M: /trunk/xsl/html/division.xsl; M: /trunk/xsl/html/sections.xsl; M: /trunk/xsl/html/math.xsl; M: /trunk/xsl/html/block.xsl; M: /trunk/xsl/html/info.xsl; M: /trunk/xsl/html/footnote.xsl; M: /trunk/xsl/html/lists.xsl; M: /trunk/xsl/html/admon.xsl; M: /trunk/xsl/html/refentry.xsl; M: /trunk/xsl/html/qandaset.xsl; M: /trunk/xsl/html/graphics.xsl; M: /trunk/xsl/html/biblio.xsl; M: /trunk/xsl/html/task.xsl; M: /trunk/xsl/html/component.xsl; M: /trunk/xsl/html/glossary.xsl; M: /trunk/xsl/html/callout.xsl; M: /trunk/xsl/html/index.xsl; M: /trunk/xsl/html/synop.xsl; M: /trunk/xsl/html/verbatim.xsl; M: /trunk/xsl/html/ebnf.xsl - Robert Stayton" class="commit-message">Convert all class attributes to use the class.attribute mode<br>
+<div class="literallayout"><p><span class="commit-message">Convert all class attributes to use the class.attribute mode<br>
 so class names can be customized more easily.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/html.xsl - Robert Stayton" class="commit-message">Add class.attribute mode to generate class attributes.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add class.attribute mode to generate class attributes.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/inline.xsl - Robert Stayton" class="commit-message">Added simple.xlink to most remaining inlines.<br>
+<div class="literallayout"><p><span class="commit-message">Added simple.xlink to most remaining inlines.<br>
 Changed class attributes to applying class.attributes mode.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/xref.xsl - Robert Stayton" class="commit-message">Changed <a href="http://docbook.org/tdg5/en/html/xref.html"><code class="sgmltag-element">xref</code></a> template to use simple.xlink tempalte.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Changed <a href="http://docbook.org/tdg5/en/html/xref.html"><code class="sgmltag-element">xref</code></a> template to use simple.xlink tempalte.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/html.xsl - Robert Stayton" class="commit-message">Improve generate.html.title to work with <a href="http://docbook.org/tdg5/en/html/link.html"><code class="sgmltag-element">link</code></a> targets too.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Improve generate.html.title to work with <a href="http://docbook.org/tdg5/en/html/link.html"><code class="sgmltag-element">link</code></a> targets too.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/inline.xsl - Robert Stayton" class="commit-message">Improved simple.xlink to support <a href="http://docbook.org/tdg5/en/html/link.html"><code class="sgmltag-element">link</code></a> and <a href="http://docbook.org/tdg5/en/html/xref.html"><code class="sgmltag-element">xref</code></a>.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Improved simple.xlink to support <a href="http://docbook.org/tdg5/en/html/link.html"><code class="sgmltag-element">link</code></a> and <a href="http://docbook.org/tdg5/en/html/xref.html"><code class="sgmltag-element">xref</code></a>.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/xref.xsl - Robert Stayton" class="commit-message">Use new link.title.attribute now.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Use new link.title.attribute now.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/inline.xsl - Robert Stayton" class="commit-message">Rewrote simple.xlink to handle linkend also.<br>
+<div class="literallayout"><p><span class="commit-message">Rewrote simple.xlink to handle linkend also.<br>
 Better computation of <a href="http://docbook.org/tdg5/en/html/title.html"><code class="sgmltag-element">title</code></a> attribute on <a href="http://docbook.org/tdg5/en/html/link.html"><code class="sgmltag-element">link</code></a> too.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/db5strip.xsl - Robert Stayton" class="commit-message">Handle Xalan quirk as special case.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Handle Xalan quirk as special case.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/admon.xsl; M: /trunk/xsl/html/autotoc.xsl; M: /trunk/xsl/html/lists.xsl; M: /trunk/xsl/html/refentry.xsl; M: /trunk/xsl/html/biblio.xsl; M: /trunk/xsl/html/qandaset.xsl; M: /trunk/xsl/html/component.xsl; M: /trunk/xsl/html/glossary.xsl; M: /trunk/xsl/html/division.xsl; M: /trunk/xsl/html/index.xsl; M: /trunk/xsl/html/sections.xsl; M: /trunk/xsl/html/table.xsl; M: /trunk/xsl/html/block.xsl - Robert Stayton" class="commit-message">Add support for <a href="http://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a>.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add support for <a href="http://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a>.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/graphics.xsl - Robert Stayton" class="commit-message">Fixed imagemaps so they work properly going from calspair coords<br>
+<div class="literallayout"><p><span class="commit-message">Fixed imagemaps so they work properly going from calspair coords<br>
 to HTML <a href="http://docbook.org/tdg5/en/html/area.html"><code class="sgmltag-element">area</code></a> coords.</span></p></div>
 </li></ul></div>
 </div>
@@ -2978,12 +3091,12 @@ to HTML <a href="http://docbook.org/tdg5/en/html/area.html"><code class="sgmltag
             <code class="filename">manpages</code> code
             since the 1.71.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/param.xweb; M: /trunk/xsl/manpages/param.ent - Michael(tm) Smith" class="commit-message">Added doc for <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.output.lang.in.name.enabled.html"><em class="parameter"><code>man.output.lang.in.name.enabled</code></em></a> parameter. This<br>
+<div class="literallayout"><p><span class="commit-message">Added doc for <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.output.lang.in.name.enabled.html"><em class="parameter"><code>man.output.lang.in.name.enabled</code></em></a> parameter. This<br>
 checkin completes support for writing file/pathnames for man-pages<br>
 with $lang include in the names. Closes #1585967. knightly<br>
 accolades to Daniel Leidert for providing the feature request.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/docbook.xsl; M: /trunk/xsl/manpages/other.xsl; M: /trunk/xsl/manpages/utility.xsl - Michael(tm) Smith" class="commit-message">Added new param <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.output.lang.in.name.enabled.html"><em class="parameter"><code>man.output.lang.in.name.enabled</code></em></a>, which<br>
+<div class="literallayout"><p><span class="commit-message">Added new param <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.output.lang.in.name.enabled.html"><em class="parameter"><code>man.output.lang.in.name.enabled</code></em></a>, which<br>
 controls whether $LANG value is included in manpages<br>
 filenames and pathnames. It works like this:<br>
 <br>
@@ -2997,13 +3110,13 @@ their filenames or pathnames as follows;<br>
 - if <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.output.subdirs.enabled.html"><em class="parameter"><code>man.output.subdirs.enabled</code></em></a> is zero, each file is output<br>
   with a foo.$lang.8 <a href="http://docbook.org/tdg5/en/html/filename.html"><code class="sgmltag-element">filename</code></a></span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/charmap.groff.xsl - Michael(tm) Smith" class="commit-message">Use "\e" instead of "\\" for backslash output, because the<br>
+<div class="literallayout"><p><span class="commit-message">Use "\e" instead of "\\" for backslash output, because the<br>
 groff docs say that's the correct thing to do; also because<br>
 testing (thanks, Paul Dubois) shows that "\\" doesn't always<br>
 work as expected; for example, "\\" within a <a href="http://docbook.org/tdg5/en/html/table.html"><code class="sgmltag-element">table</code></a> seems to<br>
 mess things up.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/param.xweb; M: /trunk/xsl/manpages/param.ent; M: /trunk/xsl/manpages/other.xsl - Michael(tm) Smith" class="commit-message">Added the <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.string.subst.map.local.pre.html"><em class="parameter"><code>man.string.subst.map.local.pre</code></em></a> and<br>
+<div class="literallayout"><p><span class="commit-message">Added the <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.string.subst.map.local.pre.html"><em class="parameter"><code>man.string.subst.map.local.pre</code></em></a> and<br>
 <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.string.subst.map.local.post.html"><em class="parameter"><code>man.string.subst.map.local.post</code></em></a> parameters. Those parameters<br>
 enable local additions and changes to string-substitution mappings<br>
 without the need to change the value of <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.string.subst.map.html"><em class="parameter"><code>man.string.subst.map</code></em></a><br>
@@ -3012,10 +3125,10 @@ parameter (which is for standard system mappings). Closes<br>
 stylesheet torture test (the clisp docs) that exposed the need for<br>
 these params.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/inline.xsl - Michael(tm) Smith" class="commit-message">Added the Markup element to the list of elements that get output<br>
+<div class="literallayout"><p><span class="commit-message">Added the Markup element to the list of elements that get output<br>
 in bold. Thanks to Eric S. Raymond.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/table.xsl; M: /trunk/xsl/manpages/synop.xsl; M: /trunk/xsl/manpages/block.xsl; M: /trunk/xsl/manpages/info.xsl; M: /trunk/xsl/manpages/lists.xsl; M: /trunk/xsl/manpages/refentry.xsl; M: /trunk/xsl/manpages/links.xsl; M: /trunk/xsl/manpages/other.xsl; M: /trunk/xsl/manpages/utility.xsl - Michael(tm) Smith" class="commit-message">Replaced all dots in roff requests with U+2302 ("house"<br>
+<div class="literallayout"><p><span class="commit-message">Replaced all dots in roff requests with U+2302 ("house"<br>
 character), and added escaping in output for all instances of dot<br>
 that are not in roff requests. This fixes the problem case where a<br>
 string beginning with a dot (for example, the string ".bashrc")<br>
@@ -3023,7 +3136,7 @@ might occur at the beginning of a line in output, in which case <br>
 would mistakenly get interpreted as a roff request. Thanks to Eric<br>
 S. Raymond for pushing to fix this.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/lists.xsl - Michael(tm) Smith" class="commit-message">Made change to ensure that list content nested in<br>
+<div class="literallayout"><p><span class="commit-message">Made change to ensure that list content nested in<br>
 <a href="http://docbook.org/tdg5/en/html/itemizedlist.html"><code class="sgmltag-element">itemizedlist</code></a> and <a href="http://docbook.org/tdg5/en/html/orderedlist.html"><code class="sgmltag-element">orderedlist</code></a> instances is properly indented. This<br>
 is a switch from using .TP to format those lists to using .RS/.RE<br>
 to format them instead (because .TP does not allow nesting). Closes bug #1602616.<br>
@@ -3037,12 +3150,12 @@ Thanks to Daniel Leidert.</span></p></div>
             <code class="filename">params</code> code
             since the 1.71.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/params/man.output.lang.in.name.enabled.xml - Michael(tm) Smith" class="commit-message">Added doc for <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.output.lang.in.name.enabled.html"><em class="parameter"><code>man.output.lang.in.name.enabled</code></em></a> parameter. This<br>
+<div class="literallayout"><p><span class="commit-message">Added doc for <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.output.lang.in.name.enabled.html"><em class="parameter"><code>man.output.lang.in.name.enabled</code></em></a> parameter. This<br>
 checkin completes support for writing file/pathnames for man-pages<br>
 with $lang include in the names. Closes #1585967. knightly<br>
 accolades to Daniel Leidert for providing the feature request.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/docbook.xsl; M: /trunk/xsl/manpages/other.xsl; M: /trunk/xsl/manpages/utility.xsl - Michael(tm) Smith" class="commit-message">Added new param <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.output.lang.in.name.enabled.html"><em class="parameter"><code>man.output.lang.in.name.enabled</code></em></a>, which<br>
+<div class="literallayout"><p><span class="commit-message">Added new param <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.output.lang.in.name.enabled.html"><em class="parameter"><code>man.output.lang.in.name.enabled</code></em></a>, which<br>
 controls whether $LANG value is included in manpages<br>
 filenames and pathnames. It works like this:<br>
 <br>
@@ -3056,7 +3169,7 @@ their filenames or pathnames as follows;<br>
 - if <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.output.subdirs.enabled.html"><em class="parameter"><code>man.output.subdirs.enabled</code></em></a> is zero, each file is output<br>
   with a foo.$lang.8 <a href="http://docbook.org/tdg5/en/html/filename.html"><code class="sgmltag-element">filename</code></a></span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/params/man.string.subst.map.local.post.xml; A: /trunk/xsl/params/man.string.subst.map.local.pre.xml; M: /trunk/xsl/params/man.string.subst.map.xml - Michael(tm) Smith" class="commit-message">Added the <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.string.subst.map.local.pre.html"><em class="parameter"><code>man.string.subst.map.local.pre</code></em></a> and<br>
+<div class="literallayout"><p><span class="commit-message">Added the <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.string.subst.map.local.pre.html"><em class="parameter"><code>man.string.subst.map.local.pre</code></em></a> and<br>
 <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.string.subst.map.local.post.html"><em class="parameter"><code>man.string.subst.map.local.post</code></em></a> parameters. Those parameters<br>
 enable local additions and changes to string-substitution mappings<br>
 without the need to change the value of <a href="http://docbook.sourceforge.net/release/xsl/current/doc/manpages/man.string.subst.map.html"><em class="parameter"><code>man.string.subst.map</code></em></a><br>
@@ -3065,18 +3178,18 @@ parameter (which is for standard system mappings). Closes<br>
 stylesheet torture test (the clisp docs) that exposed the need for<br>
 these params.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/params/xep.index.item.properties.xml - Robert Stayton" class="commit-message">Add index.page.number.properties by default.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add index.page.number.properties by default.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/params/index.page.number.properties.xml - Robert Stayton" class="commit-message">Added <a href="http://docbook.sourceforge.net/release/xsl/current/doc/fo/index.page.number.properties.html"><em class="parameter"><code>index.page.number.properties</code></em></a> to allow customizations of page numbers in indexes.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Added <a href="http://docbook.sourceforge.net/release/xsl/current/doc/fo/index.page.number.properties.html"><em class="parameter"><code>index.page.number.properties</code></em></a> to allow customizations of page numbers in indexes.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/params/olink.properties.xml - Robert Stayton" class="commit-message">Move show-destination="replace" property from template to attribute-set<br>
+<div class="literallayout"><p><span class="commit-message">Move show-destination="replace" property from template to attribute-set<br>
 so it can be customized.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/params/glossary.sort.xml - Robert Stayton" class="commit-message">Add support for sorting <a href="http://docbook.org/tdg5/en/html/glossary.html"><code class="sgmltag-element">glossary</code></a> entries</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add support for sorting <a href="http://docbook.org/tdg5/en/html/glossary.html"><code class="sgmltag-element">glossary</code></a> entries</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/params/qanda.in.toc.xml - Robert Stayton" class="commit-message">Add option to include qanda in tables of contents.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add option to include qanda in tables of contents.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/params/verbatim.properties.xml - Robert Stayton" class="commit-message">Moved all properties to attribute-sets so can be customized more easily.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Moved all properties to attribute-sets so can be customized more easily.</span></p></div>
 </li></ul></div>
 </div>
 
@@ -3086,7 +3199,7 @@ so it can be customized.</span></p></div>
             <code class="filename">template</code> code
             since the 1.71.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/template/titlepage.xsl - Mauritz Jeanson" class="commit-message">Added workaround for Xalan bug: use for-each and copy instead of copy-of (#1604770).</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Added workaround for Xalan bug: use for-each and copy instead of copy-of (#1604770).</span></p></div>
 </li></ul></div>
 </div>
 
@@ -3096,7 +3209,7 @@ so it can be customized.</span></p></div>
             <code class="filename">roundtrip</code> code
             since the 1.71.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/roundtrip/docbook-pages.xsl; M: /trunk/xsl/roundtrip/specifications.xml; A: /trunk/xsl/roundtrip/dbk2ooo.xsl; M: /trunk/xsl/roundtrip/docbook.xsl; A: /trunk/xsl/roundtrip/dbk2pages.xsl; M: /trunk/xsl/roundtrip/template.xml; A: /trunk/xsl/roundtrip/dbk2wordml.xsl; A: /trunk/xsl/roundtrip/dbk2wp.xsl; M: /trunk/xsl/roundtrip/template.dot; M: /trunk/xsl/roundtrip/wordml-final.xsl - Steve Ball" class="commit-message">rename to roundtrip, add OpenOffice support</span></p></div>
+<div class="literallayout"><p><span class="commit-message">rename to roundtrip, add OpenOffice support</span></p></div>
 </li></ul></div>
 </div>
 </div>
@@ -3125,9 +3238,9 @@ number of bug fixes, it includes two feature changes:
             <code class="filename">common</code> code
             since the 1.71.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="D: /trunk/xsl/common/autoidx-ng.xsl - Jirka Kosek" class="commit-message">For backward compatability autoidx-ng.xsl is invoking "kosek" indexing method again.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">For backward compatability autoidx-ng.xsl is invoking "kosek" indexing method again.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/common/stripns.xsl - Robert Stayton" class="commit-message">Add support for Xalan generating a root xml:base like saxon.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add support for Xalan generating a root xml:base like saxon.</span></p></div>
 </li></ul></div>
 </div>
 
@@ -3137,11 +3250,11 @@ number of bug fixes, it includes two feature changes:
             <code class="filename">fo</code> code
             since the 1.71.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/autoidx-ng.xsl; M: /trunk/xsl/fo/autoidx-kosek.xsl - Jirka Kosek" class="commit-message">For backward compatability autoidx-ng.xsl is invoking "kosek" indexing method again.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">For backward compatability autoidx-ng.xsl is invoking "kosek" indexing method again.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/docbook.xsl - Robert Stayton" class="commit-message">Add support for Xalan to add root node xml:base for db5 docs.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add support for Xalan to add root node xml:base for db5 docs.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/param.xweb; M: /trunk/xsl/fo/param.ent - Jirka Kosek" class="commit-message">Added support for profiling based on xml:lang and status attributes.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Added support for profiling based on xml:lang and status attributes.</span></p></div>
 </li></ul></div>
 </div>
 
@@ -3151,13 +3264,13 @@ number of bug fixes, it includes two feature changes:
             <code class="filename">html</code> code
             since the 1.71.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/autoidx-ng.xsl; M: /trunk/xsl/html/autoidx-kosek.xsl - Jirka Kosek" class="commit-message">For backward compatability autoidx-ng.xsl is invoking "kosek" indexing method again.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">For backward compatability autoidx-ng.xsl is invoking "kosek" indexing method again.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/chunk-code.xsl; M: /trunk/xsl/html/docbook.xsl - Robert Stayton" class="commit-message">Add support for Xalan to add root node xml:base for db5 docs.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Add support for Xalan to add root node xml:base for db5 docs.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/param.xweb; M: /trunk/xsl/html/param.ent - Jirka Kosek" class="commit-message">Added support for profiling based on xml:lang and status attributes.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Added support for profiling based on xml:lang and status attributes.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/oldchunker.xsl; M: /trunk/xsl/html/chunker.xsl; M: /trunk/xsl/html/graphics.xsl; M: /trunk/xsl/html/callout.xsl; M: /trunk/xsl/html/autoidx-kimber.xsl; M: /trunk/xsl/html/autoidx-kosek.xsl; M: /trunk/xsl/html/table.xsl; M: /trunk/xsl/html/verbatim.xsl - Michael(tm) Smith" class="commit-message">Made changes in namespace declarations to prevent xmllint's<br>
+<div class="literallayout"><p><span class="commit-message">Made changes in namespace declarations to prevent xmllint's<br>
 canonicalizer from treating them as relative namespace URIs.<br>
 <br>
   - Changed xmlns:k="java:com.isogen.saxoni18n.Saxoni18nService"<br>
@@ -3178,7 +3291,7 @@ canonicalizer from treating them as relative namespace URIs.<br>
     adjusted associated code to make the current Xalan redirect spec.<br>
     (see http://xml.apache.org/xalan-j/apidocs/org/apache/xalan/lib/Redirect.html)</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/chunk-common.xsl; M: /trunk/xsl/html/titlepage.xsl; M: /trunk/xsl/html/param.xweb; M: /trunk/xsl/html/docbook.xsl; M: /trunk/xsl/html/graphics.xsl; M: /trunk/xsl/html/param.ent - Michael(tm) Smith" class="commit-message">Added the <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/html.append.html"><em class="parameter"><code>html.append</code></em></a> and <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/chunk.append.html"><em class="parameter"><code>chunk.append</code></em></a> parameters. By default, the<br>
+<div class="literallayout"><p><span class="commit-message">Added the <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/html.append.html"><em class="parameter"><code>html.append</code></em></a> and <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/chunk.append.html"><em class="parameter"><code>chunk.append</code></em></a> parameters. By default, the<br>
 value of both is empty; but the internal DocBook XSL stylesheets<br>
 build sets their value to "&lt;xsl:text&gt;&amp;#x0a;&lt;/xsl:text&gt;", in order<br>
 to ensure that all files in the docbook-xsl-doc package end in a<br>
@@ -3194,7 +3307,7 @@ files that are not newline-terminated.)</span></p></div>
             <code class="filename">highlighting</code> code
             since the 1.71.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/highlighting/delphi-hl.xml; M: /trunk/xsl/highlighting/myxml-hl.xml; M: /trunk/xsl/highlighting/php-hl.xml; M: /trunk/xsl/highlighting/m2-hl.xml; M: /trunk/xsl/highlighting/ini-hl.xml; M: /trunk/xsl/highlighting/xslthl-config.xml; M: /trunk/xsl/highlighting/java-hl.xml - Jirka Kosek" class="commit-message">Added license information</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Added license information</span></p></div>
 </li></ul></div>
 </div>
 
@@ -3204,7 +3317,7 @@ files that are not newline-terminated.)</span></p></div>
             <code class="filename">manpages</code> code
             since the 1.71.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/table.xsl; M: /trunk/xsl/manpages/block.xsl; M: /trunk/xsl/manpages/docbook.xsl; M: /trunk/xsl/manpages/links.xsl; M: /trunk/xsl/manpages/other.xsl; M: /trunk/xsl/manpages/utility.xsl - Michael(tm) Smith" class="commit-message">Added initial support in manpages output for <a href="http://docbook.org/tdg5/en/html/footnote.html"><code class="sgmltag-element">footnote</code></a>, <a href="http://docbook.org/tdg5/en/html/annotation.html"><code class="sgmltag-element">annotation</code></a>,<br>
+<div class="literallayout"><p><span class="commit-message">Added initial support in manpages output for <a href="http://docbook.org/tdg5/en/html/footnote.html"><code class="sgmltag-element">footnote</code></a>, <a href="http://docbook.org/tdg5/en/html/annotation.html"><code class="sgmltag-element">annotation</code></a>,<br>
 and <a href="http://docbook.org/tdg5/en/html/alt.html"><code class="sgmltag-element">alt</code></a> instances. Basically, they all now get handled the same<br>
 way ulink instances are. They are treated as a class as "note<br>
 sources": A numbered marker is generated at the place in the main<br>
@@ -3228,9 +3341,9 @@ and <a href="http://docbook.org/tdg5/en/html/personblurb.html"><code class="sgml
             <code class="filename">params</code> code
             since the 1.71.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/params/profile.status.xml - Jirka Kosek" class="commit-message">Added support for profiling based on xml:lang and status attributes.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Added support for profiling based on xml:lang and status attributes.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/params/html.append.xml; A: /trunk/xsl/params/chunk.append.xml - Michael(tm) Smith" class="commit-message">Added the <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/html.append.html"><em class="parameter"><code>html.append</code></em></a> and <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/chunk.append.html"><em class="parameter"><code>chunk.append</code></em></a> parameters. By default, the<br>
+<div class="literallayout"><p><span class="commit-message">Added the <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/html.append.html"><em class="parameter"><code>html.append</code></em></a> and <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/chunk.append.html"><em class="parameter"><code>chunk.append</code></em></a> parameters. By default, the<br>
 value of both is empty; but the internal DocBook XSL stylesheets<br>
 build sets their value to "&lt;xsl:text&gt;&amp;#x0a;&lt;/xsl:text&gt;", in order<br>
 to ensure that all files in the docbook-xsl-doc <a href="http://docbook.org/tdg5/en/html/package.html"><code class="sgmltag-element">package</code></a> end in a<br>
@@ -3246,7 +3359,7 @@ files that are not newline-terminated.)</span></p></div>
             <code class="filename">profiling</code> code
             since the 1.71.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/profiling/profile.xsl; M: /trunk/xsl/profiling/profile-mode.xsl - Jirka Kosek" class="commit-message">Added support for profiling based on xml:lang and status attributes.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Added support for profiling based on xml:lang and status attributes.</span></p></div>
 </li></ul></div>
 </div>
 
@@ -3261,8 +3374,8 @@ significant feature changes:
       highlighting in output of programlisting instances (controlled
       through the <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/highlight.source.html"><em class="parameter"><code>highlight.source</code></em></a>
       parameter). The Java-based implementation requires Saxon and
-      makes use of <a class="link" href="http://molhanec.net/" target="_top"><span class="person"><span class="personname"><span class="firstname">Michal</span> <span class="surname">Molhanec</span></span></span></a>&#8217;s <a class="link" href="http://sourceforge.net/projects/xslthl" target="_top">XSLTHL</a>. More details are available at Jirka Kosek&#8217;s
-      website: </p><div class="blockquote"><blockquote class="blockquote"><p><a class="link" href="http://xmlguru.cz/2006/07/docbook-syntax-highlighting" target="_top">http://xmlguru.cz/2006/07/docbook-syntax-highlighting</a></p></blockquote></div><p> The support is currently limited to highlighting
+      makes use of <a class="ulink" href="http://molhanec.net/" target="_top"><span class="person"><span class="personname"><span class="firstname">Michal</span> <span class="surname">Molhanec</span></span></span></a>&#8217;s <a class="ulink" href="http://sourceforge.net/projects/xslthl" target="_top">XSLTHL</a>. More details are available at Jirka Kosek&#8217;s
+      website: </p><div class="blockquote"><blockquote class="blockquote"><p><a class="ulink" href="http://xmlguru.cz/2006/07/docbook-syntax-highlighting" target="_top">http://xmlguru.cz/2006/07/docbook-syntax-highlighting</a></p></blockquote></div><p> The support is currently limited to highlighting
       of XML, Java, PHP, Delphi, Modula-2 sources, and INI
       files.</p>
     </dd><dt><span class="term">Changes to autoindexing</span></dt><dd>
@@ -3309,14 +3422,14 @@ been made since the 1.70.1 release.</p>
             <code class="filename">common</code> code
             since the 1.70.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/common/labels.xsl - Michael(tm) Smith" class="commit-message">Added <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/reference.autolabel.html"><em class="parameter"><code>reference.autolabel</code></em></a> parameter for controlling labels on<br>
+<div class="literallayout"><p><span class="commit-message">Added <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/reference.autolabel.html"><em class="parameter"><code>reference.autolabel</code></em></a> parameter for controlling labels on<br>
 <a href="http://docbook.org/tdg5/en/html/reference.html"><code class="sgmltag-element">reference</code></a> output.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/common/table.xsl - Norman Walsh" class="commit-message">Support <a href="http://docbook.org/tdg5/en/html/row.html"><code class="sgmltag-element">row</code></a>s that are *completely* overlapped by the preceding <a href="http://docbook.org/tdg5/en/html/row.html"><code class="sgmltag-element">row</code></a></span></p></div>
+<div class="literallayout"><p><span class="commit-message">Support <a href="http://docbook.org/tdg5/en/html/row.html"><code class="sgmltag-element">row</code></a>s that are *completely* overlapped by the preceding <a href="http://docbook.org/tdg5/en/html/row.html"><code class="sgmltag-element">row</code></a></span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/common/autoidx-kimber.xsl; A: /trunk/xsl/common/autoidx-kosek.xsl - Robert Stayton" class="commit-message">New modules for supporting indexing extensions.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">New modules for supporting indexing extensions.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/common/common.xsl - Norman Walsh" class="commit-message">Support startinglinenumber on <a href="http://docbook.org/tdg5/en/html/orderedlist.html"><code class="sgmltag-element">orderedlist</code></a></span></p></div>
+<div class="literallayout"><p><span class="commit-message">Support startinglinenumber on <a href="http://docbook.org/tdg5/en/html/orderedlist.html"><code class="sgmltag-element">orderedlist</code></a></span></p></div>
 </li></ul></div>
 </div>
 
@@ -3326,7 +3439,7 @@ been made since the 1.70.1 release.</p>
             <code class="filename">extensions</code> code
             since the 1.70.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="D: /trunk/xsl/extensions/xalan27/.cvsignore; A: /trunk/xsl/extensions/saxon65/nbproject; A: /trunk/xsl/extensions/saxon65/nbproject/project.properties; D: /trunk/xsl/extensions/prj.el; A: /trunk/xsl/extensions/saxon65/src; A: /trunk/xsl/extensions/xalan2/src/com; M: /trunk/xsl/extensions/xalan2/src/com/nwalsh/xalan/Text.java; A: /trunk/xsl/extensions/saxon65/nbproject/project.xml; D: /trunk/xsl/extensions/build.xml; A: /trunk/xsl/extensions/saxon65/build.xml; A: /trunk/xsl/extensions/xalan2/nbproject/genfiles.properties; A: /trunk/xsl/extensions/saxon65; D: /trunk/xsl/extensions/xalan2/com; M: /trunk/xsl/extensions/xalan2/src/com/nwalsh/xalan/Func.java; A: /trunk/xsl/extensions/xalan2/test; A: /trunk/xsl/extensions/saxon65/src/com; A: /trunk/xsl/extensions/xalan2/nbproject/build-impl.xml; A: /trunk/xsl/extensions/xalan2/nbproject; A: /trunk/xsl/extensions/xalan2/src; A: /trunk/xsl/extensions/xalan2/nbproject/project.properties; D: /trunk/xsl/extensions/.cvsignore; M: /trunk/xsl/extensions/Makefile; D: /trunk/xsl/extensions/saxon8; A: /trunk/xsl/extensions/saxon65/nbproject/genfiles.properties; A: /trunk/xsl/extensions/xalan2/nbproject/project.xml; A: /trunk/xsl/extensions/saxon65/test; M: /trunk/xsl/extensions/xalan2/src/com/nwalsh/xalan/Verbatim.java; A: /trunk/xsl/extensions/xalan2/build.xml; M: /trunk/xsl/extensions/xalan2; D: /trunk/xsl/extensions/saxon643; A: /trunk/xsl/extensions/saxon65/nbproject/build-impl.xml - Norman Walsh" class="commit-message">Completely reworked extensions build system; now uses NetBeans and ant</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Completely reworked extensions build system; now uses NetBeans and ant</span></p></div>
 </li></ul></div>
 </div>
 
@@ -3336,9 +3449,9 @@ been made since the 1.70.1 release.</p>
             <code class="filename">fo</code> code
             since the 1.70.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/autoidx-kimber.xsl - Robert Stayton" class="commit-message">xsl:sort lang attribute now uses two-char substring of lang attribute.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">xsl:sort lang attribute now uses two-char substring of lang attribute.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/synop.xsl - Michael(tm) Smith" class="commit-message">Support titlecase "Java", "Perl", and "IDL" as values for the<br>
+<div class="literallayout"><p><span class="commit-message">Support titlecase "Java", "Perl", and "IDL" as values for the<br>
 language attribute on <a href="http://docbook.org/tdg5/en/html/classsynopsis.html"><code class="sgmltag-element">classsynopsis</code></a>, etc. (instead of just<br>
 lowercase "java", "perl", and "idl"). Also support "c++" and "C++"<br>
 (instead of just "cpp").<br>
@@ -3346,41 +3459,41 @@ lowercase "java", "perl", and "idl"). Also support "c++" and "C++"<br>
 Affects HTML, FO, and manpages output. Closes bug 1552332. Thanks<br>
 to "Brian A. Vanderburg II".</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/param.xweb; M: /trunk/xsl/fo/param.ent - Michael(tm) Smith" class="commit-message">Added support for the <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/reference.autolabel.html"><em class="parameter"><code>reference.autolabel</code></em></a> param in (X)HTML and FO<br>
+<div class="literallayout"><p><span class="commit-message">Added support for the <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/reference.autolabel.html"><em class="parameter"><code>reference.autolabel</code></em></a> param in (X)HTML and FO<br>
 output.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/table.xsl - Norman Walsh" class="commit-message">Support <a href="http://docbook.org/tdg5/en/html/row.html"><code class="sgmltag-element">row</code></a>s that are *completely* overlapped by the preceding <a href="http://docbook.org/tdg5/en/html/row.html"><code class="sgmltag-element">row</code></a></span></p></div>
+<div class="literallayout"><p><span class="commit-message">Support <a href="http://docbook.org/tdg5/en/html/row.html"><code class="sgmltag-element">row</code></a>s that are *completely* overlapped by the preceding <a href="http://docbook.org/tdg5/en/html/row.html"><code class="sgmltag-element">row</code></a></span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/autoidx.xsl - Robert Stayton" class="commit-message">Rearranged templates for the 3 indexing methods<br>
+<div class="literallayout"><p><span class="commit-message">Rearranged templates for the 3 indexing methods<br>
 and changed method named 'english' to 'basic'.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/fo/autoidx-kimber.xsl; A: /trunk/xsl/fo/autoidx-kosek.xsl - Robert Stayton" class="commit-message">New modules for supporting indexing extensions.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">New modules for supporting indexing extensions.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/pagesetup.xsl - Robert Stayton" class="commit-message">Turn off blank-body for <a href="http://docbook.sourceforge.net/release/xsl/current/doc/fo/fop1.extensions.html"><em class="parameter"><code>fop1.extensions</code></em></a> too since fop 0.92<br>
+<div class="literallayout"><p><span class="commit-message">Turn off blank-body for <a href="http://docbook.sourceforge.net/release/xsl/current/doc/fo/fop1.extensions.html"><em class="parameter"><code>fop1.extensions</code></em></a> too since fop 0.92<br>
 does not support it either.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/autoidx.xsl - Robert Stayton" class="commit-message">Add Xalan variant to test for exslt:node-set <a href="http://docbook.org/tdg5/en/html/function.html"><code class="sgmltag-element">function</code></a>.<br>
+<div class="literallayout"><p><span class="commit-message">Add Xalan variant to test for exslt:node-set <a href="http://docbook.org/tdg5/en/html/function.html"><code class="sgmltag-element">function</code></a>.<br>
 Xalan can use <a href="http://docbook.org/tdg5/en/html/function.html"><code class="sgmltag-element">function</code></a> named node-set(), but doesn't<br>
 recognize it using function-available().</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/inline.xsl - Michael(tm) Smith" class="commit-message">Added support to FO stylesheets for handling instances of <a href="http://docbook.org/tdg5/en/html/org.html"><code class="sgmltag-element">Org</code></a><br>
+<div class="literallayout"><p><span class="commit-message">Added support to FO stylesheets for handling instances of <a href="http://docbook.org/tdg5/en/html/org.html"><code class="sgmltag-element">Org</code></a><br>
 where it occurs outside of *<a href="http://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a> content. In HTML stylesheets,<br>
 moved handling of <a href="http://docbook.org/tdg5/en/html/org.html"><code class="sgmltag-element">Org</code></a> out of info.xsl and into inline.xsl. In both<br>
 FO and HTML stylesheets, added support for correctly processing<br>
 <a href="http://docbook.org/tdg5/en/html/affiliation.html"><code class="sgmltag-element">Affiliation</code></a> and <a href="http://docbook.org/tdg5/en/html/jobtitle.html"><code class="sgmltag-element">Jobtitle</code></a>.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/refentry.xsl - Michael(tm) Smith" class="commit-message">Don't output punctuation between <a href="http://docbook.org/tdg5/en/html/refname.html"><code class="sgmltag-element">Refname</code></a> and <a href="http://docbook.org/tdg5/en/html/refpurpose.html"><code class="sgmltag-element">Refpurpose</code></a> if<br>
+<div class="literallayout"><p><span class="commit-message">Don't output punctuation between <a href="http://docbook.org/tdg5/en/html/refname.html"><code class="sgmltag-element">Refname</code></a> and <a href="http://docbook.org/tdg5/en/html/refpurpose.html"><code class="sgmltag-element">Refpurpose</code></a> if<br>
 <a href="http://docbook.org/tdg5/en/html/refpurpose.html"><code class="sgmltag-element">Refpurpose</code></a> is empty. Also corrected handling of <a href="http://docbook.org/tdg5/en/html/refsect2.html"><code class="sgmltag-element">Refsect2</code></a>/<a href="http://docbook.org/tdg5/en/html/title.html"><code class="sgmltag-element">title</code></a><br>
 instances, and removed some debugging stuff that was generated in<br>
 manpages output to mark the ends of sections.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/inline.xsl; M: /trunk/xsl/fo/param.xweb; M: /trunk/xsl/fo/param.ent - Michael(tm) Smith" class="commit-message">Added new <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/email.delimiters.enabled.html"><em class="parameter"><code>email.delimiters.enabled</code></em></a> param. If non-zero (the<br>
+<div class="literallayout"><p><span class="commit-message">Added new <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/email.delimiters.enabled.html"><em class="parameter"><code>email.delimiters.enabled</code></em></a> param. If non-zero (the<br>
 default), delimiters are generated around e-mail addresses (output<br>
 of the <a href="http://docbook.org/tdg5/en/html/email.html"><code class="sgmltag-element">email</code></a> element). If zero, the delimiters are suppressed.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/param.ent; M: /trunk/xsl/fo/param.xweb; A: /trunk/xsl/fo/highlight.xsl; M: /trunk/xsl/fo/verbatim.xsl - Jirka Kosek" class="commit-message">Initial support of syntax highlighting of programlistings.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Initial support of syntax highlighting of programlistings.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/fo/pagesetup.xsl - Jirka Kosek" class="commit-message"><a href="http://docbook.org/tdg5/en/html/chapter.html"><code class="sgmltag-element">Chapter</code></a> after <a href="http://docbook.org/tdg5/en/html/preface.html"><code class="sgmltag-element">preface</code></a> should restart numbering of pages.</span></p></div>
+<div class="literallayout"><p><span class="commit-message"><a href="http://docbook.org/tdg5/en/html/chapter.html"><code class="sgmltag-element">Chapter</code></a> after <a href="http://docbook.org/tdg5/en/html/preface.html"><code class="sgmltag-element">preface</code></a> should restart numbering of pages.</span></p></div>
 </li></ul></div>
 </div>
 
@@ -3390,9 +3503,9 @@ of the <a href="http://docbook.org/tdg5/en/html/email.html"><code class="sgmltag
             <code class="filename">html</code> code
             since the 1.70.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/autoidx-kimber.xsl - Robert Stayton" class="commit-message">xsl:sort lang attribute now uses two-char substring of lang attribute.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">xsl:sort lang attribute now uses two-char substring of lang attribute.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/synop.xsl - Michael(tm) Smith" class="commit-message">Support titlecase "Java", "Perl", and "IDL" as values for the<br>
+<div class="literallayout"><p><span class="commit-message">Support titlecase "Java", "Perl", and "IDL" as values for the<br>
 language attribute on <a href="http://docbook.org/tdg5/en/html/classsynopsis.html"><code class="sgmltag-element">classsynopsis</code></a>, etc. (instead of just<br>
 lowercase "java", "perl", and "idl"). Also support "c++" and "C++"<br>
 (instead of just "cpp").<br>
@@ -3400,17 +3513,17 @@ lowercase "java", "perl", and "idl"). Also support "c++" and "C++"<br>
 Affects HTML, FO, and manpages output. Closes bug 1552332. Thanks<br>
 to "Brian A. Vanderburg II".</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/param.xweb; M: /trunk/xsl/html/param.ent - Michael(tm) Smith" class="commit-message">Added support for the <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/reference.autolabel.html"><em class="parameter"><code>reference.autolabel</code></em></a> param in (X)HTML and FO<br>
+<div class="literallayout"><p><span class="commit-message">Added support for the <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/reference.autolabel.html"><em class="parameter"><code>reference.autolabel</code></em></a> param in (X)HTML and FO<br>
 output.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/table.xsl - Norman Walsh" class="commit-message">Support <a href="http://docbook.org/tdg5/en/html/row.html"><code class="sgmltag-element">row</code></a>s that are *completely* overlapped by the preceding <a href="http://docbook.org/tdg5/en/html/row.html"><code class="sgmltag-element">row</code></a></span></p></div>
+<div class="literallayout"><p><span class="commit-message">Support <a href="http://docbook.org/tdg5/en/html/row.html"><code class="sgmltag-element">row</code></a>s that are *completely* overlapped by the preceding <a href="http://docbook.org/tdg5/en/html/row.html"><code class="sgmltag-element">row</code></a></span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/autoidx.xsl - Robert Stayton" class="commit-message">Rearranged templates for the 3 indexing methods<br>
+<div class="literallayout"><p><span class="commit-message">Rearranged templates for the 3 indexing methods<br>
 and changed method named 'english' to 'basic'.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/html/autoidx-kimber.xsl; A: /trunk/xsl/html/autoidx-kosek.xsl - Robert Stayton" class="commit-message">New modules for supporting indexing extensions.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">New modules for supporting indexing extensions.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/titlepage.xsl; M: /trunk/xsl/html/param.xweb; M: /trunk/xsl/html/param.ent - Michael(tm) Smith" class="commit-message">Added several new HTML parameters for controlling appearance of<br>
+<div class="literallayout"><p><span class="commit-message">Added several new HTML parameters for controlling appearance of<br>
 content on HTML <a href="http://docbook.org/tdg5/en/html/title.html"><code class="sgmltag-element">title</code></a> pages:<br>
 <br>
 <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/contrib.inline.enabled.html"><em class="parameter"><code>contrib.inline.enabled</code></em></a>:<br>
@@ -3433,40 +3546,40 @@ content on HTML <a href="http://docbook.org/tdg5/en/html/title.html"><code class
   If non-zero (the default), a localized Edited by heading is<br>
   displayed above <a href="http://docbook.org/tdg5/en/html/editor.html"><code class="sgmltag-element">editor</code></a> names in output of the <a href="http://docbook.org/tdg5/en/html/editor.html"><code class="sgmltag-element">editor</code></a> element.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/autoidx.xsl - Robert Stayton" class="commit-message">Add Xalan variant to test for exslt:node-set <a href="http://docbook.org/tdg5/en/html/function.html"><code class="sgmltag-element">function</code></a>.<br>
+<div class="literallayout"><p><span class="commit-message">Add Xalan variant to test for exslt:node-set <a href="http://docbook.org/tdg5/en/html/function.html"><code class="sgmltag-element">function</code></a>.<br>
 Xalan can use <a href="http://docbook.org/tdg5/en/html/function.html"><code class="sgmltag-element">function</code></a> named node-set(), but doesn't<br>
 recognize it using function-available().</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/inline.xsl; M: /trunk/xsl/html/info.xsl - Michael(tm) Smith" class="commit-message">Added support to FO stylesheets for handling instances of <a href="http://docbook.org/tdg5/en/html/org.html"><code class="sgmltag-element">Org</code></a><br>
+<div class="literallayout"><p><span class="commit-message">Added support to FO stylesheets for handling instances of <a href="http://docbook.org/tdg5/en/html/org.html"><code class="sgmltag-element">Org</code></a><br>
 where it occurs outside of *<a href="http://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a> content. In HTML stylesheets,<br>
 moved handling of <a href="http://docbook.org/tdg5/en/html/org.html"><code class="sgmltag-element">Org</code></a> out of info.xsl and into inline.xsl. In both<br>
 FO and HTML stylesheets, added support for correctly processing<br>
 <a href="http://docbook.org/tdg5/en/html/affiliation.html"><code class="sgmltag-element">Affiliation</code></a> and <a href="http://docbook.org/tdg5/en/html/jobtitle.html"><code class="sgmltag-element">Jobtitle</code></a>.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/refentry.xsl - Michael(tm) Smith" class="commit-message">Don't output punctuation between <a href="http://docbook.org/tdg5/en/html/refname.html"><code class="sgmltag-element">Refname</code></a> and <a href="http://docbook.org/tdg5/en/html/refpurpose.html"><code class="sgmltag-element">Refpurpose</code></a> if<br>
+<div class="literallayout"><p><span class="commit-message">Don't output punctuation between <a href="http://docbook.org/tdg5/en/html/refname.html"><code class="sgmltag-element">Refname</code></a> and <a href="http://docbook.org/tdg5/en/html/refpurpose.html"><code class="sgmltag-element">Refpurpose</code></a> if<br>
 <a href="http://docbook.org/tdg5/en/html/refpurpose.html"><code class="sgmltag-element">Refpurpose</code></a> is empty. Also corrected handling of <a href="http://docbook.org/tdg5/en/html/refsect2.html"><code class="sgmltag-element">Refsect2</code></a>/<a href="http://docbook.org/tdg5/en/html/title.html"><code class="sgmltag-element">title</code></a><br>
 instances, and removed some debugging stuff that was generated in<br>
 manpages output to mark the ends of sections.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/inline.xsl; M: /trunk/xsl/html/param.xweb; M: /trunk/xsl/html/param.ent - Michael(tm) Smith" class="commit-message">Added new <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/email.delimiters.enabled.html"><em class="parameter"><code>email.delimiters.enabled</code></em></a> param. If non-zero (the<br>
+<div class="literallayout"><p><span class="commit-message">Added new <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/email.delimiters.enabled.html"><em class="parameter"><code>email.delimiters.enabled</code></em></a> param. If non-zero (the<br>
 default), delimiters are generated around e-mail addresses (output<br>
 of the <a href="http://docbook.org/tdg5/en/html/email.html"><code class="sgmltag-element">email</code></a> element). If zero, the delimiters are suppressed.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/param.xweb; M: /trunk/xsl/html/param.ent; M: /trunk/xsl/html/qandaset.xsl - Michael(tm) Smith" class="commit-message">Added <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/qanda.nested.in.toc.html"><em class="parameter"><code>qanda.nested.in.toc</code></em></a> param. Default value is zero. If<br>
+<div class="literallayout"><p><span class="commit-message">Added <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/qanda.nested.in.toc.html"><em class="parameter"><code>qanda.nested.in.toc</code></em></a> param. Default value is zero. If<br>
 non-zero, instances of "nested" <a href="http://docbook.org/tdg5/en/html/qandaentry.html"><code class="sgmltag-element">Qandaentry</code></a> (ones that are children<br>
 of <a href="http://docbook.org/tdg5/en/html/answer.html"><code class="sgmltag-element">Answer</code></a> elements) are displayed in the <a href="http://docbook.org/tdg5/en/html/toc.html"><code class="sgmltag-element">TOC</code></a>. Closes patch 1509018<br>
 (from Daniel Leidert). Currently on affects HTML output (no patch<br>
 for FO output provided).</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/html.xsl - Jirka Kosek" class="commit-message">Improved handling of relative locations generated files</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Improved handling of relative locations generated files</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/param.ent; M: /trunk/xsl/html/param.xweb; A: /trunk/xsl/html/highlight.xsl; M: /trunk/xsl/html/verbatim.xsl - Jirka Kosek" class="commit-message">Initial support of syntax highlighting of programlistings.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Initial support of syntax highlighting of programlistings.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/info.xsl - Norman Walsh" class="commit-message">Support <a href="http://docbook.org/tdg5/en/html/org.html"><code class="sgmltag-element">org</code></a></span></p></div>
+<div class="literallayout"><p><span class="commit-message">Support <a href="http://docbook.org/tdg5/en/html/org.html"><code class="sgmltag-element">org</code></a></span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/inline.xsl - Norman Walsh" class="commit-message">Support <a href="http://docbook.org/tdg5/en/html/person.html"><code class="sgmltag-element">person</code></a></span></p></div>
+<div class="literallayout"><p><span class="commit-message">Support <a href="http://docbook.org/tdg5/en/html/person.html"><code class="sgmltag-element">person</code></a></span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/html/chunk-code.xsl - Jirka Kosek" class="commit-message">Support $keep.relative.image.uris also when chunking</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Support $keep.relative.image.uris also when chunking</span></p></div>
 </li></ul></div>
 </div>
 
@@ -3476,7 +3589,7 @@ for FO output provided).</span></p></div>
             <code class="filename">highlighting</code> code
             since the 1.70.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/highlighting/php-hl.xml; A: /trunk/xsl/highlighting/common.xsl; A: /trunk/xsl/highlighting/delphi-hl.xml; A: /trunk/xsl/highlighting/myxml-hl.xml; A: /trunk/xsl/highlighting/m2-hl.xml; A: /trunk/xsl/highlighting/ini-hl.xml; A: /trunk/xsl/highlighting/xslthl-config.xml; A: /trunk/xsl/highlighting/java-hl.xml - Jirka Kosek" class="commit-message">Initial support of syntax highlighting of programlistings.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Initial support of syntax highlighting of programlistings.</span></p></div>
 </li></ul></div>
 </div>
 
@@ -3486,26 +3599,26 @@ for FO output provided).</span></p></div>
             <code class="filename">manpages</code> code
             since the 1.70.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/docbook.xsl; M: /trunk/xsl/manpages/links.xsl; M: /trunk/xsl/manpages/other.xsl - Michael(tm) Smith" class="commit-message">Suppress <a href="http://docbook.org/tdg5/en/html/footnote.html"><code class="sgmltag-element">footnote</code></a> markers and output warning that footnotes are<br>
+<div class="literallayout"><p><span class="commit-message">Suppress <a href="http://docbook.org/tdg5/en/html/footnote.html"><code class="sgmltag-element">footnote</code></a> markers and output warning that footnotes are<br>
 not yet supported.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/info.xsl - Michael(tm) Smith" class="commit-message">Handle instances of <a href="http://docbook.org/tdg5/en/html/address.html"><code class="sgmltag-element">address</code></a>/<a href="http://docbook.org/tdg5/en/html/otheraddr.html"><code class="sgmltag-element">otheraddr</code></a>/ulink in <a href="http://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a> et al in the<br>
+<div class="literallayout"><p><span class="commit-message">Handle instances of <a href="http://docbook.org/tdg5/en/html/address.html"><code class="sgmltag-element">address</code></a>/<a href="http://docbook.org/tdg5/en/html/otheraddr.html"><code class="sgmltag-element">otheraddr</code></a>/ulink in <a href="http://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a> et al in the<br>
 same way as <a href="http://docbook.org/tdg5/en/html/email.html"><code class="sgmltag-element">email</code></a> instances; that is, display them on the same<br>
 linke as the <a href="http://docbook.org/tdg5/en/html/author.html"><code class="sgmltag-element">author</code></a>, <a href="http://docbook.org/tdg5/en/html/editor.html"><code class="sgmltag-element">editor</code></a>, etc., name.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/links.xsl - Michael(tm) Smith" class="commit-message">Don't number or link-list any Ulink instance whose string value is<br>
+<div class="literallayout"><p><span class="commit-message">Don't number or link-list any Ulink instance whose string value is<br>
 identical to the value of its url attribute. Just display it inline.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/refentry.xsl - Michael(tm) Smith" class="commit-message">Don't output punctuation between <a href="http://docbook.org/tdg5/en/html/refname.html"><code class="sgmltag-element">Refname</code></a> and <a href="http://docbook.org/tdg5/en/html/refpurpose.html"><code class="sgmltag-element">Refpurpose</code></a> if<br>
+<div class="literallayout"><p><span class="commit-message">Don't output punctuation between <a href="http://docbook.org/tdg5/en/html/refname.html"><code class="sgmltag-element">Refname</code></a> and <a href="http://docbook.org/tdg5/en/html/refpurpose.html"><code class="sgmltag-element">Refpurpose</code></a> if<br>
 <a href="http://docbook.org/tdg5/en/html/refpurpose.html"><code class="sgmltag-element">Refpurpose</code></a> is empty. Also corrected handling of <a href="http://docbook.org/tdg5/en/html/refsect2.html"><code class="sgmltag-element">Refsect2</code></a>/<a href="http://docbook.org/tdg5/en/html/title.html"><code class="sgmltag-element">title</code></a><br>
 instances, and removed some debugging stuff that was generated in<br>
 manpages output to mark the ends of sections.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/param.xweb; M: /trunk/xsl/manpages/param.ent - Michael(tm) Smith" class="commit-message">Added new <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/email.delimiters.enabled.html"><em class="parameter"><code>email.delimiters.enabled</code></em></a> param. If non-zero (the<br>
+<div class="literallayout"><p><span class="commit-message">Added new <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/email.delimiters.enabled.html"><em class="parameter"><code>email.delimiters.enabled</code></em></a> param. If non-zero (the<br>
 default), delimiters are generated around e-mail addresses (output<br>
 of the <a href="http://docbook.org/tdg5/en/html/email.html"><code class="sgmltag-element">email</code></a> element). If zero, the delimiters are suppressed.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/manpages/info.xsl - Michael(tm) Smith" class="commit-message">In manpages output, if the last/nearest *<a href="http://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a> element for<br>
+<div class="literallayout"><p><span class="commit-message">In manpages output, if the last/nearest *<a href="http://docbook.org/tdg5/en/html/info.html"><code class="sgmltag-element">info</code></a> element for<br>
 particular <a href="http://docbook.org/tdg5/en/html/refentry.html"><code class="sgmltag-element">Refentry</code></a> has multiple <a href="http://docbook.org/tdg5/en/html/copyright.html"><code class="sgmltag-element">Copyright</code></a> and/or <a href="http://docbook.org/tdg5/en/html/legalnotice.html"><code class="sgmltag-element">Legalnotice</code></a><br>
 children, process them all (not just the first ones). Closes bug<br>
 1524576. Thanks to Sam Steingold for the report and to Daniel<br>
@@ -3519,14 +3632,14 @@ Leidert for providing a patch.</span></p></div>
             <code class="filename">params</code> code
             since the 1.70.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/params/reference.autolabel.xml - Michael(tm) Smith" class="commit-message">Added <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/reference.autolabel.html"><em class="parameter"><code>reference.autolabel</code></em></a> parameter for controlling labels on<br>
+<div class="literallayout"><p><span class="commit-message">Added <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/reference.autolabel.html"><em class="parameter"><code>reference.autolabel</code></em></a> parameter for controlling labels on<br>
 <a href="http://docbook.org/tdg5/en/html/reference.html"><code class="sgmltag-element">reference</code></a> output.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/params/toc.line.properties.xml; M: /trunk/xsl/params/title.font.family.xml; M: /trunk/xsl/params/component.label.includes.part.label.xml; M: /trunk/xsl/params/refentry.manual.profile.xml; M: /trunk/xsl/params/orderedlist.properties.xml; M: /trunk/xsl/params/olink.pubid.xml; M: /trunk/xsl/params/informalexample.properties.xml; M: /trunk/xsl/params/appendix.autolabel.xml; M: /trunk/xsl/params/htmlhelp.show.toolbar.text.xml; M: /trunk/xsl/params/index.on.role.xml; M: /trunk/xsl/params/htmlhelp.button.jump2.url.xml; M: /trunk/xsl/params/variablelist.term.separator.xml; M: /trunk/xsl/params/para.propagates.style.xml; M: /trunk/xsl/params/html.stylesheet.xml; M: /trunk/xsl/params/qanda.nested.in.toc.xml; M: /trunk/xsl/params/annotation.css.xml; M: /trunk/xsl/params/funcsynopsis.style.xml; M: /trunk/xsl/params/htmlhelp.encoding.xml; M: /trunk/xsl/params/footer.content.properties.xml; M: /trunk/xsl/params/verbatim.properties.xml; M: /trunk/xsl/params/autotoc.label.in.hyperlink.xml; M: /trunk/xsl/params/body.margin.top.xml; M: /trunk/xsl/params/bibliography.numbered.xml; M: /trunk/xsl/params/figure.properties.xml; M: /trunk/xsl/params/variablelist.max.termlength.xml; M: /trunk/xsl/params/table.cell.border.style.xml; M: /trunk/xsl/params/htmlhelp.button.options.xml; M: /trunk/xsl/params/preferred.mediaobject.role.xml; M: /trunk/xsl/params/htmlhelp.chm.xml; M: /trunk/xsl/params/man.charmap.subset.profile.xml; M: /trunk/xsl/params/qanda.title.level3.properties.xml; M: /trunk/xsl/params/page.width.xml; M: /trunk/xsl/params/firstterm.only.link.xml; M: /trunk/xsl/params/section.level6.properties.xml; M: /trunk/xsl/params/htmlhelp.button.locate.xml; M: /trunk/xsl/params/chunk.sections.xml; M: /trunk/xsl/params/use.local.olink.style.xml; M: /trunk/xsl/params/refentry.date.profile.enabled.xml; M: /trunk/xsl/params/refentry.version.suppress.xml; M: /trunk/xsl/params/refentry.generate.title.xml; M: /trunk/xsl/params/punct.honorific.xml; M: /trunk/xsl/params/column.gap.index.xml; M: /trunk/xsl/params/body.start.indent.xml; M: /trunk/xsl/params/crop.mark.width.xml; M: /trunk/xsl/params/refentry.version.profile.enabled.xml; M: /trunk/xsl/params/superscript.properties.xml; M: /trunk/xsl/params/chunker.output.doctype-public.xml; M: /trunk/xsl/params/saxon.character.representation.xml; M: /trunk/xsl/params/saxon.linenumbering.xml; M: /trunk/xsl/params/shade.verbatim.style.xml; M: /trunk/xsl/params/annotate.toc.xml; M: /trunk/xsl/params/profile.attribute.xml; M: /trunk/xsl/params/callout.graphics.number.limit.xml; M: /trunk/xsl/params/profile.arch.xml; M: /trunk/xsl/params/saxon.tablecolumns.xml; M: /trunk/xsl/params/glossterm.auto.link.xml; M: /trunk/xsl/params/default.units.xml; M: /trunk/xsl/params/qanda.title.level1.properties.xml; M: /trunk/xsl/params/list.block.spacing.xml; M: /trunk/xsl/params/section.level4.properties.xml; M: /trunk/xsl/params/spacing.paras.xml; M: /trunk/xsl/params/column.count.index.xml; M: /trunk/xsl/params/dingbat.font.family.xml; M: /trunk/xsl/params/citerefentry.link.xml; M: /trunk/xsl/params/keep.relative.image.uris.xml; M: /trunk/xsl/params/ulink.footnotes.xml; M: /trunk/xsl/params/prefer.internal.olink.xml; M: /trunk/xsl/params/refentry.title.properties.xml; M: /trunk/xsl/params/variablelist.term.break.after.xml; M: /trunk/xsl/params/use.id.function.xml; M: /trunk/xsl/params/callout.unicode.start.character.xml; M: /trunk/xsl/params/column.gap.titlepage.xml; M: /trunk/xsl/params/editedby.enabled.xml; M: /trunk/xsl/params/funcsynopsis.tabular.threshold.xml; M: /trunk/xsl/params/use.extensions.xml; M: /trunk/xsl/params/index.preferred.page.properties.xml; M: /trunk/xsl/params/man.th.extra3.max.length.xml; M: /trunk/xsl/params/column.gap.back.xml; M: /trunk/xsl/params/tex.math.delims.xml; M: /trunk/xsl/params/article.appendix.title.properties.xml; M: /trunk/xsl/params/ulink.target.xml; M: /trunk/xsl/params/suppress.header.navigation.xml; M: /trunk/xsl/params/olink.resolver.xml; M: /trunk/xsl/params/admon.textlabel.xml; M: /trunk/xsl/params/procedure.properties.xml; M: /trunk/xsl/params/blurb.on.titlepage.enabled.xml; M: /trunk/xsl/params/section.level2.properties.xml; M: /trunk/xsl/params/column.gap.front.xml; M: /trunk/xsl/params/margin.note.title.properties.xml; M: /trunk/xsl/params/glossary.collection.xml; M: /trunk/xsl/params/admon.graphics.xml; M: /trunk/xsl/params/current.docid.xml; M: /trunk/xsl/params/qanda.inherit.numeration.xml; M: /trunk/xsl/params/table.cell.padding.xml; M: /trunk/xsl/params/preface.autolabel.xml; M: /trunk/xsl/params/man.th.extra3.suppress.xml; M: /trunk/xsl/params/wordml.template.xml; M: /trunk/xsl/params/htmlhelp.use.hhk.xml; M: /trunk/xsl/params/textinsert.extension.xml; M: /trunk/xsl/params/ebnf.table.bgcolor.xml; M: /trunk/xsl/params/refentry.source.fallback.profile.xml; M: /trunk/xsl/params/body.font.master.xml; M: /trunk/xsl/params/l10n.gentext.default.language.xml; M: /trunk/xsl/params/list.block.properties.xml; M: /trunk/xsl/params/refentry.source.name.suppress.xml; M: /trunk/xsl/params/htmlhelp.hhp.window.xml; M: /trunk/xsl/params/sidebar.properties.xml; M: /trunk/xsl/params/tex.math.file.xml; M: /trunk/xsl/params/man.justify.xml; M: /trunk/xsl/params/subscript.properties.xml; M: /trunk/xsl/params/column.count.front.xml; M: /trunk/xsl/params/index.term.separator.xml; M: /trunk/xsl/params/biblioentry.properties.xml; M: /trunk/xsl/params/biblioentry.item.separator.xml; M: /trunk/xsl/params/htmlhelp.button.home.url.xml; M: /trunk/xsl/params/column.count.body.xml; M: /trunk/xsl/params/suppress.navigation.xml; M: /trunk/xsl/params/htmlhelp.remember.window.position.xml; M: /trunk/xsl/params/htmlhelp.hhc.section.depth.xml; M: /trunk/xsl/params/xref.with.number.and.title.xml; M: /trunk/xsl/params/make.year.ranges.xml; M: /trunk/xsl/params/region.before.extent.xml; M: /trunk/xsl/params/xref.label-page.separator.xml; M: /trunk/xsl/params/html.longdesc.link.xml; M: /trunk/xsl/params/man.subheading.divider.enabled.xml; M: /trunk/xsl/params/index.entry.properties.xml; M: /trunk/xsl/params/generate.legalnotice.link.xml; M: /trunk/xsl/params/section.autolabel.xml; M: /trunk/xsl/params/html.base.xml; M: /trunk/xsl/params/suppress.footer.navigation.xml; M: /trunk/xsl/params/nominal.image.depth.xml; M: /trunk/xsl/params/table.footnote.number.symbols.xml; M: /trunk/xsl/params/table.footnote.number.format.xml; M: /trunk/xsl/params/callout.graphics.xml; M: /trunk/xsl/params/man.break.after.slash.xml; M: /trunk/xsl/params/function.parens.xml; M: /trunk/xsl/params/part.autolabel.xml; M: /trunk/xsl/params/saxon.callouts.xml; M: /trunk/xsl/params/css.decoration.xml; M: /trunk/xsl/params/htmlhelp.button.home.xml; M: /trunk/xsl/params/email.delimiters.enabled.xml; M: /trunk/xsl/params/column.count.lot.xml; M: /trunk/xsl/params/draft.mode.xml; M: /trunk/xsl/params/use.role.for.mediaobject.xml; M: /trunk/xsl/params/refentry.separator.xml; M: /trunk/xsl/params/man.font.funcsynopsisinfo.xml; M: /trunk/xsl/params/man.output.manifest.filename.xml; M: /trunk/xsl/params/process.empty.source.toc.xml; M: /trunk/xsl/params/man.output.in.separate.dir.xml; M: /trunk/xsl/params/graphicsize.use.img.src.path.xml; M: /trunk/xsl/params/man.output.encoding.xml; M: /trunk/xsl/params/column.gap.lot.xml; M: /trunk/xsl/params/profile.role.xml; M: /trunk/xsl/params/column.count.titlepage.xml; M: /trunk/xsl/params/show.comments.xml; M: /trunk/xsl/params/informalfigure.properties.xml; M: /trunk/xsl/params/entry.propagates.style.xml; M: /trunk/xsl/params/bibliography.collection.xml; M: /trunk/xsl/params/contrib.inline.enabled.xml; M: /trunk/xsl/params/section.title.level5.properties.xml; M: /trunk/xsl/params/fop.extensions.xml; M: /trunk/xsl/params/htmlhelp.button.jump1.xml; M: /trunk/xsl/params/man.hyphenate.urls.xml; M: /trunk/xsl/params/profile.condition.xml; M: /trunk/xsl/params/header.column.widths.xml; M: /trunk/xsl/params/annotation.js.xml; M: /trunk/xsl/params/chunker.output.standalone.xml; M: /trunk/xsl/params/targets.filename.xml; M: /trunk/xsl/params/default.float.class.xml; M: /trunk/xsl/params/chapter.autolabel.xml; M: /trunk/xsl/params/sidebar.float.type.xml; M: /trunk/xsl/params/profile.separator.xml; M: /trunk/xsl/params/generate.index.xml; M: /trunk/xsl/params/nongraphical.admonition.properties.xml; M: /trunk/xsl/params/navig.graphics.xml; M: /trunk/xsl/params/htmlhelp.button.next.xml; M: /trunk/xsl/params/insert.olink.pdf.frag.xml; M: /trunk/xsl/params/htmlhelp.button.stop.xml; M: /trunk/xsl/params/footnote.font.size.xml; M: /trunk/xsl/params/profile.value.xml; M: /trunk/xsl/params/ebnf.table.border.xml; M: /trunk/xsl/params/htmlhelp.hhc.folders.instead.books.xml; M: /trunk/xsl/params/glossary.as.blocks.xml; M: /trunk/xsl/params/body.end.indent.xml; M: /trunk/xsl/params/use.role.as.xrefstyle.xml; M: /trunk/xsl/params/man.indent.blurbs.xml; M: /trunk/xsl/params/chunker.output.encoding.xml; M: /trunk/xsl/params/chunker.output.omit-xml-declaration.xml; M: /trunk/xsl/params/sans.font.family.xml; M: /trunk/xsl/params/html.cleanup.xml; M: /trunk/xsl/params/htmlhelp.hhp.xml; M: /trunk/xsl/params/htmlhelp.only.xml; M: /trunk/xsl/params/eclipse.plugin.name.xml; M: /trunk/xsl/params/section.title.level3.properties.xml; M: /trunk/xsl/params/man.th.extra1.suppress.xml; M: /trunk/xsl/params/chunk.section.depth.xml; M: /trunk/xsl/params/htmlhelp.hhp.tail.xml; M: /trunk/xsl/params/sidebar.title.properties.xml; M: /trunk/xsl/params/hyphenate.xml; M: /trunk/xsl/params/paper.type.xml; M: /trunk/xsl/params/chunk.tocs.and.lots.has.title.xml; M: /trunk/xsl/params/symbol.font.family.xml; M: /trunk/xsl/params/page.margin.bottom.xml; M: /trunk/xsl/params/callout.unicode.number.limit.xml; M: /trunk/xsl/params/itemizedlist.properties.xml; M: /trunk/xsl/params/root.filename.xml; M: /trunk/xsl/params/tablecolumns.extension.xml; M: /trunk/xsl/params/htmlhelp.show.favorities.xml; M: /trunk/xsl/params/informaltable.properties.xml; M: /trunk/xsl/params/revhistory.table.cell.properties.xml; M: /trunk/xsl/params/htmlhelp.default.topic.xml; M: /trunk/xsl/params/compact.list.item.spacing.xml; M: /trunk/xsl/params/page.height.portrait.xml; M: /trunk/xsl/params/html.head.legalnotice.link.types.xml; M: /trunk/xsl/params/passivetex.extensions.xml; M: /trunk/xsl/params/orderedlist.label.properties.xml; M: /trunk/xsl/params/othercredit.like.author.enabled.xml; M: /trunk/xsl/params/header.content.properties.xml; M: /trunk/xsl/params/refentry.meta.get.quietly.xml; M: /trunk/xsl/params/section.properties.xml; M: /trunk/xsl/params/htmlhelp.button.hideshow.xml; M: /trunk/xsl/params/simplesect.in.toc.xml; M: /trunk/xsl/params/chunk.quietly.xml; M: /trunk/xsl/params/htmlhelp.enumerate.images.xml; M: /trunk/xsl/params/section.title.level1.properties.xml; M: /trunk/xsl/params/qanda.defaultlabel.xml; M: /trunk/xsl/params/htmlhelp.enhanced.decompilation.xml; M: /trunk/xsl/params/man.th.title.max.length.xml; M: /trunk/xsl/params/footnote.number.format.xml; M: /trunk/xsl/params/body.margin.bottom.xml; M: /trunk/xsl/params/htmlhelp.window.geometry.xml; M: /trunk/xsl/params/htmlhelp.button.jump2.xml; M: /trunk/xsl/params/use.svg.xml; M: /trunk/xsl/params/qanda.title.level6.properties.xml; M: /trunk/xsl/params/collect.xref.targets.xml; M: /trunk/xsl/params/html.extra.head.links.xml; M: /trunk/xsl/params/variablelist.as.table.xml; M: /trunk/xsl/params/man.indent.width.xml; M: /trunk/xsl/params/eclipse.plugin.id.xml; M: /trunk/xsl/params/linenumbering.width.xml; M: /trunk/xsl/params/axf.extensions.xml; M: /trunk/xsl/params/menuchoice.separator.xml; M: /trunk/xsl/params/glossterm.separation.xml; M: /trunk/xsl/params/htmlhelp.autolabel.xml; M: /trunk/xsl/params/chunk.separate.lots.xml; M: /trunk/xsl/params/man.hyphenate.computer.inlines.xml; M: /trunk/xsl/params/linenumbering.separator.xml; M: /trunk/xsl/params/htmlhelp.title.xml; M: /trunk/xsl/params/index.number.separator.xml; M: /trunk/xsl/params/htmlhelp.button.prev.xml; M: /trunk/xsl/params/refentry.manual.fallback.profile.xml; M: /trunk/xsl/params/table.frame.border.color.xml; M: /trunk/xsl/params/footnote.sep.leader.properties.xml; M: /trunk/xsl/params/hyphenate.verbatim.characters.xml; M: /trunk/xsl/params/table.cell.border.thickness.xml; M: /trunk/xsl/params/template.xml; M: /trunk/xsl/params/margin.note.properties.xml; M: /trunk/xsl/params/man.segtitle.suppress.xml; M: /trunk/xsl/params/generate.toc.xml; M: /trunk/xsl/params/formal.object.properties.xml; M: /trunk/xsl/params/footnote.mark.properties.xml; M: /trunk/xsl/params/header.table.height.xml; M: /trunk/xsl/params/htmlhelp.button.back.xml; M: /trunk/xsl/params/qanda.title.level4.properties.xml; M: /trunk/xsl/params/man.links.are.numbered.xml; M: /trunk/xsl/params/manual.toc.xml; M: /trunk/xsl/params/olink.lang.fallback.sequence.xml; M: /trunk/xsl/params/refentry.manual.profile.enabled.xml; M: /trunk/xsl/params/ulink.hyphenate.chars.xml; M: /trunk/xsl/params/manifest.xml; M: /trunk/xsl/params/olink.fragid.xml; M: /trunk/xsl/params/refentry.date.profile.xml; M: /trunk/xsl/params/linenumbering.extension.xml; M: /trunk/xsl/params/component.title.properties.xml; M: /trunk/xsl/params/alignment.xml; M: /trunk/xsl/params/refentry.version.profile.xml; M: /trunk/xsl/params/ebnf.assignment.xml; M: /trunk/xsl/params/htmlhelp.button.print.xml; M: /trunk/xsl/params/annotation.support.xml; M: /trunk/xsl/params/sidebar.float.width.xml; M: /trunk/xsl/params/normal.para.spacing.xml; M: /trunk/xsl/params/xref.title-page.separator.xml; M: /trunk/xsl/params/callout.unicode.font.xml; M: /trunk/xsl/params/default.table.frame.xml; M: /trunk/xsl/params/pages.template.xml; M: /trunk/xsl/params/htmlhelp.button.zoom.xml; M: /trunk/xsl/params/admonition.title.properties.xml; M: /trunk/xsl/params/callout.graphics.extension.xml; M: /trunk/xsl/params/make.valid.html.xml; M: /trunk/xsl/params/qanda.title.level2.properties.xml; M: /trunk/xsl/params/page.margin.top.xml; M: /trunk/xsl/params/xep.index.item.properties.xml; M: /trunk/xsl/params/section.level5.properties.xml; M: /trunk/xsl/params/line-height.xml; M: /trunk/xsl/params/table.cell.border.color.xml; M: /trunk/xsl/params/qandadiv.autolabel.xml; M: /trunk/xsl/params/xref.label-title.separator.xml; M: /trunk/xsl/params/chunk.tocs.and.lots.xml; M: /trunk/xsl/params/man.font.funcprototype.xml; M: /trunk/xsl/params/process.source.toc.xml; M: /trunk/xsl/params/page.orientation.xml; M: /trunk/xsl/params/refentry.generate.name.xml; M: /trunk/xsl/params/navig.showtitles.xml; M: /trunk/xsl/params/table.table.properties.xml; M: /trunk/xsl/params/arbortext.extensions.xml; M: /trunk/xsl/params/informalequation.properties.xml; M: /trunk/xsl/params/headers.on.blank.pages.xml; M: /trunk/xsl/params/table.footnote.properties.xml; M: /trunk/xsl/params/root.properties.xml; M: /trunk/xsl/params/htmlhelp.display.progress.xml; M: /trunk/xsl/params/htmlhelp.hhp.windows.xml; M: /trunk/xsl/params/graphical.admonition.properties.xml; M: /trunk/xsl/params/refclass.suppress.xml; M: /trunk/xsl/params/profile.conformance.xml; M: /trunk/xsl/params/htmlhelp.button.forward.xml; M: /trunk/xsl/params/segmentedlist.as.table.xml; M: /trunk/xsl/params/margin.note.float.type.xml; M: /trunk/xsl/params/man.table.footnotes.divider.xml; M: /trunk/xsl/params/man.output.quietly.xml; M: /trunk/xsl/params/htmlhelp.hhc.show.root.xml; M: /trunk/xsl/params/footers.on.blank.pages.xml; M: /trunk/xsl/params/crop.mark.offset.xml; M: /trunk/xsl/params/olink.doctitle.xml; M: /trunk/xsl/params/section.level3.properties.xml; M: /trunk/xsl/params/callout.unicode.xml; M: /trunk/xsl/params/formal.procedures.xml; M: /trunk/xsl/params/toc.section.depth.xml; M: /trunk/xsl/params/index.prefer.titleabbrev.xml; M: /trunk/xsl/params/nominal.image.width.xml; M: /trunk/xsl/params/htmlhelp.show.menu.xml; M: /trunk/xsl/params/linenumbering.everyNth.xml; M: /trunk/xsl/params/double.sided.xml; M: /trunk/xsl/params/generate.revhistory.link.xml; M: /trunk/xsl/params/olink.properties.xml; M: /trunk/xsl/params/tex.math.in.alt.xml; M: /trunk/xsl/params/man.output.subdirs.enabled.xml; M: /trunk/xsl/params/section.title.properties.xml; M: /trunk/xsl/params/column.count.back.xml; M: /trunk/xsl/params/toc.indent.width.xml; M: /trunk/xsl/params/man.charmap.uri.xml; M: /trunk/xsl/params/index.method.xml; M: /trunk/xsl/params/generate.section.toc.level.xml; M: /trunk/xsl/params/page.width.portrait.xml; M: /trunk/xsl/params/man.th.extra2.max.length.xml; M: /trunk/xsl/params/abstract.properties.xml; M: /trunk/xsl/params/revhistory.table.properties.xml; M: /trunk/xsl/params/nominal.table.width.xml; M: /trunk/xsl/params/ulink.show.xml; M: /trunk/xsl/params/htmlhelp.button.jump1.title.xml; M: /trunk/xsl/params/index.div.title.properties.xml; M: /trunk/xsl/params/profile.userlevel.xml; M: /trunk/xsl/params/html.cellpadding.xml; M: /trunk/xsl/params/orderedlist.label.width.xml; M: /trunk/xsl/params/crop.marks.xml; M: /trunk/xsl/params/menuchoice.menu.separator.xml; M: /trunk/xsl/params/author.othername.in.middle.xml; M: /trunk/xsl/params/section.level1.properties.xml; M: /trunk/xsl/params/textdata.default.encoding.xml; M: /trunk/xsl/params/label.from.part.xml; M: /trunk/xsl/params/use.embed.for.svg.xml; M: /trunk/xsl/params/list.item.spacing.xml; M: /trunk/xsl/params/htmlhelp.hhc.width.xml; M: /trunk/xsl/params/column.gap.body.xml; M: /trunk/xsl/params/rootid.xml; M: /trunk/xsl/params/glosslist.as.blocks.xml; M: /trunk/xsl/params/index.range.separator.xml; M: /trunk/xsl/params/html.ext.xml; M: /trunk/xsl/params/callout.list.table.xml; M: /trunk/xsl/params/highlight.source.xml; M: /trunk/xsl/params/show.revisionflag.xml; M: /trunk/xsl/params/man.output.manifest.enabled.xml; M: /trunk/xsl/params/make.single.year.ranges.xml; M: /trunk/xsl/params/pgwide.properties.xml; M: /trunk/xsl/params/generate.id.attributes.xml; M: /trunk/xsl/params/emphasis.propagates.style.xml; M: /trunk/xsl/params/abstract.title.properties.xml; M: /trunk/xsl/params/htmlhelp.hhc.xml; M: /trunk/xsl/params/monospace.properties.xml; M: /trunk/xsl/params/htmlhelp.hhk.xml; M: /trunk/xsl/params/table.borders.with.css.xml; M: /trunk/xsl/params/man.links.are.underlined.xml; M: /trunk/xsl/params/profile.vendor.xml; M: /trunk/xsl/params/shade.verbatim.xml; M: /trunk/xsl/params/callout.graphics.path.xml; M: /trunk/xsl/params/olink.debug.xml; M: /trunk/xsl/params/make.graphic.viewport.xml; M: /trunk/xsl/params/footnote.number.symbols.xml; M: /trunk/xsl/params/man.charmap.enabled.xml; M: /trunk/xsl/params/page.height.xml; M: /trunk/xsl/params/htmlhelp.button.jump1.url.xml; M: /trunk/xsl/params/man.font.table.title.xml; M: /trunk/xsl/params/revhistory.title.properties.xml; M: /trunk/xsl/params/chunker.output.media-type.xml; M: /trunk/xsl/params/glossterm.width.xml; M: /trunk/xsl/params/points.per.em.xml; M: /trunk/xsl/params/page.margin.inner.xml; M: /trunk/xsl/params/itemizedlist.label.width.xml; M: /trunk/xsl/params/ulink.hyphenate.xml; M: /trunk/xsl/params/crop.mark.bleed.xml; M: /trunk/xsl/params/use.id.as.filename.xml; M: /trunk/xsl/params/section.title.level6.properties.xml; M: /trunk/xsl/params/highlight.default.language.xml; M: /trunk/xsl/params/man.th.extra2.suppress.xml; M: /trunk/xsl/params/id.warnings.xml; M: /trunk/xsl/params/title.margin.left.xml; M: /trunk/xsl/params/chunker.output.doctype-system.xml; M: /trunk/xsl/params/man.indent.verbatims.xml; M: /trunk/xsl/params/table.frame.border.thickness.xml; M: /trunk/xsl/params/monospace.verbatim.properties.xml; M: /trunk/xsl/params/formal.title.properties.xml; M: /trunk/xsl/params/margin.note.width.xml; M: /trunk/xsl/params/man.hyphenate.filenames.xml; M: /trunk/xsl/params/blockquote.properties.xml; M: /trunk/xsl/params/callout.defaultcolumn.xml; M: /trunk/xsl/params/profile.security.xml; M: /trunk/xsl/params/informal.object.properties.xml; M: /trunk/xsl/params/formal.title.placement.xml; M: /trunk/xsl/params/draft.watermark.image.xml; M: /trunk/xsl/params/equation.properties.xml; M: /trunk/xsl/params/body.font.family.xml; M: /trunk/xsl/params/ignore.image.scaling.xml; M: /trunk/xsl/params/chunk.first.sections.xml; M: /trunk/xsl/params/base.dir.xml; M: /trunk/xsl/params/footnote.properties.xml; M: /trunk/xsl/params/olink.outline.ext.xml; M: /trunk/xsl/params/img.src.path.xml; M: /trunk/xsl/params/qanda.title.properties.xml; M: /trunk/xsl/params/ebnf.statement.terminator.xml; M: /trunk/xsl/params/callouts.extension.xml; M: /trunk/xsl/params/manifest.in.base.dir.xml; M: /trunk/xsl/params/fop1.extensions.xml; M: /trunk/xsl/params/olink.sysid.xml; M: /trunk/xsl/params/section.title.level4.properties.xml; M: /trunk/xsl/params/monospace.font.family.xml; M: /trunk/xsl/params/l10n.gentext.language.xml; M: /trunk/xsl/params/graphic.default.extension.xml; M: /trunk/xsl/params/default.image.width.xml; M: /trunk/xsl/params/htmlhelp.button.refresh.xml; M: /trunk/xsl/params/chunker.output.cdata-section-elements.xml; M: /trunk/xsl/params/admon.graphics.path.xml; M: /trunk/xsl/params/admon.style.xml; M: /trunk/xsl/params/profile.revision.xml; M: /trunk/xsl/params/generate.manifest.xml; M: /trunk/xsl/params/html.longdesc.xml; M: /trunk/xsl/params/footer.rule.xml; M: /trunk/xsl/params/eclipse.plugin.provider.xml; M: /trunk/xsl/params/refentry.source.name.profile.xml; M: /trunk/xsl/params/toc.max.depth.xml; M: /trunk/xsl/params/chunker.output.indent.xml; M: /trunk/xsl/params/html.head.legalnotice.link.multiple.xml; M: /trunk/xsl/params/toc.list.type.xml; M: /trunk/xsl/params/link.mailto.url.xml; M: /trunk/xsl/params/table.properties.xml; M: /trunk/xsl/params/side.float.properties.xml; M: /trunk/xsl/params/man.charmap.use.subset.xml; M: /trunk/xsl/params/annotation.graphic.open.xml; M: /trunk/xsl/params/html.cellspacing.xml; M: /trunk/xsl/params/default.table.width.xml; M: /trunk/xsl/params/xep.extensions.xml; M: /trunk/xsl/params/admonition.properties.xml; M: /trunk/xsl/params/toc.margin.properties.xml; M: /trunk/xsl/params/chunk.toc.xml; M: /trunk/xsl/params/table.entry.padding.xml; M: /trunk/xsl/params/header.rule.xml; M: /trunk/xsl/params/glossentry.show.acronym.xml; M: /trunk/xsl/params/variablelist.as.blocks.xml; M: /trunk/xsl/params/man.hyphenate.xml; M: /trunk/xsl/params/refentry.source.name.profile.enabled.xml; M: /trunk/xsl/params/section.label.includes.component.label.xml; M: /trunk/xsl/params/bridgehead.in.toc.xml; M: /trunk/xsl/params/section.title.level2.properties.xml; M: /trunk/xsl/params/admon.graphics.extension.xml; M: /trunk/xsl/params/inherit.keywords.xml; M: /trunk/xsl/params/insert.xref.page.number.xml; M: /trunk/xsl/params/pixels.per.inch.xml; M: /trunk/xsl/params/refentry.pagebreak.xml; M: /trunk/xsl/params/profile.lang.xml; M: /trunk/xsl/params/insert.olink.page.number.xml; M: /trunk/xsl/params/generate.meta.abstract.xml; M: /trunk/xsl/params/graphicsize.extension.xml; M: /trunk/xsl/params/man.indent.lists.xml; M: /trunk/xsl/params/funcsynopsis.decoration.xml; M: /trunk/xsl/params/runinhead.title.end.punct.xml; M: /trunk/xsl/params/man.string.subst.map.xml; M: /trunk/xsl/params/man.links.list.enabled.xml; M: /trunk/xsl/params/section.autolabel.max.depth.xml; M: /trunk/xsl/params/htmlhelp.show.advanced.search.xml; M: /trunk/xsl/params/htmlhelp.map.file.xml; M: /trunk/xsl/params/l10n.gentext.use.xref.language.xml; M: /trunk/xsl/params/body.font.size.xml; M: /trunk/xsl/params/html.stylesheet.type.xml; M: /trunk/xsl/params/refentry.xref.manvolnum.xml; M: /trunk/xsl/params/runinhead.default.title.end.punct.xml; M: /trunk/xsl/params/navig.graphics.extension.xml; M: /trunk/xsl/params/itemizedlist.label.properties.xml; M: /trunk/xsl/params/htmlhelp.force.map.and.alias.xml; M: /trunk/xsl/params/profile.os.xml; M: /trunk/xsl/params/htmlhelp.alias.file.xml; M: /trunk/xsl/params/page.margin.outer.xml; M: /trunk/xsl/params/annotation.graphic.close.xml; M: /trunk/xsl/params/eclipse.autolabel.xml; M: /trunk/xsl/params/table.frame.border.style.xml; M: /trunk/xsl/params/navig.graphics.path.xml; M: /trunk/xsl/params/htmlhelp.hhc.binary.xml; M: /trunk/xsl/params/index.on.type.xml; M: /trunk/xsl/params/target.database.document.xml; M: /trunk/xsl/params/man.subheading.divider.xml; M: /trunk/xsl/params/chunker.output.method.xml; M: /trunk/xsl/params/make.index.markup.xml; M: /trunk/xsl/params/olink.base.uri.xml; M: /trunk/xsl/params/phrase.propagates.style.xml; M: /trunk/xsl/params/man.indent.refsect.xml; M: /trunk/xsl/params/example.properties.xml; M: /trunk/xsl/params/man.font.table.headings.xml; M: /trunk/xsl/params/profile.revisionflag.xml; M: /trunk/xsl/params/region.after.extent.xml; M: /trunk/xsl/params/qanda.title.level5.properties.xml; M: /trunk/xsl/params/marker.section.level.xml; M: /trunk/xsl/params/footer.table.height.xml; M: /trunk/xsl/params/autotoc.label.separator.xml; M: /trunk/xsl/params/footer.column.widths.xml; M: /trunk/xsl/params/hyphenate.verbatim.xml; M: /trunk/xsl/params/xref.properties.xml; M: /trunk/xsl/params/man.output.base.dir.xml; M: /trunk/xsl/params/man.links.list.heading.xml; M: /trunk/xsl/params/insert.link.page.number.xml; M: /trunk/xsl/params/htmlhelp.button.jump2.title.xml; M: /trunk/xsl/params/l10n.lang.value.rfc.compliant.xml - Michael(tm) Smith" class="commit-message">Added namespace declarations to document elements for all param files.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Added namespace declarations to document elements for all param files.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/params/index.method.xml - Robert Stayton" class="commit-message">Updated index.method doc to describe revised setup for importing <a href="http://docbook.org/tdg5/en/html/index.html"><code class="sgmltag-element">index</code></a> extensions.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Updated index.method doc to describe revised setup for importing <a href="http://docbook.org/tdg5/en/html/index.html"><code class="sgmltag-element">index</code></a> extensions.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/params/contrib.inline.enabled.xml; A: /trunk/xsl/params/blurb.on.titlepage.enabled.xml; A: /trunk/xsl/params/othercredit.like.author.enabled.xml; A: /trunk/xsl/params/editedby.enabled.xml - Michael(tm) Smith" class="commit-message">Added several new HTML parameters for controlling appearance of<br>
+<div class="literallayout"><p><span class="commit-message">Added several new HTML parameters for controlling appearance of<br>
 content on HTML <a href="http://docbook.org/tdg5/en/html/title.html"><code class="sgmltag-element">title</code></a> pages:<br>
 <br>
 <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/contrib.inline.enabled.html"><em class="parameter"><code>contrib.inline.enabled</code></em></a>:<br>
@@ -3549,17 +3662,17 @@ content on HTML <a href="http://docbook.org/tdg5/en/html/title.html"><code class
   If non-zero (the default), a localized Edited by heading is<br>
   displayed above <a href="http://docbook.org/tdg5/en/html/editor.html"><code class="sgmltag-element">editor</code></a> names in output of the <a href="http://docbook.org/tdg5/en/html/editor.html"><code class="sgmltag-element">editor</code></a> element.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/params/email.delimiters.enabled.xml - Michael(tm) Smith" class="commit-message">Added new <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/email.delimiters.enabled.html"><em class="parameter"><code>email.delimiters.enabled</code></em></a> param. If non-zero (the<br>
+<div class="literallayout"><p><span class="commit-message">Added new <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/email.delimiters.enabled.html"><em class="parameter"><code>email.delimiters.enabled</code></em></a> param. If non-zero (the<br>
 default), delimiters are generated around e-mail addresses (output<br>
 of the <a href="http://docbook.org/tdg5/en/html/email.html"><code class="sgmltag-element">email</code></a> element). If zero, the delimiters are suppressed.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/params/qanda.nested.in.toc.xml - Michael(tm) Smith" class="commit-message">Added <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/qanda.nested.in.toc.html"><em class="parameter"><code>qanda.nested.in.toc</code></em></a> param. Default value is zero. If<br>
+<div class="literallayout"><p><span class="commit-message">Added <a href="http://docbook.sourceforge.net/release/xsl/current/doc/html/qanda.nested.in.toc.html"><em class="parameter"><code>qanda.nested.in.toc</code></em></a> param. Default value is zero. If<br>
 non-zero, instances of "nested" <a href="http://docbook.org/tdg5/en/html/qandaentry.html"><code class="sgmltag-element">Qandaentry</code></a> (ones that are children<br>
 of <a href="http://docbook.org/tdg5/en/html/answer.html"><code class="sgmltag-element">Answer</code></a> elements) are displayed in the <a href="http://docbook.org/tdg5/en/html/toc.html"><code class="sgmltag-element">TOC</code></a>. Closes patch 1509018<br>
 (from Daniel Leidert). Currently on affects HTML output (no patch<br>
 for FO output provided).</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/params/highlight.source.xml; A: /trunk/xsl/params/highlight.default.language.xml - Jirka Kosek" class="commit-message">Initial support of syntax highlighting of programlistings.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Initial support of syntax highlighting of programlistings.</span></p></div>
 </li></ul></div>
 </div>
 
@@ -3569,17 +3682,17 @@ for FO output provided).</span></p></div>
             <code class="filename">tools</code> code
             since the 1.70.1 release.</p>
 <div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/tools/make/Makefile.DocBook - Michael(tm) Smith" class="commit-message">Racheted down font sizes of headings in example makefile FO output.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Racheted down font sizes of headings in example makefile FO output.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/tools/make/Makefile.DocBook - Michael(tm) Smith" class="commit-message">Added param and attribute set to example makefile, for getting<br>
+<div class="literallayout"><p><span class="commit-message">Added param and attribute set to example makefile, for getting<br>
 wrapping in verbatims in FO output.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/tools/make/Makefile.docParam; D: /trunk/xsl/tools/make/Makefile.paramDoc - Michael(tm) Smith" class="commit-message">Renamed Makefile.paramDoc to Makefile.docParam.</span></p></div>
+<div class="literallayout"><p><span class="commit-message">Renamed Makefile.paramDoc to Makefile.docParam.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="A: /trunk/xsl/tools/make/Makefile.paramDoc - Michael(tm) Smith" class="commit-message">Added Makefile.paramDoc file, for creating versions of param.xsl<br>
+<div class="literallayout"><p><span class="commit-message">Added Makefile.paramDoc file, for creating versions of param.xsl<br>
 files with doc embedded.</span></p></div>
 </li><li class="listitem">
-<div class="literallayout"><p><span title="M: /trunk/xsl/tools/make/Makefile.DocBook - Michael(tm) Smith" class="commit-message">Added variable to example makefile for controlling whether HTML or<br>
+<div class="literallayout"><p><span class="commit-message">Added variable to example makefile for controlling whether HTML or<br>
 XHTML is generated.</span></p></div>
 </li></ul></div>
 </div>

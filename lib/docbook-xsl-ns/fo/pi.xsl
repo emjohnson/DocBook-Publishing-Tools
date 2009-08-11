@@ -9,7 +9,7 @@ xmlns:doc="http://nwalsh.com/xsl/documentation/1.0"
   version='1.0'>
 
 <!-- ********************************************************************
-     $Id: pi.xsl 8394 2009-04-02 20:31:30Z mzjn $
+     $Id: pi.xsl 8487 2009-07-14 21:43:36Z bobstayton $
      ********************************************************************
 
      This file is part of the XSL DocBook Stylesheet distribution.
@@ -20,7 +20,7 @@ xmlns:doc="http://nwalsh.com/xsl/documentation/1.0"
 
 <doc:reference xmlns=""><info><title>FO Processing Instruction Reference</title>
     <releaseinfo role="meta">
-      $Id: pi.xsl 8394 2009-04-02 20:31:30Z mzjn $
+      $Id: pi.xsl 8487 2009-07-14 21:43:36Z bobstayton $
     </releaseinfo>
   </info>
 
@@ -965,6 +965,9 @@ xmlns:doc="http://nwalsh.com/xsl/documentation/1.0"
   </xsl:variable>
 
   <xsl:choose>
+    <xsl:when test="$fop1.extensions != 0">
+      <!-- Doesn't work in fop -->
+    </xsl:when>
     <xsl:when test="$fop.extensions != 0">
       <!-- Doesn't work in fop -->
     </xsl:when>
@@ -1037,6 +1040,9 @@ xmlns:doc="http://nwalsh.com/xsl/documentation/1.0"
   </xsl:choose>
 
   <xsl:choose>
+    <xsl:when test="$fop1.extensions != 0">
+      <!-- Doesn't work in fop -->
+    </xsl:when>
     <xsl:when test="$fop.extensions != 0">
       <!-- Doesn't work in fop -->
     </xsl:when>

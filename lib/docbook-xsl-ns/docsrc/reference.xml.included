@@ -6731,7 +6731,7 @@ at SourceForge.</para>
     </para>
   </listitem>
 <listitem>
-    <para><filename>html-1_1/highlight.xsl</filename>
+    <para><filename>xhtml-1_1/highlight.xsl</filename>
     </para>
   </listitem>
 <listitem>
@@ -17092,7 +17092,7 @@ at SourceForge.</para>
     </para>
   </listitem>
 <listitem>
-    <para><filename>html-1_1/highlight.xsl</filename>
+    <para><filename>xhtml-1_1/highlight.xsl</filename>
     </para>
   </listitem>
 <listitem>
@@ -28924,7 +28924,7 @@ will be used to indent the TOC.</para>
     <part id="pi-fo">
       <info xml:base="../fo/pi.xml"><title>FO Processing Instruction Reference</title>
     <releaseinfo role="meta">
-      $Id: pi.xsl 8394 2009-04-02 20:31:30Z mzjn $
+      $Id: pi.xsl 8487 2009-07-14 21:43:36Z bobstayton $
     </releaseinfo>
   </info>
 

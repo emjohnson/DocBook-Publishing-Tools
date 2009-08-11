@@ -68,12 +68,12 @@ module DocBook
       callout_limit =   "--stringparam callout.graphics.number.limit #{CALLOUT_LIMIT}"
       callout_ext =     "--stringparam callout.graphics.extension #{CALLOUT_EXT}" 
       html_stylesheet = "--stringparam html.stylesheet #{File.basename(@css_file)}" if @css_file
-      base =            "--stringparam base.dir #{@oebps_dir}/" 
+      base =            "--stringparam base.dir #{OEBPS_DIR}/" 
       unless @embedded_fonts.empty? 
         font =            "--stringparam epub.embedded.font \"#{File.basename(@embedded_fonts.first)}\"" 
       end  
-      meta =            "--stringparam epub.metainf.dir #{@meta_dir}/" 
-      oebps =           "--stringparam epub.oebps.dir #{@oebps_dir}/" 
+      meta =            "--stringparam epub.metainf.dir #{META_DIR}/" 
+      oebps =           "--stringparam epub.oebps.dir #{OEBPS_DIR}/" 
       options = [chunk_quietly, 
                  callout_path, 
                  callout_limit, 
@@ -85,7 +85,7 @@ module DocBook
                  html_stylesheet,
                 ].join(" ")
       # Double-quote stylesheet & file to help Windows cmd.exe
-      db2epub_cmd = "#{XSLT_PROCESSOR} #{options} \"#{@stylesheet}\" \"#{@collapsed_docbook_file}\""
+      db2epub_cmd = "cd #{@output_dir} && #{XSLT_PROCESSOR} #{options} \"#{@stylesheet}\" \"#{@collapsed_docbook_file}\""
       STDERR.puts db2epub_cmd if $DEBUG
       success = system(db2epub_cmd)
       raise "Could not render as .epub to #{output_file} (#{db2epub_cmd})" unless success
@@ -115,8 +115,8 @@ module DocBook
     # were XIncluded or added by ENTITY
     #   http://sourceforge.net/tracker/?func=detail&aid=2750442&group_id=21935&atid=373747
     def collapse_docbook
-      collapsed_file = File.join(File.dirname(@docbook_file),
-                                              '.collapsed.' + File.basename(@docbook_file))
+      collapsed_file = File.join(File.expand_path(File.dirname(@docbook_file)), 
+                                 '.collapsed.' + File.basename(@docbook_file))
       entity_collapse_command = "xmllint --loaddtd --noent -o '#{collapsed_file}' '#{@docbook_file}'"
       entity_success = system(entity_collapse_command)
       raise "Could not collapse named entites in #{@docbook_file}" unless entity_success
