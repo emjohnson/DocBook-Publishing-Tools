@@ -10,7 +10,7 @@ FUSE Doc Press RC1
 --- name:content pipeline:redcloth,tags
 h2. DocBook XSLT
 
-This release is based off of the 1.75.1 version of the namespace aware DocBook XSL style sheets. Release notes can be found "here":http://sourceforge.net/project/shownotes.php?group_id=21935&release_id=685608.
+This release is based off of the 1.75.2 version of the namespace aware DocBook XSL style sheets. Release notes can be found "here":http://sourceforge.net/project/shownotes.php?group_id=21935&release_id=685608.
 
 h2. Saxon
 
