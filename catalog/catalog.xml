@@ -51,56 +51,13 @@
       uri="htmlhelp/htmlhelp.xsl"/>
   </group>
 
-  <!-- Iona customization layers. Call these and they each call the appropiate 
+  <!-- Customization layers. Call these and they each call the appropiate 
        DocBook driver as listed above. -->
   <group xml:base="../custom/">
-
-<!-- Mod for validating xinclude in validating editors  -->
-<system systemId="xinclude.mod"
-    uri="xinclude.mod" />
-<systemSuffix systemIdSuffix="xinclude.mod" 
-      uri="xinclude.mod"/>
-
-<!-- Stylesheets for building FUSE books -->
-  <uri name="fuse-xhtml-chunk-chapter.xsl" 
-      uri="fuse-xhtml-chunk-chapter.xsl"/>
-  <uri name="fuse-xhtml-chunk-section.xsl" 
-      uri="fuse-xhtml-chunk-section.xsl"/>
-  <uri name="fuse-xhtml-article.xsl" 
-      uri="fuse-xhtml-article.xsl"/>
-	  
-<!-- Stylesheets for building Artix books -->
-   <uri name="iona-xhtml-chunk.xsl" 
-      uri="iona-xhtml-chunk.xsl"/>
-  <uri name="iona-xhtml-chunk-chapter.xsl" 
-      uri="iona-xhtml-chunk-chapter.xsl"/>
-  <uri name="iona-xhtml-chunk-section.xsl" 
-      uri="iona-xhtml-chunk-section.xsl"/>
-  <uri name="iona-xhtml-part.xsl" 
-      uri="iona-xhtml-part.xsl"/>
-  <uri name="iona-xhtml-single.xsl" 
-      uri="iona-xhtml-single.xsl"/>
-  <uri name="iona-xhtml-article.xsl" 
-      uri="iona-xhtml-article.xsl"/>
-  <uri name="iona-pdf-fop.xsl" 
-      uri="iona-pdf-fop.xsl"/>
-  <uri name="iona-pdf-xep.xsl" 
-      uri="iona-pdf-xep.xsl"/>
-  <uri name="iona-frameset.xsl" 
-      uri="iona-frameset.xsl"/>
-  <uri name="iona_olinks_collect_targets.xsl" 
-      uri="iona_olinks_collect_targets.xsl"/>
-  <uri name="iona_olinks_collect_targets_article.xsl" 
-      uri="iona_olinks_collect_targets_article.xsl"/>
-  <uri name="iona_olinks_collect_targets_chapter.xsl" 
-      uri="iona_olinks_collect_targets.xsl"/>
-  <uri name="iona_olinks_collect_targets_section.xsl" 
-      uri="iona_olinks_collect_targets.xsl"/>
-  <uri name="iona_olinks_pdf_collect_targets.xsl" 
-      uri="iona_olinks_pdf_collect_targets.xsl"/>
-	  <uri name="xep-docbook.xsl" 
-      uri="xep-docbook.xsl"/>
-	  
+      <uri name="xhtml.xsl" uri="xhtml.xsl"/>
+      <uri name="pdf.xsl" uri="pdf.xsl"/>
+      <uri name="frameset.xsl" uri="frameset.xsl"/>
+      <uri name="olinks_collect_targets.xsl" uri="olinks_collect_targets.xsl"/>
+      <uri name="olinks_pdf_collect_targets.xsl" uri="olinks_pdf_collect_targets.xsl"/>
   </group>
-
 </catalog>
