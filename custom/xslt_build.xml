@@ -94,6 +94,9 @@
 		<copy todir="output/images" failonerror="false">
 			<fileset dir="images" />
 		</copy>
+		<copy todir="output/images/callouts" failonerror="false">
+			<fileset dir="../template/lib/docbook-xsl-ns/images/callouts" />
+		</copy>
 		<java classname="com.icl.saxon.StyleSheet" classpathref="xslt-classpath" fork="true" dir="." maxmemory="512M">
 			<sysproperty key="javax.xml.parsers.DocumentBuilderFactory" value="org.apache.xerces.jaxp.DocumentBuilderFactoryImpl" />
 			<sysproperty key="javax.xml.parsers.SAXParserFactory" value="org.apache.xerces.jaxp.SAXParserFactoryImpl" />
