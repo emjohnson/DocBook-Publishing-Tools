@@ -5,9 +5,9 @@ sort_info: 3
 --- name:overview
 # User's Guide
 
-Information to get a DocBook XML project up and running using {project_name:}.
+Information to get a DocBook XML project up and running using ${project_name}.
 
---- name:content pipeline:redcloth,tags
+--- name:content
 
-# "Installing":install.html
-# "Customizing":customize.html
+# [Installing](install.html)
+# [Customizing](customize.html)

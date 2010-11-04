@@ -5,7 +5,7 @@ sort_info: 3
 --- name:overview
 # Documentation
 
-All the information you need to be become a {project_name:} expert 
+All the information you need to be become a ${project_name} expert 
 
 --- name:content
 

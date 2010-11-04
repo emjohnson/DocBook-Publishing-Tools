@@ -6,12 +6,12 @@ sort_info: 3
 
 # Licensing
 
---- name:content pipeline:textile,tags
-h3. Open Source license details
+--- name:content 
+### Open Source license details
 
-The opens source version of {project_name:} is distributed under an AGPL license.
+The opens source version of ${project_name} is distributed under an AGPL license.
 
-h3. Commercial license details
+### Commercial license details
 
 This project is not available with a commercial license.
 

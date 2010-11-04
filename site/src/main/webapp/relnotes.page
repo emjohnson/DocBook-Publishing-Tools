@@ -5,22 +5,22 @@ in_menu: true
 
 # Release Notes
 
-FUSE Doc Press RC1
+FUSE Doc Press ${project_version}
 
---- name:content pipeline:redcloth,tags
-h2. DocBook XSLT
+--- name:content 
+## DocBook XSLT
 
-This release is based off of the 1.75.2 version of the namespace aware DocBook XSL style sheets. Release notes can be found "here":http://sourceforge.net/project/shownotes.php?group_id=21935&release_id=685608.
+This release is based off of the 1.76.1 version of the namespace aware DocBook XSL style sheets. Release notes can be found [here](http://sourceforge.net/project/shownotes.php?group_id=21935&release_id=685608).
 
-h2. Saxon
+## Saxon
 
-This release redistributes Saxon 6.6.5. You can get more information "here":http://saxon.sourceforge.net/saxon6.5.5/index.html.
+This release redistributes Saxon 6.6.5. You can get more information [here](http://saxon.sourceforge.net/saxon6.5.5/index.html).
 
-h2. Apache Xalan Java
+## Apache Xalan Java
 
-This release redistributes Apache Xalan Java 2.7.1. Realease notes can be found "here":http://xml.apache.org/xalan-j/readme.html.
+This release redistributes Apache Xalan Java 2.7.1. Realease notes can be found [here](http://xml.apache.org/xalan-j/readme.html).
 
-h2. Apache FOP
+## Apache FOP
 
-The release redistributes Apache FOP 0.95. Release notes can be found "here":http://xmlgraphics.apache.org/fop/0.95/releaseNotes_0.95.htm.
+The release redistributes Apache FOP 0.95. Release notes can be found [here](http://xmlgraphics.apache.org/fop/0.95/releaseNotes_0.95.htm).
 

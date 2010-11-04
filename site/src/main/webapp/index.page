@@ -2,23 +2,21 @@
 title: Home
 in_menu: true
 sort_info: 1
---- name:overview pipeline:haml,tags
+--- name:overview
 
-%h1 {project_name:}
+# ${project_name}
 
-{project_slogan:}
+${project_slogan}
 
 --- name:content
-<div class='title'>
-  &nbsp;
-</div>
-<div class='content'>
-  <table><tr>
+
+<table>
+  <tr>
     <td>
 	    <h2>Get Started</h2>
 	    <br />  
-	    <a href='{relocatable: /download.html}'>
-  	    <img src='{relocatable: /images/download.png}' />
+	    <a href="/download.html">
+  	    <img src="/images/download.png" />
   	    <br />
   	    <br />
   	    Grab a release
@@ -27,8 +25,8 @@ sort_info: 1
     <td>
 	    <h2>Get Smart</h2>
 	    <br />
-	    <a href='{relocatable: /documentation}'>
-  	    <img src='{relocatable: /images/book.gif}'/>
+	    <a href="/documentation">
+  	    <img src="/images/book.gif"/>
   	    <br />
   	    <br />
   	    View the docs
@@ -37,8 +35,8 @@ sort_info: 1
     <td>
 	    <h2>Get Coding</h2>
 	    <br />  
-	    <a href='{relocatable: /source.html}'>
-  	    <img src='{relocatable: /images/arrows.gif}' />
+	    <a href="source.html">
+  	    <img src="/images/arrows.gif" />
   	    <br />
   	    <br />
   	    Checkout the source
@@ -50,7 +48,7 @@ sort_info: 1
     <ul>
     	<li><a href='{project_mailing_list_url:}'>Mailing List</a></li>
     	<li><a href='{project_issue_url:}'>Issue Tracker</a></li>
-    	<li><a href='{relocatable: /license.html}'>Licensing</a></li>
+    	<li><a href="license.html">Licensing</a></li>
 	</ul>    
 	  	    <br />
 	  	    <br />
@@ -59,6 +57,5 @@ sort_info: 1
   	        
 	    
     </td>
-  </tr></table>
-</div>
---- name:content
+  </tr>
+  </table>

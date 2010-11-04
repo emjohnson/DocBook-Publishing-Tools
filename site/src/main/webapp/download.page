@@ -7,8 +7,8 @@ sort_info: 2
 # Download
 
 --- name:content
-{project_name:} has a sample library your can download from [here]({project_download_url:}).
+${project_name} has a sample library your can download from [here](${project_download_url}).
 
 You can also download the [source code](source.html).
 
-Join our [mailing list]({project_mailing_list_url:}) to get notification of the upcoming binary release.
+Join our [mailing list](${project_mailing_list_url}) to get notification of the upcoming binary release.

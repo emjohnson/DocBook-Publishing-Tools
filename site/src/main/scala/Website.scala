@@ -18,32 +18,24 @@
 
 package
 
-/**
- * <p>
- * </p>
- *
- * @author <a href="http://hiramchirino.com">Hiram Chirino</a>
- */
 object Website {
 
-  val project_name = "Rider"
-  val project_slogan = "Ride that Camel and get where you want to go fast!"
-  val project_id = "rider"
-  val project_jira_key = "RIDER"
-  val project_issue_url = "http://fusesource.com/issues/browse/RIDER"
-  val project_forums_url = "http://fusesource.com/forums/forum.jspa?forumID=7"
-  val project_wiki_url = "http:/rider.fusesource.org/"
-  val project_logo = "/images/project-logo.png"
-  val project_version = "1.0"
-  val project_snapshot_version = "1.0-SNAPSHOT"
-
-  val github_page = "http://github.com/rider/rider"
-  val git_user_url = "git://github.com/rider/rider.git"
-  val git_commiter_url = "git@github.com:rider/rider.git"
+  val project_name = "Forge Documentation Press"
+  val project_slogan = "DocBook XML publishing made easy"
+  val project_id = "fusedp"
+  val project_jira_key = "FORGEDP"
+  val project_issue_url = "http://fusesource.com/issues/browse/FORGEDP"
+  val project_logo = null
+  val project_version = "1.76.1"
+  val project_svn_url = "http://fusesource.com/forge/svn/forgedp/trunk"
+  val project_svn_branches_url = "http://fusesource.com/forge/svn/forgedp/branches"
+  val project_mailing_list_url = "http://fusesource.com/forge/projects/FORGEDP/mailing-lists"
+  val project_docs_url = "http://forgedp.fusesource.org/documentation"
+  val project_download_url = "http://forgedp.fusesource.org/downloads"
 
   // -------------------------------------------------------------------
   val project_maven_groupId = "org.fusesource.%s".format(project_id)
-  val project_maven_artifactId = "rider-overlay"
+  val project_maven_artifactId = "forgedp"
 
 
 }
