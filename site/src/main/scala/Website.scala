@@ -1,5 +1,3 @@
-import org.fusesource.scalate.RenderContext
-
 /**
  * Copyright (C) 2009-2010 the original author or authors.
  * See the notice.md file distributed with this work for additional
@@ -17,6 +15,7 @@ import org.fusesource.scalate.RenderContext
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package
 
 /**
@@ -27,26 +26,24 @@ package
  */
 object Website {
 
-  val project_name= "Scalate"
-  val project_slogan= "Scala Template Engine: like JSP without the crap but with added Scala coolness"
-  val project_id= "scalate"
-  val project_jira_key= "SCALATE"
-  val project_issue_url= "http://scalate.assembla.com/spaces/scalate/support/tickets"
-  val project_forums_url= "http://scalate.fusesource.org/community.html"
-  val project_wiki_url= "http://wiki.github.com/scalate/scalate/"
-  val project_logo= "/images/project-logo.png"
-  val project_version= "1.3.1"
-  val project_snapshot_version= "1.4-SNAPSHOT"
+  val project_name = "Rider"
+  val project_slogan = "Ride that Camel and get where you want to go fast!"
+  val project_id = "rider"
+  val project_jira_key = "RIDER"
+  val project_issue_url = "http://fusesource.com/issues/browse/RIDER"
+  val project_forums_url = "http://fusesource.com/forums/forum.jspa?forumID=7"
+  val project_wiki_url = "http:/rider.fusesource.org/"
+  val project_logo = "/images/project-logo.png"
+  val project_version = "1.0"
+  val project_snapshot_version = "1.0-SNAPSHOT"
 
-  val github_page= "http://github.com/scalate/scalate"
-  val git_user_url= "git://github.com/scalate/scalate.git"
-  val git_commiter_url= "git@github.com:scalate/scalate.git"
+  val github_page = "http://github.com/rider/rider"
+  val git_user_url = "git://github.com/rider/rider.git"
+  val git_commiter_url = "git@github.com:rider/rider.git"
 
   // -------------------------------------------------------------------
-  val project_svn_url= "http://fusesource.com/forge/svn/%s/trunk".format(project_id)
-  val project_svn_branches_url= "http://fusesource.com/forge/svn/%s/branches".format(project_id)
-  val project_svn_tags_url= "http://fusesource.com/forge/svn/%s/tags".format(project_id)
-  val project_maven_groupId= "org.fusesource.%s".format(project_id)
-  val project_maven_artifactId= "scalate-core"
+  val project_maven_groupId = "org.fusesource.%s".format(project_id)
+  val project_maven_artifactId = "rider-overlay"
+
 
 }

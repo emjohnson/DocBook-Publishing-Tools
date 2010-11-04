@@ -16,7 +16,7 @@
 -# limitations under the License.
 -#
 - response.setContentType("text/html") 
--@ var title : String = null
+-@ var title : String = ""
 -@ var body: String = null
 -@ var overview: String = null
 -@ var spot: String = null
@@ -27,9 +27,9 @@
 html(lang="en")
   head
     meta(content="text/html; charset=utf-8" http-equiv="Content-Type")
-    meta(content="scala template engine implementing HAML, JSP, Erb style templates" name="description")
-    meta(content="scalate,scala,template engine,haml,erb,jsp" name="keywords")
-    meta(content="Scalate" name="author")
+    meta(content="Rider is a developer tool for designing enterprise integration patterns" name="description")
+    meta(content="rider, camel, eip, fuse, route, patterns" name="keywords")
+    meta(content="FuseSource" name="author")
     link(type="text/css" rel="stylesheet" href={uri("/styles/impact/css/pygmentize.css")})
     link(type="text/css" rel="stylesheet" href={uri("/styles/impact/css/site.css")})
 
@@ -40,12 +40,8 @@ html(lang="en")
       - if (include_console)
         - include("/org/fusesource/scalate/console/console_head.scaml")
         link(href={uri("/css/scalate/console.css")} rel="stylesheet" type="text/css")
-
-    - if (title!=null)
-      title= "Forge Doc Press - "+title
-
-    - if (title==null)
-      title= "Forge Doc Press"
+    
+    title= title
   body
     div#navigation
       div.wrapper
@@ -78,3 +74,13 @@ html(lang="en")
     -#
       - if (include_console)
         = include("/org/fusesource/scalate/console/console.scaml")
+
+    :javascript
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script> 
+      <script type="text/javascript"> 
+      try {
+      var pageTracker = _gat._getTracker("UA-1347593-12");
+      pageTracker._trackPageview();
+      } catch(err) {}

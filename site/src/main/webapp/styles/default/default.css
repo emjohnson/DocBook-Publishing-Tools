@@ -1,3 +1,11 @@
+/**
+ * Copyright (C) 2010 FuseSource, Corp. All rights reserved.
+ * http://fusesource.com
+ *
+ * The software in this package is published under the terms of the AGPL license
+ * a copy of which has been included with this distribution in the license.txt file.
+ */
+
 /* andreas07 - an open source xhtml/css website layout by Andreas Viklund - http://andreasviklund.com . Free to use for any purpose as long as the proper credits are given for the original design work.
 
 Version: 1.1, November 28, 2005 */
@@ -5,7 +13,7 @@ Version: 1.1, November 28, 2005 */
 /**************** Page and tag styles ****************/
 
 body
-{margin:0; padding:0; color:#303030; background:#fafafa url(images/bodybg.gif) top left repeat-y; font-size:76%; font-family:Verdana,Tahoma,sans-serif;}
+{margin:0; padding:0; color:#303030; background:#fafafa url(images/bodybg.gif) top left repeat-y; font:76% Verdana,Tahoma,sans-serif;}
 
 ul
 {list-style:circle; margin:15px 0 20px 0; font-size:0.9em;}

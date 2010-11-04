@@ -24,9 +24,9 @@ import org.fusesource.scalate.{Binding, TemplateSource}
  * Defines the template package of reusable imports, attributes and methods across templates
  */
 class ScalatePackage extends TemplatePackage {
-  def header(source: TemplateSource, bindings: List[Binding]) = """
-
+  def header(source: TemplateSource, bindings: List[Binding]) =
+    """
     // common imports go here
-    import _root_.Website._;
-  """
+    import Website._;
+    """
 }
